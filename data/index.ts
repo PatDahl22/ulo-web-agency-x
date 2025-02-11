@@ -88,6 +88,7 @@ export const projects = [
   {
     id: 1,
     title: "TravelBuddy",
+    name: "TravelBuddy",
     des: "Work professionally as a UX/UI designer with Front End skills. Translate user needs into a finished product or service. Use agile methods to participate in a project with a user-centered perspective and oversee web development and complete assigned projects within the professional role.",
     img: "/p1.png",
     iconLists: [
@@ -101,6 +102,7 @@ export const projects = [
   },
   {
     id: 2,
+    name: "Shoes & Stitches",
     title: "Shoes & Stitches, WebShop Application",
     des: "Deepen the knowledge and ability to develop interfaces for both mobile applications and websites using the ReactJS framework. The focus is on optimizing usability, ensuring accessibility and exploring opportunities for further development.",
     img: "/p2.png",
@@ -115,6 +117,7 @@ export const projects = [
   },
   {
     id: 3,
+    name: "FemTask",
     title: "FemTask, Web Application",
     des: "Advanced Interaction Design: A deep dive into UX design focusing on user analysis, requirements management, and the design process. The goal is to transform user insights into targeted solutions that meet specific needs while creating meaningful and engaging user experiences.",
     img: "/p3.png",
@@ -129,10 +132,16 @@ export const projects = [
   },
   {
     id: 4,
+    name: "Ullis Fitness & Kroppvård",
     title: "Ullis Fitness & Kroppvård, Web Application",
     des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
     img: "/p4.PNG",
-    iconLists: [ "/figma.png", "/discord.png", "/css.png", "/html.png", "/javascript.png",
+    iconLists: [
+      "/figma.png",
+      "/discord.png",
+      "/css.png",
+      "/html.png",
+      "/javascript.png",
     ],
     link: "/https://ullisfitnessochkroppsvard.com/",
   },
