@@ -2,7 +2,7 @@
 import { ShootingStars } from "@/components/ui/shooting-stars"
 import { StarsBackground } from "@/components/ui/stars-background"
 
-const ShootingStarsAndStarsBackgroundDemo = ({
+const ShootingStarsAndStarsBackground = ({
     containerClassName,
     colors,
     dotSize,
@@ -20,5 +20,5 @@ const ShootingStarsAndStarsBackgroundDemo = ({
   );
 };
 
-export default ShootingStarsAndStarsBackgroundDemo;
+export default ShootingStarsAndStarsBackground;
 

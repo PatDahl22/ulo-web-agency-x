@@ -98,7 +98,7 @@ export const projects = [
       "/html.png",
       "/javascript.png",
     ],
-    link: "/ui.earth.com",
+    link: "/project1",
   },
   {
     id: 2,
@@ -113,7 +113,7 @@ export const projects = [
       "/html.png",
       "/javascript.png",
     ],
-    link: "/https://github.com/Swifty-sketch/webshop",
+    link: "/project2",
   },
   {
     id: 3,
@@ -128,7 +128,7 @@ export const projects = [
       "/html.png",
       "/javascript.png",
     ],
-    link: "/https://www.figma.com/proto/bP3cdyLfc0kK7asOqblhkv/FemTask?node-id=8-7173&node-type=frame&viewport=1592%2C-2879%2C0.25&t=Fr6i0PrSYVjD1y1y-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=8%3A7173",
+    link: "/project3",
   },
   {
     id: 4,
@@ -143,7 +143,7 @@ export const projects = [
       "/html.png",
       "/javascript.png",
     ],
-    link: "/https://ullisfitnessochkroppsvard.com/",
+    link: "/project4",
   },
 ];
 
@@ -208,14 +208,14 @@ export const workExperience = [
     id: 2,
     title: "Frontend Development with React",
     desc: "I have developed interactive web and mobile applications in ReactJS, working on retrieving component data, creating custom hooks, and handling exceptions. I have also implemented routing and authentication for users, and built component-based applications using JSX. I have become an expert in using React hooks and knowledge control methods.",
-    className: "md:col-span-2", // change to md:col-span-2
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
     title: "UI/UX and Interaction Design with an Agile Approach",
     desc: "I have participated in sprint planning, daily stand-ups, and retrospectives, focusing on usability goals and user experience. I have collected and analyzed both qualitative and quantitative data to create wireframes and interactive prototypes. I have worked in agile teams and used empirical analysis methods to assess usability.",
-    className: "md:col-span-2", // change to md:col-span-2
+    className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
   {
@@ -230,14 +230,38 @@ export const workExperience = [
     title: "Basic Frontend Programming",
     desc: "I have learned the basics of Javascript, HTML and CSS, as well as testing and API management methods. I have built interactive web pages and worked on retrieving and presenting data from CMS. I have also applied WCAG to ensure accessibility in my applications.",
     className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
+    thumbnail: "/exp2.svg",
   },
   {
     id: 6,
     title: "IT Tech & Operations",
     desc: "I have gained insights into the role of the Javascript developer in web development projects and investigated common technology stacks. I have learned about system development methodologies such as Scrum and how CD/CI works in agile development. I have also understood the role of the requirements specification and how it is connected to the developer's work.",
     className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
+    thumbnail: "/exp1.svg",
+  },
+];
+
+export const Approachs = [
+  {
+    id: 1,
+    title: "User-Focused, Data-Driven, and Seamlessly Integrated",
+    icon: "UX/UI Design",
+    img: "/creator.png",
+    des: "I create intuitive, user-centered designs by combining data insights and user feedback. My approach ensures designs are functional, visually appealing, and meet business goals while being adaptable through agile methodologies.",
+  },
+  {
+    id: 2,
+    title: "Clear, Engaging, and Performance-Optimized",
+    icon: "Web Design",
+    img: "/web.png",
+    des: "I design responsive, mobile-first websites that focus on speed, clear navigation, and user engagement. By optimizing for performance and SEO, I ensure your website is both attractive and effective at converting visitors.",
+  },
+  {
+    id: 3,
+    title: "Collaborative, Iterative, and Results-Driven",
+    icon: "UI/UX Web Design",
+    img: "/mobile.png",
+    des: "I work closely with clients and users, using an iterative approach to refine designs based on feedback. I focus on clarity, usability, and adaptability to deliver results that improve engagement, conversions, and overall user satisfaction.",
   },
 ];
 

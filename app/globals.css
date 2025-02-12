@@ -94,6 +94,17 @@
     }
   }
 }
+/* In your CSS file */
+.custom-grid {
+  gap: 20px;
+  /* Adjust the gap between items */
+}
+
+.custom-item {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+}
 
 /* Removed @apply directive and used equivalent CSS classes */
 @layer utilities {

@@ -2,6 +2,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
+import { Vortex } from "./ui/vortex";
 
 const Footer = () => {
   return (
@@ -15,23 +16,6 @@ const Footer = () => {
         />
       </div>
 
-      <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[65vw]">
-          How about we craft <br /><span className="text-purple"> a solution</span>{" "} 
-          <br/> that drives results for your business?
-        </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center">
-          Let&apos;s work together and take your project to the next level with user-centric
-          design.
-        </p>
-        <a href="mailto:contact@jsmastery.pro">
-          <MagicButton
-            title="Let's get in touch"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
-      </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <p className="md:text-base text-sm md:font-normal font-light">
           Copyright © 2024 Pat Dahl
