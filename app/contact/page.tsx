@@ -7,7 +7,6 @@ import { BackgroundLines } from "@/components/ui/background-lines";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 import Clients from "@/components/Clients";
 import { SignupForm } from "@/components/SignupForm";
-import SectionFooter from "@/components/SectionFooter";
 
 const Contact = () => {
   return (
@@ -16,12 +15,9 @@ const Contact = () => {
         {" "}
         {/* Set height to 40vh on the container */}
         <div className="relative h-full w-full">
-          <BackgroundLines
-            className="absolute inset-0 -z-100"
-            children={null}
-          />{" "}
+          <BackgroundLines className="absolute inset-0 z-100" children={null} />{" "}
           {/* BackgroundLines fills the container */}
-          <div className="relative h-full flex items-center justify-center w-full flex-col px-4">
+          <div className="relative h-full flex items-center justify-center w-full flex-col">
             {/* Ensure content is positioned correctly */}
             <TextGenerateEffect
               words="Are you ready?"
@@ -29,7 +25,7 @@ const Contact = () => {
             />
             <div className="flex flex-col items-center">
               <p className="text-center text-[20px] lg:max-w-[65vw]">
-                I'm ready to 
+                I'm ready to
                 <span className="text-purple">
                   {" "}
                   craft a solution
@@ -43,9 +39,8 @@ const Contact = () => {
       <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
         <div className="max-w-7xl w-full">
           <FloatingNav navItems={navItems} />
-          <Clients/>
-          <SignupForm/>
-          <SectionFooter/>
+          <SignupForm />
+          <Clients />
           <Footer />
         </div>
       </main>

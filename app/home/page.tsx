@@ -10,6 +10,7 @@ import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import CardHoverEffect from "@/components/CardHoverEffect";
+import SectionFooter from "@/components/SectionFooter";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
         <Approach />
         <Clients />
         <Experience />
+        <SectionFooter/>
         <Footer />
       </div>
     </main>
