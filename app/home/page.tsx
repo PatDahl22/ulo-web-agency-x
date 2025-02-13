@@ -7,10 +7,10 @@ import Grid from "@/components/Grid";
 import Footer from "@/components/Footer";
 import Clients from "@/components/Clients";
 import Approach from "@/components/Approach";
-import Experience from "@/components/Experience";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import CardHoverEffect from "@/components/CardHoverEffect";
-import SectionFooter from "@/components/SectionFooter";
+import { FooterSection } from "@/components/FooterSection";
+import HomeExperience from "@/components/HomeExperience";
 
 const Home = () => {
   return (
@@ -22,8 +22,8 @@ const Home = () => {
         <CardHoverEffect />
         <Approach />
         <Clients />
-        <Experience />
-        <SectionFooter/>
+        <HomeExperience />
+        <FooterSection/>
         <Footer />
       </div>
     </main>

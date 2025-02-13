@@ -41,7 +41,7 @@ const Approach = () => {
                 <h3 className="text-start text-sm md:text-xl mt-3 font-semibold">
                   {card.title}
                 </h3>
-                <p className="text-start text-white-100 mt-3 line-clamp-2">
+                <p className="text-start text-white-100 mt-3 ">
                   {card.des}
                 </p>
               </div>

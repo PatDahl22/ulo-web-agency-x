@@ -3,7 +3,7 @@ import React from "react";
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
 
-const Experience = () => {
+const HomeExperience = () => {
   return (
     <div className="py-20 w-full">
       <h1 className="heading">
@@ -38,7 +38,7 @@ const Experience = () => {
                 <h1 className="text-start text-xl md:text-2xl font-bold">
                   {card.title}
                 </h1>
-                <p className="text-start text-white-100 mt-3 font-semibold ">
+                <p className="text-start text-white-100 mt-3 font-semibold line-clamp-2">
                   {card.desc}
                 </p>
               </div>
@@ -50,4 +50,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default HomeExperience;

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
@@ -6,7 +5,6 @@ import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "react-lottie";
 
 import { cn } from "@/utils/cn";
-
 
 import { BackgroundGradientAnimation } from "./GradientBg";
 import animationData from "@/data/confetti.json";
@@ -37,6 +35,7 @@ export const BentoGridItem = ({
   id,
   title,
   description,
+  //   remove unecessary things here
   img,
   imgClassName,
   titleClassName,
@@ -66,7 +65,7 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const text = "pattaravarat.dahl@gmail.com";
+    const text = "hsu@jsmastery.pro";
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
@@ -79,6 +78,8 @@ export const BentoGridItem = ({
         className
       )}
       style={{
+        //   add these two
+        //   you can generate the color from here https://cssgradient.io/
         background: "rgb(4,7,29)",
         backgroundColor:
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
@@ -95,9 +96,11 @@ export const BentoGridItem = ({
             />
           )}
         </div>
+
         <div
-          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
-            } `}
+          className={`absolute right-0 -bottom-5 ${
+            id === 5 && "w-full opacity-80"
+          } `}
         >
           {spareImg && (
             <img
@@ -111,7 +114,13 @@ export const BentoGridItem = ({
         {id === 6 && (
           // add background animation , remove the p tag
           <BackgroundGradientAnimation>
-            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-start md:text-4xl lg:text-7xl"></div>
+            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
+          </BackgroundGradientAnimation>
+        )}
+        {id === 2 && (
+          // add background animation , remove the p tag
+          <BackgroundGradientAnimation>
+            <div className="h-4 w-4 absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
           </BackgroundGradientAnimation>
         )}
 
@@ -125,14 +134,13 @@ export const BentoGridItem = ({
           <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
+          {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
+          {/* remove mb-2 mt-2 */}
           <div
             className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
           >
             {title}
           </div>
-
-          {/* */}
-          {id === 2 }
 
           {/* Tech stack list div */}
           {id === 3 && (
@@ -166,11 +174,12 @@ export const BentoGridItem = ({
           )}
           {id === 6 && (
             <div className="mt-5 relative">
-              {/* add handleCopy() for the copy the text */}
               <div
-                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
-                  }`}
+                className={`absolute -bottom-5 right-0 ${
+                  copied ? "block" : "block"
+                }`}
               >
+                {/* <img src="/confetti.gif" alt="confetti" /> */}
                 <Lottie options={defaultOptions} height={200} width={400} />
               </div>
 
