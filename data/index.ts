@@ -1,5 +1,100 @@
-import { title } from "process";
+import React from "react";
+import {
+  IconArrowWaveRightUp,
+  IconBoxAlignRightFilled,
+  IconBoxAlignTopLeft,
+  IconClipboardCopy,
+  IconFileBroken,
+  IconSignature,
+  IconTableColumn,
+} from "@/components/icons"; 
 
+import Skeleton from "@/components/ui/Skeleton";
+
+export const gridItems = [
+  {
+    id: 1,
+    title: "The Outside Scoop",
+    description:
+      "My designs are tailored to meet both user needs and business goals, delivering results that boost conversions and customer satisfaction.",
+    img: "/b1.svg",
+    imgClassName: "img-class",
+    titleClassName: "title-class",
+    spareImg: "",
+    header: React.createElement(Skeleton),
+    icon: React.createElement(IconClipboardCopy, {
+      className: "h-4 w-4 text-neutral-500",
+    }),
+  },
+  {
+    id: 2,
+    title: "I'm very flexible with time zone communications",
+    description: "",
+    img: "/path/to/img2.jpg",
+    imgClassName: "img-class",
+    titleClassName: "title-class",
+    spareImg: "",
+    header: React.createElement(Skeleton),
+    icon: React.createElement(IconFileBroken, {
+      className: "h-4 w-4 text-neutral-500",
+    }),
+  },
+  {
+    id: 3,
+    title: "My tech stack",
+    description: "I constantly try to improve",
+    img: "/b5.svg",
+    imgClassName: "img-class",
+    titleClassName: "title-class",
+    spareImg: "",
+    header: React.createElement(Skeleton),
+    icon: React.createElement(IconSignature, {
+      className: "h-4 w-4 text-neutral-500",
+    }),
+  },
+  {
+    id: 4,
+    title: "The Art of Design",
+    description:
+      "Iterate on designs through agile processes, collaborating closely with clients to refine and enhance user experiences throughout the project lifecycle.",
+    img: "/grid.svg",
+    imgClassName: "img-class",
+    titleClassName: "title-class",
+    spareImg: "",
+    header: React.createElement(Skeleton),
+    icon: React.createElement(IconTableColumn, {
+      className: "h-4 w-4 text-neutral-500",
+    }),
+  },
+  {
+    id: 5,
+    title: "The Inside Scoop",
+    description:
+      "Data-driven insights and user testing, design decision is based on real feedback, improving overall usability.",
+    img: "/b5.svg",
+    imgClassName: "img-class",
+    titleClassName: "title-class",
+    spareImg: "",
+    header: React.createElement(Skeleton),
+    icon: React.createElement(IconArrowWaveRightUp, {
+      className: "h-4 w-4 text-neutral-500",
+    }),
+  },
+  {
+    id: 6,
+    title: "Let's collaborate!",
+    description:
+      "I'd love to help elevate your brand with a tailored design strategy.",
+    img: "/path/to/img7.jpg",
+    imgClassName: "img-class",
+    titleClassName: "title-class",
+    spareImg: "",
+    header: React.createElement(Skeleton),
+    icon: React.createElement(IconBoxAlignRightFilled, {
+      className: "h-4 w-4 text-neutral-500",
+    }),
+  },
+];
 export const navItems = [
   { name: "Home", link: "/home" },
   { name: "About", link: "/about" },
@@ -14,74 +109,6 @@ export const navItems = [
     ],
   },
   { name: "Contact", link: "/contact" },
-];
-
-export const gridItems = [
-  {
-    id: 1,
-    title:
-      "My designs are tailored to meet both user needs and business goals, delivering results that boost conversions and customer satisfaction.",
-    description: "The Outside Scoop",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
-    spareImg: "",
-  },
-  {
-    id: 2,
-    title: "I'm very flexible with time zone communications",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    titleClassName: "justify-center",
-    img: "b5.svg",
-    spareImg: "",
-  },
-  {
-    id: 4,
-    title:
-      "Iterate on designs through agile processes, collaborating closely with clients to refine and enhance user experiences throughout the project lifecycle.",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
-  },
-
-  {
-    id: 5,
-    title:
-      "Data-driven insights and user testing, design decision is based on real feedback, improving overall usability.",
-    description: "The Inside Scoop",
-    className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
-  },
-  {
-    id: 6,
-    title: "Let's collaborate!",
-    description:
-      "I'd love to help elevate your brand with a tailored design strategy.",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-    img: "",
-    spareImg: "",
-  },
 ];
 
 export const projects = [

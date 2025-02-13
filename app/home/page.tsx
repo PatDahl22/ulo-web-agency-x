@@ -3,7 +3,6 @@
 import { navItems } from "@/data";
 
 import Hero from "@/components/Hero";
-import Grid from "@/components/Grid";
 import Footer from "@/components/Footer";
 import Clients from "@/components/Clients";
 import Approach from "@/components/Approach";
@@ -11,6 +10,7 @@ import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import CardHoverEffect from "@/components/CardHoverEffect";
 import { FooterSection } from "@/components/FooterSection";
 import HomeExperience from "@/components/HomeExperience";
+import Grid from "@/components/Grid";
 
 const Home = () => {
   return (
@@ -18,7 +18,7 @@ const Home = () => {
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
         <Hero />
-        <Grid />
+        <Grid/>
         <CardHoverEffect />
         <Approach />
         <Clients />
