@@ -1,30 +1,40 @@
+import { BentoGrid, BentoGridItem } from "@/components/ui/BentoGrid"; // Import BentoGrid and BentoGridItem
+import { FC } from "react";
+import Link from "next/link";
 
+interface GridItem {
+  id: number;
+  title: string;
+  description: string;
+  img: string;
+  link: string;
+}
 
-import React from "react";
-import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
-import {gridItems } from "../data/index"
+interface GridProps {
+  gridItems: GridItem[];
+}
 
-const Grid = () => {
+const Grid: FC<GridProps> = ({ gridItems }) => {
+  if (!gridItems || gridItems.length === 0) {
+    return <div>No items available</div>; // Fallback if gridItems is empty
+  }
+
   return (
-    <>
-      <BentoGrid className="w-full py-20">
-        {gridItems.map((item, i) => (
+    <BentoGrid className="gap-6">
+      {gridItems.map((item) => (
+        <Link href={item.link} key={item.id}>
           <BentoGridItem
             id={item.id}
-            key={i}
             title={item.title}
             description={item.description}
-            // remove icon prop
-            // remove original classname condition
-            className={item.className}
             img={item.img}
-            imgClassName={item.imgClassName}
-            titleClassName={item.titleClassName}
-            spareImg={item.spareImg}
+            imgClassName="h-full"
+            titleClassName="text-white"
+            spareImg=""
           />
-        ))}
-      </BentoGrid>
-    </>
+        </Link>
+      ))}
+    </BentoGrid>
   );
 };
 
