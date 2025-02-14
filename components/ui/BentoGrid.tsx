@@ -7,6 +7,7 @@ import { cn } from "@/utils/cn";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
+import { IconProps } from "@tabler/icons-react";
 
 // BentoGrid Component
 export const BentoGrid = ({
@@ -19,7 +20,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto", // Adjusted grid structure
+        "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-rows-7 gap-4 lg:gap-8 mx-auto", // Adjusted grid structure
         className
       )}
     >
@@ -37,6 +38,8 @@ export const BentoGridItem = ({
   img,
   imgClassName,
   titleClassName,
+  spareImg,
+  icon,
 }: {
   className?: string;
   id: number;
@@ -45,6 +48,10 @@ export const BentoGridItem = ({
   img?: string;
   imgClassName?: string;
   titleClassName?: string;
+  spareImg?: string;
+  icon?: React.FunctionComponentElement<
+    IconProps & React.RefAttributes<SVGSVGElement>
+  >;
 }) => {
   const leftLists = ["ReactJS", "Express", "Typescript"];
   const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
@@ -59,22 +66,16 @@ export const BentoGridItem = ({
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-
   const handleCopy = () => {
     const text = "pattaravarat.dahl@gmail.com";
     navigator.clipboard.writeText(text);
     setCopied(true);
-
-    // Reset 'copied' state after 2 seconds
-    setTimeout(() => {
-      setCopied(false);
-    }, 2000);
   };
 
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        "row-span-1 relative rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
         className
       )}
       style={{
@@ -93,8 +94,22 @@ export const BentoGridItem = ({
             />
           )}
         </div>
-
+        <div
+          className={`absolute right-0 -bottom-5 ${
+            id === 5 && "w-full opacity-80"
+          } `}
+        >
+          {spareImg && (
+            <img
+              src={spareImg}
+              alt={spareImg}
+              //   width={220}
+              className="object-cover object-center w-full h-full"
+            />
+          )}
+        </div>
         {id === 6 && (
+          // add background animation , remove the p tag
           <BackgroundGradientAnimation>
             <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
           </BackgroundGradientAnimation>
@@ -114,7 +129,6 @@ export const BentoGridItem = ({
           >
             {title}
           </div>
-
           {id === 2 && (
             <BackgroundGradientAnimation>
               <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
@@ -135,6 +149,7 @@ export const BentoGridItem = ({
                 ))}
                 <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
               </div>
+
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
                 <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
                 {rightLists.map((item, i) => (
@@ -148,7 +163,9 @@ export const BentoGridItem = ({
                 ))}
               </div>
             </div>
+
           )}
+
           {id === 6 && (
             <div className="mt-5 relative">
               <div
