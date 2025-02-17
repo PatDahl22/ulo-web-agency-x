@@ -303,39 +303,46 @@ export const socialMedia = [
 export const project1Items = {
   journeys: [
     {
-      title: "Traveler's Profile Creation",
+      title: "Travel Decisions",
       description:
-        "The app builds a traveler profile based on psychographics, understanding what kind of vacation the user prefers, favorite destinations, and budget preferences. This allows the app to offer tailored travel suggestions.",
-    },
+        "Users finalize travel details, such as resort choice, dates, and transportation options. They can also select accommodation options, whether it's a hotel, Airbnb, or staying with someone local.",
+      className: "h-4 w-4 text-neutral-500",
+    }, 
     {
       title: "Personalized Recommendations",
       description:
         "Based on the traveler's profile, the app provides destination suggestions. Users can compare options, assess costs, and read reviews from other travelers to make informed decisions.",
-    },
-    {
-      title: "Travel Decisions",
-      description:
-        "Users finalize travel details, such as resort choice, dates, and transportation options. They can also select accommodation options, whether it's a hotel, Airbnb, or staying with someone local.",
+      className: "h-4 w-4 text-neutral-500",
     },
     {
       title: "Pre-Travel Preparation",
       description:
         "The app assists with all pre-trip arrangements, such as vaccinations, packing lists, transportation logistics, and currency exchange. It sends reminders for any unfinished tasks, ensuring travelers are fully prepared.",
+      className: "h-4 w-4 text-neutral-500",
     },
     {
       title: "Journey to the Resort",
       description:
         "Notifications guide travelers to their departure points with geo-based recommendations. It suggests eateries and tax-free shops at airports or train stations, providing real-time updates to smooth the journey.",
+      className: "h-4 w-4 text-neutral-500",
     },
     {
       title: "At the Destination",
       description:
         "Upon arrival, the app offers recommendations for the best restaurants, pubs, attractions, and activities. It helps with social sharing by crafting posts and images for travelers to share.",
+      className: "h-4 w-4 text-neutral-500",
     },
     {
       title: "Post-Trip Evaluation",
       description:
         "After the trip, users are prompted to provide feedback. This feedback loop not only helps other users but also improves the app's recommendations and services.",
+      className: "h-4 w-4 text-neutral-500",
+    },
+    {
+      title: "Traveler's Profile Creation",
+      description:
+        "The app builds a traveler profile based on psychographics, understanding what kind of vacation the user prefers, favorite destinations, and budget preferences. This allows the app to offer tailored travel suggestions.",
+      className: "h-4 w-4 text-neutral-500",
     },
   ],
 
