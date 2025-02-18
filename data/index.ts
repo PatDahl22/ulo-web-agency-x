@@ -1,90 +1,59 @@
-import React from "react";
-import {
-  IconArrowWaveRightUp,
-  IconBoxAlignRightFilled,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@/components/icons/index"; 
-
 export const gridItems = [
   {
     id: 1,
-    title:
-      "My designs are tailored to meet both user needs and business goals, delivering results that boost conversions and customer satisfaction.",
-    description: "The Outside Scoop",
-    icon: React.createElement(IconClipboardCopy, {
-      className: "h-4 w-4 text-neutral-500",
-    }),
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
+    title: "I'm very flexible with time zone communications",
+    description: "",
+    className: "lg:col-span-3 md:col-span-2 md:row-span-3",
+    imgClassName: "",
+    titleClassName: "justify-center",
+    img: "",
     spareImg: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
+    title: "I prioritize client collaboration, fostering open communication ",
     description: "",
-    icon: React.createElement(IconBoxAlignRightFilled, {
-      className: "h-4 w-4 text-neutral-500",
-    }),
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "",
+    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
+    imgClassName: "w-full h-full",
+    titleClassName: "justify-center",
+    img: "/b1.svg",
     spareImg: "",
   },
   {
     id: 3,
     title: "My tech stack",
     description: "I constantly try to improve",
-    icon: React.createElement(IconSignature, {
-      className: "h-4 w-4 text-neutral-500",
-    }),
-    img: "/b5.svg",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
-    spareImg: "",
+    img: "/grid.svg",
+    spareImg: "/b4.svg",
   },
   {
     id: 4,
-    title:
-      "Iterate on designs through agile processes, collaborating closely with clients to refine and enhance user experiences throughout the project lifecycle.",
-    description: "The Art of Design",
-    icon: React.createElement(IconFileBroken, {
-      className: "h-4 w-4 text-neutral-500",
-    }),
-    img: "/grid.svg",
+    title: "Tech enthusiast with a passion for development.",
+    description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
-    spareImg: "",
+    img: "/grid.svg",
+    spareImg: "/b4.svg",
   },
+
   {
     id: 5,
-    title:
-      "Data-driven insights and user testing, design decision is based on real feedback, improving overall usability.",
+    title: "Currently building a JS Animation library",
     description: "The Inside Scoop",
-    img: "/b5.svg",
-    icon: React.createElement(IconTableColumn, {
-      className: "h-4 w-4 text-neutral-500",
-    }),
+    className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
+    img: "/b5.svg",
     spareImg: "/grid.svg",
-    className: "md:col-span-3 md:row-span-2",
   },
   {
     id: 6,
-    title: "Let's collaborate!",
-    description:
-      "I'd love to help elevate your brand with a tailored design strategy.",
-    icon: React.createElement(IconArrowWaveRightUp, {
-      className: "h-4 w-4 text-neutral-500",
-    }),
+    title: "Do you want to start a project together?",
+    description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
@@ -92,6 +61,7 @@ export const gridItems = [
     spareImg: "",
   },
 ];
+
 export const navItems = [
   { name: "Home", link: "/home" },
   { name: "About", link: "/about" },
@@ -114,7 +84,7 @@ export const projects = [
     title: "TravelBuddy",
     name: "TravelBuddy",
     des: "Work professionally as a UX/UI designer with Front End skills. Translate user needs into a finished product or service. Use agile methods to participate in a project with a user-centered perspective and oversee web development and complete assigned projects within the professional role.",
-    img: "/p1.png",
+    img: "/ReseApp.png",
     iconLists: [
       "/figma.png",
       "/discord.png",
@@ -301,48 +271,96 @@ export const socialMedia = [
 ];
 
 export const project1Items = {
-  journeys: [
+  HeroImg: [
     {
-      title: "Travel Decisions",
-      description:
-        "Users finalize travel details, such as resort choice, dates, and transportation options. They can also select accommodation options, whether it's a hotel, Airbnb, or staying with someone local.",
-      className: "h-4 w-4 text-neutral-500",
-    }, 
-    {
-      title: "Personalized Recommendations",
-      description:
-        "Based on the traveler's profile, the app provides destination suggestions. Users can compare options, assess costs, and read reviews from other travelers to make informed decisions.",
-      className: "h-4 w-4 text-neutral-500",
+      id: 1,
+      name: "About TravelBuddy",
+      img: "/TB-Mobile/HeroImg1.png",
+      Link: "#about",
     },
     {
-      title: "Pre-Travel Preparation",
-      description:
-        "The app assists with all pre-trip arrangements, such as vaccinations, packing lists, transportation logistics, and currency exchange. It sends reminders for any unfinished tasks, ensuring travelers are fully prepared.",
-      className: "h-4 w-4 text-neutral-500",
+      id: 2,
+      name: "My Role",
+      img: "/TB-Mobile/HeroImg2.png",
+      Link: "#myrole",
     },
     {
-      title: "Journey to the Resort",
-      description:
-        "Notifications guide travelers to their departure points with geo-based recommendations. It suggests eateries and tax-free shops at airports or train stations, providing real-time updates to smooth the journey.",
-      className: "h-4 w-4 text-neutral-500",
+      id: 3,
+      name: "Problems & Solutions",
+      img: "/TB-Mobile/HeroImg3.png",
+      Link: "#problems",
     },
     {
-      title: "At the Destination",
-      description:
-        "Upon arrival, the app offers recommendations for the best restaurants, pubs, attractions, and activities. It helps with social sharing by crafting posts and images for travelers to share.",
-      className: "h-4 w-4 text-neutral-500",
+      id: 4,
+      name: "Persona",
+      img: "/TB-Mobile/HeroImg4.png",
+      Link: "#persona",
     },
     {
-      title: "Post-Trip Evaluation",
-      description:
-        "After the trip, users are prompted to provide feedback. This feedback loop not only helps other users but also improves the app's recommendations and services.",
-      className: "h-4 w-4 text-neutral-500",
+      id: 5,
+      name: "Key Features",
+      img: "/TB-Mobile/HeroImg5.png",
+      Link: "#keyfeatures",
     },
     {
-      title: "Traveler's Profile Creation",
-      description:
-        "The app builds a traveler profile based on psychographics, understanding what kind of vacation the user prefers, favorite destinations, and budget preferences. This allows the app to offer tailored travel suggestions.",
+      id: 6,
+      name: "User Flow",
+      img: "/TB-Mobile/HeroImg6.png",
+      Link: "#userflow",
+    },
+    {
+      id: 7,
+      name: "UI Design",
+      img: "/TB-Mobile/HeroImg7.png",
+      Link: "#uidesign",
+    },
+    {
+      id: 8,
+      name: "Visual Design",
+      img: "/TB-Mobile/HeroImg8.png",
+      Link: "#visualdesign",
+    },
+  ],
+
+  myroles: [
+    {
+      title: "Typography & Layout",
+      description: "Ensured clean, readable text and clear hierarchy.",
       className: "h-4 w-4 text-neutral-500",
+      icon: "/TB-Mobile/role-icons1.png",
+    },
+    {
+      title: "Spacing & Padding",
+      description:
+        "Made sure elements were well-spaced for a visually balanced design.",
+      className: "h-4 w-4 text-neutral-500",
+      icon: "/TB-Mobile/role-icons2.png",
+    },
+    {
+      title: "Component Structure",
+      description: "Helped define reusable UI components for consistency",
+      className: "h-4 w-4 text-neutral-500",
+      icon: "/TB-Mobile/role-icon3.png",
+    },
+    {
+      title: " Accessibility (WCAG)",
+      description: "Checked contrast ratios and color accessibility.",
+      className: "h-4 w-4 text-neutral-500",
+      icon: "/TB-Mobile/role-icons4.png",
+    },
+    {
+      title: "Flow Documentation",
+      description:
+        "when the application is continued, it can be easily carried out.",
+      className: "h-4 w-4 text-neutral-500",
+      icon: "/TB-Mobile/role-icons5.png",
+    },
+    {
+      title: "Research",
+      description:
+        "This process is made so that the requirements and problems obtained meet the target market.",
+      className: "h-4 w-4 text-neutral-500",
+      icon: "/TB-Mobile/role-icons6.png",
     },
   ],
 

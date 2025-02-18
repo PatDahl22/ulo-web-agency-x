@@ -8,15 +8,18 @@ const CardHoverEffect = () => {
     <h1 className="heading">
         My <span className="text-purple">projects</span>
       </h1>
-      <div className="max-w-5xl mx-auto px-8">
+      <div className="max-w-5xl mx-auto px-8 gap-6">
         <HoverEffect
             items={projects.map((item) => ({
                 title: item.title,
                 description: item.des,
                 imageUrl: item.img, // Corrected: use imageUrl for the image path
                 link: item.link,
-                projectId: item.id.toString(), // Convert projectId to string
-            }))} />
+                projectId: item.id.toString(),
+                iconLists: item.iconLists, // Assign iconLists correctly
+            }))}
+
+        />
         </div>
     </>
   );

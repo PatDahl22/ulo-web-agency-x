@@ -50,16 +50,15 @@ const Hero = () => {
             I&apos;m a UX/UI designer and Frontend Developer based in Stockholm SWEDEN.
           </p>
 
-          <a href="#about">
+          <a href="/contact">
             <MagicButton
-              title="Show my work"
+              title="Let's talk"
               icon={<FaLocationArrow />}
               position="right"
             />
           </a>
-
-            </div>
         </div>
+      </div>
     </div>
   );
 };

@@ -5,12 +5,12 @@ import { Button } from "./ui/MovingBorders";
 
 const Approach = () => {
   return (
-    <div className="py-20 w-full">
+    <div className="py-10 w-full mx-auto">
       <h1 className="heading">
         My <span className="text-purple"> Approachs</span>
       </h1>
 
-      <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
+      <div className="w-full mt-12 grid lg:grid-rows-4 grid-cols-1 gap-6">
         {Approachs.map((card) => (
           <Button
             key={card.id}
@@ -28,12 +28,12 @@ const Approach = () => {
             // remove bg-white dark:bg-slate-900
             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
           >
-            <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
-              <img
-                src={card.img}
-                alt={card.img}
-                className="lg:w-32 md:w-20 w-16"
-              />
+            <img
+              src={card.img}
+              alt={card.img}
+              className="lg:w-16 md:w-16 w-16 p-2"
+            />
+            <div className="flex lg:flex-row flex-col-reverse lg:items-center p-3 py-6 md:p-4 lg:p-6 gap-2">
               <div className="lg:ms-5">
                 <h1 className="text-start text-xl md:text-2xl font-bold">
                   {card.icon}
@@ -41,9 +41,7 @@ const Approach = () => {
                 <h3 className="text-start text-sm md:text-xl mt-3 font-semibold">
                   {card.title}
                 </h3>
-                <p className="text-start text-white-100 mt-3 ">
-                  {card.des}
-                </p>
+                <p className="text-start text-white-100 mt-3 ">{card.des}</p>
               </div>
             </div>
           </Button>

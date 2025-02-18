@@ -1,8 +1,8 @@
 "use client";
 
 import { cn } from "@/utils/cn";
-import { motion, stagger, useAnimate, useInView } from "framer-motion";
-import { useEffect } from "react";
+import { animate, motion, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export const TypewriterEffect = ({
   words,
@@ -24,24 +24,24 @@ export const TypewriterEffect = ({
     };
   });
 
-  const [scope, animate] = useAnimate();
-  const isInView = useInView(scope);
+  const containerRef = useRef(null);
+  const scope = useRef(null);
+  const isInView = useInView(containerRef);  
   useEffect(() => {
-    if (isInView) {
-      animate(
-        "span",
+ const timeoutId = setTimeout(() => {
+        animate(
+        ".my-text span",
         {
           display: "inline-block",
-          opacity: 1,
           width: "fit-content",
         },
         {
           duration: 0.3,
-          delay: stagger(0.1),
           ease: "easeInOut",
-        }
+        },
       );
-    }
+    }, 0);
+    return () => clearTimeout(timeoutId);
   }, [isInView]);
 
   const renderWords = () => {
@@ -90,7 +90,7 @@ export const TypewriterEffect = ({
           repeatType: "reverse",
         }}
         className={cn(
-          "inline-block rounded-sm w-[4px] h-4 md:h-6 lg:h-10 bg-blue-500",
+          "inline-block rounded-sm h-4 md:h-6 lg:h-10 bg-blue-500",
           cursorClassName
         )}
       ></motion.span>
@@ -140,7 +140,7 @@ export const TypewriterEffectSmooth = ({
   };
 
   return (
-    <div className={cn("flex space-x-1 my-6", className)}>
+    <div className={cn("flex space-x-1 my-2", className)}>
       <motion.div
         className="overflow-hidden pb-2"
         initial={{
