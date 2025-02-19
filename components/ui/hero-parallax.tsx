@@ -58,7 +58,7 @@ const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
  return (
    <div
      ref={ref}
-     className="h-[150rem] relative z-20 w-screen py-10 overflow-hidden antialiased flex flex-col self-auto [perspective:500px] [transform-style:preserve-3d]"
+     className="h-[150rem] relative w-screen z-20 py-10 overflow-hidden antialiased flex flex-col self-auto [perspective:500px] [transform-style:preserve-3d]"
    >
      <motion.div
        style={{

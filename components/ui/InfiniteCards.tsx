@@ -105,7 +105,7 @@ export const InfiniteMovingCards = ({
             key={idx}
           >
             <blockquote>
-              <p className="text-lg font-white text-[18px]">"</p>
+              <p className="text-lg font-white text-[20px]">"</p>
               <div
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"

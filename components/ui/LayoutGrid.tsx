@@ -1,12 +1,10 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, JSX, ReactNode } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { cn } from "@/utils/cn";
-import { Button } from "./MovingBorders";
-import { JSX } from "react/jsx-runtime";
 
 type Card = {
+  [x: string]: ReactNode;
   id: number;
   content: JSX.Element | React.ReactNode | string;
   className: string;
@@ -16,6 +14,8 @@ type Card = {
 export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   const [selected, setSelected] = useState<Card | null>(null);
   const [lastSelected, setLastSelected] = useState<Card | null>(null);
+  const [hoveredCard, setHoveredCard] = useState<Card | null>(null);
+
 
   const handleClick = (card: Card) => {
     setLastSelected(selected);
@@ -27,45 +27,49 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
     setSelected(null);
   };
 
+  const handleMouseEnter = (card: Card) => {
+    setHoveredCard(card); // Set hovered card ID
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredCard(null); // Clear hovered card ID
+  };
+
   return (
-    // change md:grid-cols-3 to md:grid-cols-4, gap-4 to gap-10
-    <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-4 max-w-7xl mx-auto gap-10 ">
+    <div className="w-full h-[40rem] py-4 grid grid-cols-1 md:grid-cols-4 max-w-7xl mx-auto gap-6 relative">
       {cards.map((card, i) => (
-        <Button
-          key={i}
-          borderRadius="1.75rem"
-          //   default is 2000
-          duration={10000}
-          //   add className={cn(card.className, "")}
-          className={cn(
-            card.className
-            // "bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
-          )}
-        >
-          <div
+        <div key={i} className={cn(card.className, "")}>
+          <motion.div
+            onClick={() => handleClick(card)}
+            onMouseEnter={() => handleMouseEnter(card)}
+            whileHover={{
+              y: -20,
+            }}
+            onMouseLeave={() => setHoveredCard(null)}
             className={cn(
               card.className,
-              "relative border-3 border-yellow-500"
+              "relative overflow-hidden",
+              selected?.id === card.id
+                ? "rounded-lg cursor-pointer absolute inset-0 h-2/3 md:h-full w-full md:w-1/2 m-auto z-10 flex justify-center items-center flex-wrap flex-col"
+                : lastSelected?.id === card.id
+                ? "z-10 rounded-xl h-full w-full "
+                : "rounded-xl h-full w-full"
             )}
+            layoutId={`card-${card.id}`}
           >
-            <motion.div
-              onClick={() => handleClick(card)}
-              className={cn(
-                card.className,
-                "relative overflow-hidden",
-                selected?.id === card.id
-                  ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
-                  : lastSelected?.id === card.id
-                  ? "z-40 bg-white rounded-xl h-full w-full"
-                  : "bg-white rounded-xl h-full w-full"
-              )}
-              layout
-            >
-              {selected?.id === card.id && <SelectedCard selected={selected} />}
-              <BlurImage card={card} />
-            </motion.div>
-          </div>
-        </Button>
+            {selected?.id === card.id && <SelectedCard selected={selected} />}
+            <ImageComponent card={card} />
+            {/* Overlay: Show on hover */}
+            {hoveredCard?.id === card.id && (
+              <div className="absolute inset-0 bg-black-200 opacity-80 flex justify-center items-center">
+                <span className="text-white font-bold text-4xl">
+                  {card.name}
+                </span>{" "}
+                {/* Card name on top of overlay */}
+              </div>
+            )}{" "}
+          </motion.div>
+        </div>
       ))}
       <motion.div
         onClick={handleOutsideClick}
@@ -79,18 +83,15 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   );
 };
 
-const BlurImage = ({ card }: { card: Card }) => {
-  const [loaded, setLoaded] = useState(false);
+const ImageComponent = ({ card }: { card: Card }) => {
   return (
-    <Image
+    <motion.img
+      layoutId={`image-${card.id}-image`}
       src={card.thumbnail}
-      //   change image scale 500 to 100
-      height="100"
-      width="100"
-      onLoad={() => setLoaded(true)}
+      height="600"
+      width="500"
       className={cn(
-        "object-cover object-top absolute inset-0 h-full w-full transition duration-200",
-        loaded ? "blur-none" : "blur-md"
+        "object-cover object-top absolute inset-0 h-full w-full transition duration-200"
       )}
       alt="thumbnail"
     />
@@ -99,7 +100,7 @@ const BlurImage = ({ card }: { card: Card }) => {
 
 const SelectedCard = ({ selected }: { selected: Card | null }) => {
   return (
-    <div className="bg-transparent h-full w-full flex flex-col justify-end rounded-lg shadow-2xl relative z-[60]">
+    <div className="bg-transparent h-full w-full flex flex-col justify-center rounded-lg shadow-2xl relative z-[60]">
       <motion.div
         initial={{
           opacity: 0,
@@ -107,9 +108,10 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
         animate={{
           opacity: 0.6,
         }}
-        className="absolute inset-0 h-full w-full bg-black opacity-60 z-10"
+        className="absolute inset-0 h-full w-full bg-black-100 opacity-80 z-10"
       />
       <motion.div
+        layoutId={`content-${selected?.id}`}
         initial={{
           opacity: 0,
           y: 100,
@@ -118,11 +120,15 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
           opacity: 1,
           y: 0,
         }}
+        exit={{
+          opacity: 0,
+          y: 100,
+        }}
         transition={{
           duration: 0.3,
           ease: "easeInOut",
         }}
-        className="relative px-8 pb-4 z-[70]"
+        className="relative px-8 py-2 z-[70]"
       >
         {selected?.content}
       </motion.div>
