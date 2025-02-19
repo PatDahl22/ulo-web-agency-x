@@ -11,6 +11,7 @@ import { TypewriterEffectSmooth as TypewriterEffect } from "@/components/ui/type
 import Clients from "@/components/Clients";
 import { RoleFeaturesSection } from "@/components/ui/RoleFeaturesSection";
 import { LayoutGrid } from "@/components/ui/LayoutGrid";
+import { Personas } from "@/components/Personas";
 
 const Page = () => {
   const [showSecondEffect, setShowSecondEffect] = useState(false);
@@ -54,14 +55,12 @@ const Page = () => {
     },
   ];
 
-
   useEffect(() => {
     // Assuming each word takes 1 second to type, adjust the timeout accordingly
     const timeout = words1.length * 1000;
     const timer = setTimeout(() => setShowSecondEffect(true), timeout);
     return () => clearTimeout(timer);
   }, []);
-
   
   // Prepare the data for the HeroParallax component
   const heroItems = project1Items.HeroImg.map((item) => ({
@@ -286,10 +285,13 @@ const cards = [
           </section>
 
           {/* Persona section */}
-          <section id="pesona" className="my-40 mx-10">
-
-
-
+          <section id="pesonas" className="my-40 mx-10">
+            <ul className="grid grid-cols-1 md:grid-cols-12 gap-4">
+              {" "}
+              {project1Items.Personas1.map((persona, index) => (
+                <Personas key={index} {...persona} />
+              ))}
+            </ul>{" "}
           </section>
 
           <Clients />
