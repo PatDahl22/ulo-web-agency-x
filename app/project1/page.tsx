@@ -12,7 +12,6 @@ import Clients from "@/components/Clients";
 import { RoleFeaturesSection } from "@/components/ui/RoleFeaturesSection";
 import { LayoutGrid } from "@/components/ui/LayoutGrid";
 
-
 const Page = () => {
   const [showSecondEffect, setShowSecondEffect] = useState(false);
 
@@ -56,15 +55,14 @@ const Page = () => {
   ];
 
 
-    useEffect(() => {
-      // Assuming each word takes 1 second to type, adjust the timeout accordingly
-      const timeout = words1.length * 1000;
-      const timer = setTimeout(() => setShowSecondEffect(true), timeout);
-      return () => clearTimeout(timer);
-    }, []);
-  
-  
+  useEffect(() => {
+    // Assuming each word takes 1 second to type, adjust the timeout accordingly
+    const timeout = words1.length * 1000;
+    const timer = setTimeout(() => setShowSecondEffect(true), timeout);
+    return () => clearTimeout(timer);
+  }, []);
 
+  
   // Prepare the data for the HeroParallax component
   const heroItems = project1Items.HeroImg.map((item) => ({
     title: item.name,
@@ -215,6 +213,7 @@ const cards = [
             </div>
           </div>
 
+          {/* HeroParallax */}
           <div className="h-[100rem] absolute w-screen inset-0">
             <HeroParallax products={heroItems} />
           </div>
@@ -291,7 +290,6 @@ const cards = [
 
 
 
-            
           </section>
 
           <Clients />

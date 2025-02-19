@@ -366,6 +366,43 @@ export const project1Items = {
 
   Personas: [
     {
+      persona1: [
+        {
+          area: "md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]",
+          icon: "/TB-Mobile/role-icons6.png",
+          title: "Name: Eva - Adventurous Traveler",
+          description:
+            "Eva enjoys outdoor activities like hiking, camping, and diving. She values freedom, adventure, and self-challenge.",
+        },
+        {
+          area: "md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]",
+          icon: "/TB-Mobile/role-icons6.png",
+          title: "Goals",
+          description:
+            "Eva wants personalized adventure recommendations and real-time information about terrain and weather conditions at her travel destinations. She struggles with finding reliable, up-to-date travel information tailored to her specific interests.",
+        },
+        {
+          area: "md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]",
+          icon: "/TB-Mobile/role-icons6.png",
+          title: "Think & Feel",
+          description:
+            "Eva seeks freedom and adventure but gets frustrated by lack of relevant information.",
+        },
+        {
+          area: "md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]",
+          icon: "/TB-Mobile/role-icons6.png",
+          title: "See",
+          description:
+            "Eva is constantly looking for travel apps that provide detailed information and real-time updates.",
+        },
+        {
+          area: "md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]",
+          icon: "/TB-Mobile/role-icons6.png",
+          title: "Hear",
+          description:
+            "She hears tips from other travelers and online reviews.",
+        },
+      ],
       title: "Eva - Adventurous Traveler",
       overview:
         "Loves exploring new places and enjoys outdoor activities such as hiking, diving, and camping.",
