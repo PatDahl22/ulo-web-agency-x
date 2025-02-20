@@ -13,7 +13,7 @@ export const HoverEffect = ({
     title: string;
     description: string;
     link: string;
-    imageId?: string; // Added an optional ID for the image (you can use it as a key to fetch images)
+    imageId?: string; 
     imageUrl?: string; // Optional image URL
     projectId?: string; // Optional project ID
   }[];
@@ -105,7 +105,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black-200 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full py-8 overflow-hidden bg-black-200 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >

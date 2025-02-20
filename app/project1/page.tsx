@@ -11,7 +11,7 @@ import { TypewriterEffectSmooth as TypewriterEffect } from "@/components/ui/type
 import Clients from "@/components/Clients";
 import { RoleFeaturesSection } from "@/components/ui/RoleFeaturesSection";
 import { LayoutGrid } from "@/components/ui/LayoutGrid";
-import { Personas } from "@/components/Personas";
+import Personas from "@/components/Personas";
 
 const Page = () => {
   const [showSecondEffect, setShowSecondEffect] = useState(false);
@@ -288,7 +288,7 @@ const cards = [
           <section id="pesonas" className="my-40 mx-10">
             <ul className="grid grid-cols-1 md:grid-cols-12 gap-4">
               {" "}
-              {project1Items.Personas1.map((persona, index) => (
+              {project1Items.Personas.map((persona, index) => (
                 <Personas key={index} {...persona} />
               ))}
             </ul>{" "}

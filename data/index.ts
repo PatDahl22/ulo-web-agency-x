@@ -364,7 +364,7 @@ export const project1Items = {
     },
   ],
 
-  Personas1: [
+  Personas: [
     {
       area: "md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]",
       icon: "/TB-Mobile/role-icons6.png",
@@ -405,49 +405,6 @@ export const project1Items = {
       title: "Say & Do",
       description:
         "'I want recommendations for new adventures' —Eva plans and books activities based on her interests.",
-    },
-  ],
-  Personas2: [
-    {
-      area: "md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]",
-      icon: "/TB-Mobile/role-icons6.png",
-      title: "Name: David - Business Traveler",
-      description:
-        "I travel frequently for work and need to book flights, hotels, and transportation at the last minute. I use apps and online booking services to make my reservations and keep track of my travel plans.",
-    },
-    {
-      area: "md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]",
-      icon: "/TB-Mobile/role-icons6.png",
-      title: "Goals",
-      description:
-        "For me, it would be very useful if the AI assistant could act as a personal travel assistant that could handle the entire booking process for me, including comparing prices, booking flights and hotels, and keeping track of my travel plans. I would also like the assistant to be able to give me real-time updates on flight status and traffic conditions to help me plan my business trips smoothly and efficiently.",
-    },
-    {
-      area: "md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]",
-      icon: "/TB-Mobile/role-icons6.png",
-      title: "Think & Feel",
-      description:
-        "Values efficiency and ease in booking travel. Frustrated by last-minute bookings and lack of real-time updates.",
-    },
-    {
-      area: "md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]",
-      icon: "/TB-Mobile/role-icons6.png",
-      title: "See",
-      description:
-        "Sees airports, hotels, and booking platforms on his devices.",
-    },
-    {
-      area: "md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]",
-      icon: "/TB-Mobile/role-icons6.png",
-      title: "Hear",
-      description: "Hears tips from colleagues on efficient travel planning.",
-    },
-    {
-      area: "md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]",
-      icon: "/TB-Mobile/role-icons6.png",
-      title: "Say & Do",
-      description:
-        "'I need an app to handle my bookings.' Does, books last-minute travel and manages itineraries using apps.",
     },
   ],
 
