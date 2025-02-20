@@ -364,47 +364,93 @@ export const project1Items = {
     },
   ],
 
-  Personas: [
+  Personas1: [
     {
-      area: "md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]",
+      id: 1,
+      area: "sm:col-span-2 md:col-span-4 md:row-span-1 xl:col-span-4 xl:row-span-2",
       icon: "/TB-Mobile/role-icons6.png",
       title: "Name: Eva - Adventurous Traveler",
       description:
         "Eva enjoys outdoor activities like hiking, camping, and diving. She values freedom, adventure, and self-challenge.",
     },
     {
-      area: "md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]",
-      icon: "/TB-Mobile/role-icons6.png",
+      id: 2,
+      area: "sm:col-span-2 md:col-span-4 md:row-span-1 xl:col-span-4 xl:row-span-2",
       title: "Goals",
       description:
         "Eva wants personalized adventure recommendations and real-time information about terrain and weather conditions at her travel destinations. She struggles with finding reliable, up-to-date travel information tailored to her specific interests.",
     },
     {
-      area: "md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]",
-      icon: "/TB-Mobile/role-icons6.png",
+      id: 3,
+      area: "sm:col-span-1 md:col-span-2 xl:col-span-2 xl:row-span-1",
       title: "Think & Feel",
       description:
         "Eva seeks freedom and adventure but gets frustrated by lack of relevant information.",
     },
     {
-      area: "md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]",
-      icon: "/TB-Mobile/role-icons6.png",
+      id: 4,
+      area: "sm:col-span-1 md:col-span-2 xl:col-span-2 xl:row-span-1",
       title: "See",
       description:
         "Eva is constantly looking for travel apps that provide detailed information and real-time updates.",
     },
     {
-      area: "md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]",
-      icon: "/TB-Mobile/role-icons6.png",
+      id: 5,
+      area: "sm:col-span-1 md:col-span-2 xl:col-span-2 xl:row-span-1",
       title: "Hear",
       description: "She hears tips from other travelers and online reviews.",
     },
     {
-      area: "md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]",
-      icon: "/TB-Mobile/role-icons6.png",
+      id: 6,
+      area: "sm:col-span-1 md:col-span-2 xl:col-span-2 xl:row-span-1",
       title: "Say & Do",
       description:
-        "'I want recommendations for new adventures' —Eva plans and books activities based on her interests.",
+        "'I want recommendations for new adventures' — Eva plans and books activities based on her interests.",
+    },
+  ],
+
+  Personas2: [
+    {
+      id: 1,
+      area: "sm:col-span-2 md:col-span-4 md:row-span-1 xl:col-span-4 xl:row-span-2",
+      icon: "/TB-Mobile/role-icons6.png",
+      title: "Name: David - Business Traveler",
+      description:
+        "I travel frequently for work and need to book flights, hotels, and transportation at the last minute. I use apps and online booking services to make my reservations and keep track of my travel plans.",
+    },
+    {
+      id: 2,
+      area: "sm:col-span-2 md:col-span-4 md:row-span-1 xl:col-span-4 xl:row-span-2",
+      title: "Goals",
+      description:
+        "For me, it would be very useful if the AI assistant could act as a personal travel assistant that could handle the entire booking process for me, including comparing prices, booking flights and hotels, and keeping track of my travel plans. I would also like the assistant to be able to give me real-time updates on flight status and traffic conditions to help me plan my business trips smoothly and efficiently.",
+    },
+    {
+      id: 3,
+      area: "sm:col-span-1 md:col-span-2 xl:col-span-2 xl:row-span-1",
+      title: "Think & Feel",
+      description:
+        "Values efficiency and ease in booking travel. Frustrated by last-minute bookings and lack of real-time updates.",
+    },
+    {
+      id: 4,
+      area: "sm:col-span-1 md:col-span-2 xl:col-span-2 xl:row-span-1",
+      title: "See",
+      description:
+        "Sees airports, hotels, and booking platforms on his devices.",
+    },
+    {
+      id: 5,
+      area: "sm:col-span-1 md:col-span-2 xl:col-span-2 xl:row-span-1",
+      title: "Hear",
+      description: "Hears tips from colleagues on efficient travel planning.",
+    },
+    {
+      id: 6,
+      area: "sm:col-span-1 md:col-span-2 xl:col-span-2 xl:row-span-1",
+      title: "Say & Do",
+      description:
+        "'I need an app to handle my bookings.' Does, books last-minute travel and manages itineraries using apps.",
     },
   ],
 

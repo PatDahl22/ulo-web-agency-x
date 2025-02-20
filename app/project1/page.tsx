@@ -5,27 +5,16 @@ import Footer from "@/components/Footer";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { StarsBackground } from "@/components/ui/stars-background";
 import { ShootingStars } from "@/components/ui/shooting-stars";
-import { HeroParallax } from "@/components/ui/hero-parallax";
 import { useEffect, useState } from "react";
 import { TypewriterEffectSmooth as TypewriterEffect } from "@/components/ui/typewriter-effect";
 import Clients from "@/components/Clients";
 import { RoleFeaturesSection } from "@/components/ui/RoleFeaturesSection";
 import { LayoutGrid } from "@/components/ui/LayoutGrid";
-import Personas from "@/components/Personas";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 const Page = () => {
   const [showSecondEffect, setShowSecondEffect] = useState(false);
 
-  const words2 = [
-    {
-      text: "UX/UI ",
-      className: "text-lg ",
-    },
-    {
-      text: " Design",
-      className: "text-lg ",
-    },
-  ];
   const words1 = [
     {
       text: " Travel",
@@ -184,6 +173,62 @@ const cards = [
   },
 ];
 
+interface PersonasProps {
+  id: number;
+  area: string;
+  icon?: React.ReactNode;
+  title: string;
+  description: React.ReactNode;
+}
+
+const PersonaCard = ({ id, area, icon, title, description }: PersonasProps) => {
+  return (
+    <div
+      id={id.toString()} // Apply the unique ID to each grid item
+      className={`min-h-[10rem] list-none ${area}`}
+    >
+      {/* Container with border and padding */}
+      <div className="relative h-full w-full items-center justify-between">
+        {/* Glowing effect component */}
+        <GlowingEffect
+          blur={0}
+          borderWidth={3}
+          spread={80}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+        />
+        {/* Content container with inner styling */}
+        <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-0.75 p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D] md:p-6">
+          {/* Icon and text */}
+          <div className="relative flex flex-1 flex-col justify-between gap-3">
+            {/* Icon container */}
+            <div className="w-fit rounded-lg border border-gray-600 p-2">
+              {icon}
+            </div>
+            {/* Title and Description */}
+            <div className="space-y-3">
+              {/* Title */}
+              <h3 className="pt-0.5 text-xl/[1.375rem] font-semibold font-sans -tracking-4 md:text-2xl/[1.875rem] text-balance text-black dark:text-white">
+                {title}
+              </h3>
+              {/* Description */}
+              <h2
+                className="[&_b]:md:font-semibold [&_strong]:md:font-semibold font-sans text-sm/[1.125rem] 
+                  md:text-base/[1.375rem] text-black dark:text-neutral-400"
+              >
+                {description}
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden w-full h-full">
       <div className="max-w-7xl w-full">
@@ -192,29 +237,28 @@ const cards = [
           <StarsBackground className="absolute inset-0 z-100" />
           <ShootingStars />
           {/* BackgroundLines fills the container */}
-          <div className="max-w-7xl relative mx-auto py-10 md:py-20 px-4 w-full left-0 top-0 h-[100vh]">
-            <div className="relative z-20 my-10 flex flex-row items-center justify-between gap-8">
-              <div className="flex flex-col justify-center h-[20rem] w-full px-20">
-                <TypewriterEffect words={words2} />
+          <div className="relative mx-auto py-10 md:py-10 xs:pt-20 px-4 w-full top-0 h-[50vh] flex justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 px-4 w-full max-w-7xl mx-auto">
+              <div className="flex flex-col justify-center w-full sm:w-1/2 px-4 sm:px-8">
+                <h4 className="text-xl sm:text-2xl lg:text-3xl">
+                  UX/UI Designer
+                </h4>
 
-                <div className="flex flex-col justify-center h-[20rem] w-full">
+                <div className="flex flex-col justify-center w-full mt-4">
+                  {" "}
                   <TypewriterEffect words={words1} />
                   {showSecondEffect && <TypewriterEffect words={words3} />}
                 </div>
               </div>
-              <div className="item-end">
+              <div className="flex justify-center items-center sm:w-1/2 mt-6 sm:mt-0">
+                {" "}
                 <img
                   src="/TB-Mobile/TB-mockup32.png"
                   alt="travelbuddy mockup"
-                  className=" h-full w-full"
+                  className="w-full sm:w-auto sm:h-auto max-w-[300px] mx-auto"
                 />
               </div>
             </div>
-          </div>
-
-          {/* HeroParallax */}
-          <div className="h-[100rem] absolute w-screen inset-0">
-            <HeroParallax products={heroItems} />
           </div>
 
           {/* About section */}
@@ -226,12 +270,11 @@ const cards = [
               Create an intuitive travel assistant app that provides
               personalized recommendations based on user preferences.
             </p>
-            <div className="relative mt-6 flex flex-row items-center justify-between gap-8">
-              <div className="w-1/2">
+            <div className="flex flex-col sm:flex-row gap-4 px-4 w-full max-w-7xl mx-auto">
+              <div className="flex flex-col justify-center w-full px-4 sm:w-1/2 sm:px-4">
                 <h4 className="relative text-white-200 my-2 flex flex-row text-xl font-semiblod">
                   GET START
                 </h4>
-
                 <h2 className="relative my-4 flex flex-row text-3xl font-bold">
                   Project's Overview
                 </h2>
@@ -247,11 +290,11 @@ const cards = [
                   spacing, UI components, and ensuring accessibility compliance.
                 </p>
               </div>
-              <div className="items-end w-1/2">
+              <div className="flex justify-center items-center sm:w-1/2 mt-6 sm:mt-0">
                 <img
                   src="/TB-Mobile/TB-mockup31.png"
                   alt="travelbuddy mockup"
-                  className=" h-full w-full"
+                  className="w-full sm:w-auto sm:h-auto max-w-[300px] mx-auto"
                 />
               </div>
             </div>
@@ -285,13 +328,41 @@ const cards = [
           </section>
 
           {/* Persona section */}
-          <section id="pesonas" className="my-40 mx-10">
-            <ul className="grid grid-cols-1 md:grid-cols-12 gap-4">
-              {" "}
-              {project1Items.Personas.map((persona, index) => (
-                <Personas key={index} {...persona} />
-              ))}
-            </ul>{" "}
+          <section id="pesonas" className="my-20 mx-10">
+            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center">
+              Persona
+            </h1>
+            <p className="relative  text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
+              We conducted user interviews to gather insights into travel
+              behaviors, challenges, and requirements. This allowed us to
+              develop accurate personas and tailor the app to specific user
+              needs, improving both usability and relevance.
+            </p>
+            <div className="relative m-10">
+              <p className="relative flex flex-row text-2xl font-bold text-start ">
+                Persona 1
+              </p>
+              <div className="relative my-4 grid grid-rows-none grid-row-2 gap-4 sm:grid-cols-2 sm:grid-row-3 md:grid-cols-8 md:grid-rows-2 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
+                {" "}
+                {/* This is the important part! */}
+                {project1Items.Personas1.map((persona, index) => (
+                  <PersonaCard key={index} {...persona} />
+                ))}
+              </div>
+            </div>
+                        <div className="relative m-10">
+              <p className="relative flex flex-row text-2xl font-bold text-start ">
+                Persona 2
+              </p>
+              <div className="relative my-4 grid grid-rows-none grid-row-2 ga-p-4 sm:grid-cols-2 sm:grid-row-3 md:grid-cols-8 md:grid-rows-2 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
+                {" "}
+                {/* This is the important part! */}
+                {project1Items.Personas2.map((persona, index) => (
+                  <PersonaCard key={index} {...persona} />
+                ))}
+              </div>
+            </div>
+
           </section>
 
           <Clients />
