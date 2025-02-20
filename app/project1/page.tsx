@@ -237,8 +237,8 @@ const PersonaCard = ({ id, area, icon, title, description }: PersonasProps) => {
           <StarsBackground className="absolute inset-0 z-100" />
           <ShootingStars />
           {/* BackgroundLines fills the container */}
-          <div className="relative mx-auto py-10 md:py-10 xs:pt-20 px-4 w-full top-0 h-[50vh] flex justify-center items-center">
-            <div className="flex flex-col sm:flex-row gap-4 px-4 w-full max-w-7xl mx-auto">
+          <div className="relative mx-10 xs:pt-20 px-4 w-full top-0 h-[50vh] flex justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 px-4 w-full max-w-7xl mx-auto items-center justify-between">
               <div className="flex flex-col justify-center w-full sm:w-1/2 px-4 sm:px-8">
                 <h4 className="text-xl sm:text-2xl lg:text-3xl">
                   UX/UI Designer
@@ -255,14 +255,14 @@ const PersonaCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 <img
                   src="/TB-Mobile/TB-mockup32.png"
                   alt="travelbuddy mockup"
-                  className="w-full sm:w-auto sm:h-auto max-w-[300px] mx-auto"
+                  className="w-full items-center sm:w-auto sm:h-auto max-w-[300px] mx-auto"
                 />
               </div>
             </div>
           </div>
 
           {/* About section */}
-          <section id="about" className="my-40 mx-10">
+          <section id="about" className="my-40 mx-20">
             <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center">
               About The Project
             </h1>
@@ -317,8 +317,8 @@ const PersonaCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Problems & Solutions */}
-          <section id="problems" className="m-20">
-            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center">
+          <section id="problems" className="my-40 mx-20">
+            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center w-full ">
               Problems VS Solutions
             </h1>
 
@@ -328,7 +328,7 @@ const PersonaCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Persona section */}
-          <section id="pesonas" className="my-20 mx-10">
+          <section id="pesonas" className="my-20 mx-20">
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center">
               Persona
             </h1>
