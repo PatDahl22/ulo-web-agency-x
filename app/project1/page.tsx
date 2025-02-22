@@ -7,13 +7,12 @@ import { StarsBackground } from "@/components/ui/stars-background";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { useEffect, useState } from "react";
 import { TypewriterEffectSmooth as TypewriterEffect } from "@/components/ui/typewriter-effect";
-import Clients from "@/components/Clients";
 import { RoleFeaturesSection } from "@/components/ui/RoleFeaturesSection";
 import { LayoutGrid } from "@/components/ui/LayoutGrid";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 const Page = () => {
-  const [showSecondEffect, setShowSecondEffect] = useState(false);
+  const [showSecondEffect, setShowSecondEffect] = useState(false); 
 
   const words1 = [
     {
@@ -176,55 +175,44 @@ const cards = [
 interface PersonasProps {
   id: number;
   area: string;
-  icon?: React.ReactNode;
+  icon?: string;
   title: string;
   description: React.ReactNode;
 }
 
-const PersonaCard = ({ id, area, icon, title, description }: PersonasProps) => {
+const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
   return (
-    <div
+    <li
       id={id.toString()} // Apply the unique ID to each grid item
       className={`min-h-[10rem] list-none ${area}`}
     >
       {/* Container with border and padding */}
-      <div className="relative h-full w-full items-center justify-between">
-        {/* Glowing effect component */}
-        <GlowingEffect
-          blur={0}
-          borderWidth={3}
-          spread={80}
-          glow={true}
-          disabled={false}
-          proximity={64}
-          inactiveZone={0.01}
-        />
         {/* Content container with inner styling */}
-        <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-0.75 p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D] md:p-6">
+        <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-0.75 p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D] ">
           {/* Icon and text */}
           <div className="relative flex flex-1 flex-col justify-between gap-3">
             {/* Icon container */}
             <div className="w-fit rounded-lg border border-gray-600 p-2">
-              {icon}
+              {icon && (
+                <img src={icon} alt={title} className="mb-4 w-16 h-16" />
+              )}
             </div>
             {/* Title and Description */}
-            <div className="space-y-3">
+            <div className="space-y-3 text-start">
               {/* Title */}
-              <h3 className="pt-0.5 text-xl/[1.375rem] font-semibold font-sans -tracking-4 md:text-2xl/[1.875rem] text-balance text-black dark:text-white">
+              <h3 className="pt-0.5 text-xl/[1.375rem] font-semibold font-sans md:text-2xl/[1.875rem] text-balance text-black dark:text-white">
                 {title}
               </h3>
               {/* Description */}
               <h2
-                className="[&_b]:md:font-semibold [&_strong]:md:font-semibold font-sans text-sm/[1.125rem] 
-                  md:text-base/[1.375rem] text-black dark:text-neutral-400"
-              >
+                className="font-medium font-sans text-sm/[1.125rem]
+                  md:text-base/[1.375rem] text-black dark:text-neutral-400" >
                 {description}
               </h2>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </li>
   );
 }
 
@@ -317,7 +305,10 @@ const PersonaCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Problems & Solutions */}
-          <section id="problems" className="my-40 mx-20">
+          <section
+            id="problems"
+            className="my-40 mx-20 items-center justify-center"
+          >
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center w-full ">
               Problems VS Solutions
             </h1>
@@ -328,7 +319,10 @@ const PersonaCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Persona section */}
-          <section id="pesonas" className="my-20 mx-20">
+          <section
+            id="pesonas"
+            className="my-40 mx-20 items-center justify-center"
+          >
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center">
               Persona
             </h1>
@@ -338,34 +332,287 @@ const PersonaCard = ({ id, area, icon, title, description }: PersonasProps) => {
               develop accurate personas and tailor the app to specific user
               needs, improving both usability and relevance.
             </p>
-            <div className="relative m-10">
-              <p className="relative flex flex-row text-2xl font-bold text-start ">
-                Persona 1
-              </p>
-              <div className="relative my-4 grid grid-rows-none grid-row-2 gap-4 sm:grid-cols-2 sm:grid-row-3 md:grid-cols-8 md:grid-rows-2 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
-                {" "}
-                {/* This is the important part! */}
-                {project1Items.Personas1.map((persona, index) => (
-                  <PersonaCard key={index} {...persona} />
-                ))}
+            <div className="relative h-full w-full p-2 m-4 rounded-xl border-0.75">
+              {/* Glowing effect component */}
+              <GlowingEffect
+                blur={0}
+                borderWidth={3}
+                spread={80}
+                glow={true}
+                disabled={false}
+                proximity={64}
+                inactiveZone={0.01}
+              />
+              <div className="relative m-10">
+                <p className="relative flex flex-row py-2 text-2xl font-bold text-start ">
+                  Persona 1
+                </p>
+                <ul className="grid md:grid-cols-4 grid-rows-none sm:grid-cols-2 xs:grid-cols-2 gap-4 ">
+                  {" "}
+                  {/* This is the important part! */}
+                  {project1Items.Personas1.map((persona, index) => (
+                    <TextCard key={index} {...persona} />
+                  ))}
+                </ul>
               </div>
             </div>
-                        <div className="relative m-10">
-              <p className="relative flex flex-row text-2xl font-bold text-start ">
-                Persona 2
-              </p>
-              <div className="relative my-4 grid grid-rows-none grid-row-2 ga-p-4 sm:grid-cols-2 sm:grid-row-3 md:grid-cols-8 md:grid-rows-2 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
-                {" "}
-                {/* This is the important part! */}
-                {project1Items.Personas2.map((persona, index) => (
-                  <PersonaCard key={index} {...persona} />
-                ))}
+            <div className="relative h-full w-full p-2 m-4 items-center justify-center rounded-xl border-0.75">
+              {/* Glowing effect component */}
+              <GlowingEffect
+                blur={0}
+                borderWidth={3}
+                spread={80}
+                glow={true}
+                disabled={false}
+                proximity={64}
+                inactiveZone={0.01}
+              />
+              <div className="relative m-10">
+                <p className="relative flex flex-row py-2 text-2xl font-bold text-start ">
+                  Persona 2
+                </p>
+                <ul className="grid md:grid-cols-4 grid-rows-none sm:grid-cols-2 xs:grid-cols-2 gap-4 ">
+                  {" "}
+                  {/* This is the important part! */}
+                  {project1Items.Personas2.map((persona, index) => (
+                    <TextCard key={index} {...persona} />
+                  ))}
+                </ul>
               </div>
             </div>
-
           </section>
 
-          <Clients />
+          {/* Competitive Analysis */}
+          <section
+            id="competitive"
+            className="my-40 mx-20 items-center justify-center"
+          >
+            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center">
+              Competitive Analysis
+            </h1>
+            <p className="relative  text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
+              TravelBuddy differentiates itself from competitors such as Google
+              Travel, TripIt, and Kayak by focusing on:
+            </p>
+            <div className="relative m-10">
+              <ul className="grid md:grid-cols-4 grid-rows-none sm:grid-cols-1 xs:grid-cols-2 gap-8 ">
+                {" "}
+                {/* This is the important part! */}
+                {project1Items.CompetitiveAnalysis.map(
+                  (CompetitiveAnalysis, index) => (
+                    <TextCard id={0} key={index} {...CompetitiveAnalysis} />
+                  )
+                )}
+              </ul>
+            </div>
+          </section>
+
+          {/* Competitive Analysis */}
+          <section
+            id="competitive"
+            className="my-40 mx-20 items-center justify-center"
+          >
+            <h1 className="relative text-black dark:text-white flex flex-row text-4xl font-bold items-center justify-center">
+              Competitive Analysis
+            </h1>
+            <p className="relative text-black dark:text-white-200 mt-6 py-4 px-8 flex text-center items-center justify-center">
+              TravelBuddy differentiates itself from competitors such as Google
+              Travel, TripIt, and Kayak by focusing on:
+            </p>
+            <div className="relative m-10">
+              <ul className="grid md:grid-cols-4 grid-rows-none sm:grid-cols-1 xs:grid-cols-2 gap-8 ">
+                {" "}
+                {/* This is the important part! */}
+                {project1Items.CompetitiveAnalysis.map(
+                  (CompetitiveAnalysis, index) => (
+                    <TextCard id={0} key={index} {...CompetitiveAnalysis} />
+                  )
+                )}
+              </ul>
+            </div>
+          </section>
+
+          {/* Design & Key Features */}
+          <section
+            id="competitive"
+            className="my-40 mx-20 items-center justify-center"
+          >
+            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
+              Design & Key Features
+            </h1>
+            <h3 className="relative text-black dark:text-white mt-6 py-4 px-8 flex font-semibold txt-3xl text-center items-center justify-center">
+              Features I Helped Shape
+            </h3>
+            <div className="relative m-10">
+              <ul className="grid md:grid-cols-6 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 ">
+                {" "}
+                {/* This is the important part! */}
+                {project1Items.DesignKeyFeatures.map(
+                  (DesignKeyFeatures, index) => (
+                    <TextCard id={0} key={index} {...DesignKeyFeatures} />
+                  )
+                )}
+              </ul>
+            </div>
+          </section>
+
+          {/* Use Flow */}
+          <section id="userflow" className="my-40 mx-20">
+            <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center">
+              User Flow
+            </h1>
+            <p className="relative text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
+              We kept the user flow simple and intuitive.
+            </p>
+            <div className="relative py-10 mx-10 items-center justify-center md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-1 gap-6 grid">
+              {project1Items.userflows.map((userflow, index) => (
+                <RoleFeaturesSection
+                  key={userflow.title}
+                  {...userflow}
+                  index={index}
+                />
+              ))}
+            </div>
+          </section>
+
+          {/* UI Design*/}
+          <section
+            id="uiDesign"
+            className="my-40 mx-20 items-center justify-center"
+          >
+            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
+              UI Design
+            </h1>
+            <h2 className="relative font-semibold txt-4xl text-black dark:text-white mt-6 py-4 px-8 flex  text-center items-center justify-center">
+              Our system ensures a harmonious, accessible, and responsive design
+              framework that is user-friendly and adaptable to varying contexts.
+            </h2>{" "}
+            <p className="relative text-black dark:text-white-200 mt-6 py-4 px-8 flex text-start items-center justify-center">
+              User-friendly, with simple button presses based on real user
+              feedback for enhanced usability. Clear color contrasts,
+              easy-to-read text, and a mobile-friendly interface with
+              touch-friendly buttons and links. Customizable light and dark
+              modes for a comfortable experience in any setting.
+            </p>{" "}
+            <div className="relative m-10"></div>
+          </section>
+
+          {/* Key Features */}
+          <section
+            id="keyFeatures"
+            className="my-40 mx-20 items-center justify-center"
+          >
+            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
+              Key Features
+            </h1>
+            <div className="relative m-10">
+              <ul className="grid md:grid-cols-6 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 ">
+                {" "}
+                {/* This is the important part! */}
+                {project1Items.KeyFeatures.map((KeyFeatures, index) => (
+                  <TextCard id={0} key={index} {...KeyFeatures} />
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          {/* Visual Design */}
+          <section
+            id="VisualDesign"
+            className="my-40 mx-20 items-center justify-center"
+          >
+            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
+              Visual Design
+            </h1>
+            <p className="relative text-black dark:text-white-200 mt-6 py-4 px-8 flex text-start items-center justify-center">
+              The app's functionality focuses on user personalization, helping
+              users find travel-related services (like accommodation, dining,
+              and activities) based on their personal preferences and location.
+              The search options are highly customizable, and the profile
+              creation ensures the app can provide more relevant and tailored
+              suggestions.
+            </p>{" "}
+            <div className="relative m-10"></div>
+          </section>
+
+          {/* Testing & Results */}
+          <section
+            id="Testing&Results"
+            className="my-40 mx-20 items-center justify-center"
+          >
+            <h1 className="relative my-10 flex flex-row text-4xl font-bold items-center justify-center">
+              Testing & Results
+            </h1>
+            <div className="grid md:grid-cols-3 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 items-center justify-center mx-10">
+              {project1Items.testingandresults.map(
+                (testingandresult: any, index: number) => (
+                  <RoleFeaturesSection
+                    key={testingandresult.title}
+                    {...testingandresult}
+                    index={index}
+                  />
+                )
+              )}
+            </div>
+          </section>
+
+          {/* Future Improvements */}
+          <section
+            id="FutureImprovements"
+            className="my-40 mx-20 items-center justify-center"
+          >
+            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
+              Future Improvements
+            </h1>
+            <div className="relative m-10">
+              <ul className="grid md:grid-cols-6 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 ">
+                {" "}
+                {/* This is the important part! */}
+                {project1Items.FutureImprovements.map(
+                  (FutureImprovements, index) => (
+                    <TextCard id={0} key={index} {...FutureImprovements} />
+                  )
+                )}
+              </ul>
+            </div>
+          </section>
+
+          {/* Reflection & Challenges*/}
+          <section
+            id="Reflection&Challenges"
+            className="my-40 mx-20 items-center justify-center"
+          >
+            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
+              Reflection & Challenges
+            </h1>
+            <div className="relative m-10">
+              <ul className="grid md:grid-cols-6 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 ">
+                {" "}
+                {/* This is the important part! */}
+                {project1Items.ReflectionAndChallenges.map(
+                  (ReflectionAndChallenges, index) => (
+                    <TextCard id={0} key={index} {...ReflectionAndChallenges} />
+                  )
+                )}
+              </ul>
+            </div>
+          </section>
+
+          {/* Conclusions*/}
+          <section id="Conclusions" className="my-40 mx-20">
+            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
+              Conclusions
+            </h1>
+            <div className="relative m-10">
+              <ul className="grid md:grid-cols-6 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 ">
+                {" "}
+                {/* This is the important part! */}
+                {project1Items.Conclusions.map((Conclusion, index) => (
+                  <TextCard id={0} key={index} {...Conclusion} />
+                ))}
+              </ul>
+            </div>
+          </section>
         </div>
       </div>
       {/* Include your sections below */}

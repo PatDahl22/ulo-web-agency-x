@@ -367,7 +367,7 @@ export const project1Items = {
   Personas1: [
     {
       id: 1,
-      area: "sm:col-span-2 md:col-span-4 md:row-span-1 xl:col-span-4 xl:row-span-2",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 row-end-3 xl:col-span-4 xl:row-span-1",
       icon: "/TB-Mobile/role-icons6.png",
       title: "Name: Eva - Adventurous Traveler",
       description:
@@ -375,34 +375,34 @@ export const project1Items = {
     },
     {
       id: 2,
-      area: "sm:col-span-2 md:col-span-4 md:row-span-1 xl:col-span-4 xl:row-span-2",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-4 xl:row-span-1",
       title: "Goals",
       description:
         "Eva wants personalized adventure recommendations and real-time information about terrain and weather conditions at her travel destinations. She struggles with finding reliable, up-to-date travel information tailored to her specific interests.",
     },
     {
       id: 3,
-      area: "sm:col-span-1 md:col-span-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
       title: "Think & Feel",
       description:
         "Eva seeks freedom and adventure but gets frustrated by lack of relevant information.",
     },
     {
       id: 4,
-      area: "sm:col-span-1 md:col-span-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
       title: "See",
       description:
         "Eva is constantly looking for travel apps that provide detailed information and real-time updates.",
     },
     {
       id: 5,
-      area: "sm:col-span-1 md:col-span-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
       title: "Hear",
       description: "She hears tips from other travelers and online reviews.",
     },
     {
       id: 6,
-      area: "sm:col-span-1 md:col-span-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
       title: "Say & Do",
       description:
         "'I want recommendations for new adventures' — Eva plans and books activities based on her interests.",
@@ -412,7 +412,7 @@ export const project1Items = {
   Personas2: [
     {
       id: 1,
-      area: "sm:col-span-2 md:col-span-4 md:row-span-1 xl:col-span-4 xl:row-span-2",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
       icon: "/TB-Mobile/role-icons6.png",
       title: "Name: David - Business Traveler",
       description:
@@ -420,87 +420,142 @@ export const project1Items = {
     },
     {
       id: 2,
-      area: "sm:col-span-2 md:col-span-4 md:row-span-1 xl:col-span-4 xl:row-span-2",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
       title: "Goals",
       description:
-        "For me, it would be very useful if the AI assistant could act as a personal travel assistant that could handle the entire booking process for me, including comparing prices, booking flights and hotels, and keeping track of my travel plans. I would also like the assistant to be able to give me real-time updates on flight status and traffic conditions to help me plan my business trips smoothly and efficiently.",
+        "' For me, it would be very useful if the AI assistant could act as a personal travel assistant that could handle the entire booking process for me, including comparing prices, booking flights and hotels, and keeping track of my travel plans. I would also like the assistant to be able to give me real-time updates on flight status and traffic conditions to help me plan my business trips smoothly and efficiently. '",
     },
     {
       id: 3,
-      area: "sm:col-span-1 md:col-span-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
       title: "Think & Feel",
       description:
         "Values efficiency and ease in booking travel. Frustrated by last-minute bookings and lack of real-time updates.",
     },
     {
       id: 4,
-      area: "sm:col-span-1 md:col-span-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
       title: "See",
       description:
         "Sees airports, hotels, and booking platforms on his devices.",
     },
     {
       id: 5,
-      area: "sm:col-span-1 md:col-span-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
       title: "Hear",
       description: "Hears tips from colleagues on efficient travel planning.",
     },
     {
       id: 6,
-      area: "sm:col-span-1 md:col-span-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
       title: "Say & Do",
       description:
         "'I need an app to handle my bookings.' Does, books last-minute travel and manages itineraries using apps.",
     },
   ],
 
-  Archetypes: [
+  CompetitiveAnalysis: [
     {
-      title: "Adventure Anton, Age: 25",
-      interests: "Outdoor activities like hiking, diving, and camping.",
-      techSavvy: "Regularly uses apps to plan adventures and compare prices.",
-      needs:
-        "Wants an AI assistant that offers recommendations for adventure activities, provides real-time weather updates, and assists with travel planning.",
+      title: "AI-Powered Personalization",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      description:
+        "Unlike many apps, TravelBuddy's AI offers real-time personalized recommendations, adapting to the user's preferences.",
     },
     {
-      title: "Business Anna, Age: 30",
-      interests: "Business consultant, traveling frequently for work.",
-      techSavvy: "Uses apps to manage last-minute travel bookings and plans.",
-      needs:
-        "Requires an AI assistant that handles the booking process while providing real-time updates on flight status and traffic conditions.",
+      title: "Centralized Platform",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      description:
+        "TravelBuddy combines booking and itinerary management in one seamless platform, eliminating the need to juggle multiple apps.",
+    },
+  ],
+
+  DesignKeyFeatures: [
+    {
+      title: "Geo-Based Recommendations",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      description:
+        "Real-time tips about local attractions, events, and weather to help users make the most of their destination.",
+    },
+    {
+      title: "Search Filters",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      description:
+        "Users can filter by price, cuisine, or activity type, making the search process more efficient.",
+    },
+    {
+      title: "Craving Input",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      description:
+        "For food-related searches, users can input or select specific cravings, allowing for a more personalized dining experience.",
+    },
+    {
+      title: "Typography & Layout",
+      area: "sm:col-span-3 md:col-span-3 row-start-1 xl:col-span-3 xl:row-span-1",
+      description:
+        "The typography was chosen for readability, with clear hierarchy and legible fonts. Spacing and padding were adjusted to ensure visual balance across the app.",
+    },
+    {
+      title: "Personalized Recommendations",
+      area: "sm:col-span-3 md:col-span-3 row-start-1 xl:col-span-3 xl:row-span-1",
+      description:
+        "AI technology provides tailored travel suggestions based on the user's preferences, budget, and previous trips.",
     },
   ],
 
   KeyFeatures: [
     {
-      title: "Search & Filtering",
+      title: "Personalized Assistance",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
       description:
-        "Users can refine searches using filters like price range, room type, location, reviews, and more.",
+        "The app tailors the user's experience by addressing them by name and offering customized services (vacation planning, finding places to stay, eating out, and activities).",
     },
     {
-      title: "Stay Comparison",
+      title: "Custom Search Filters",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
       description:
-        "Allows users to compare different accommodations side by side for easier decision-making.",
+        "Users can filter dining options by price range, type of cuisine, or specific cravings, enhancing the search experience.",
     },
     {
-      title: "Interactive Map",
+      title: "Flexibility in Choices",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
       description:
-        "Users can view stays on an interactive map to select locations near their desired travel spots.",
+        "Users can either select predefined options or input specific desires (e.g., specific food cravings or types of vacation).",
     },
     {
-      title: "Booking Management",
+      title: "Rating System",
+      area: "sm:col-span-3 md:col-span-3 row-start-1 xl:col-span-3 xl:row-span-1",
       description:
-        "After booking, users can easily view or modify reservations, and access booking details like check-in/check-out times.",
+        "Users can rate the app on a scale of 1 to 5 stars and add a review title and detailed feedback to explain their rating. Users have the option to cancel the rating process or send their feedback, giving them control over the process.",
     },
     {
-      title: "User Reviews & Ratings",
+      title: "User Profile",
+      area: "sm:col-span-3 md:col-span-3 row-start-1 xl:col-span-3 xl:row-span-1",
       description:
-        "Each stay has reviews from previous guests and an overall rating to help users choose the best option.",
+        "Profile creation allows the app to personalize recommendations based on preferences, improving the overall user experience.",
+    },
+  ],
+
+  testingandresults: [
+    {
+      title: "80%",
+      description:
+        "Of users found the AI recommendations highly useful for trip planning, significantly reducing decision fatigue.",
+      className: "h-4 w-4 text-neutral-500",
+      icon: "/web.png",
     },
     {
-      title: "Personalized Recommendations",
+      title: "90%",
       description:
-        "Based on previous searches and preferences, the system offers personalized accommodation recommendations.",
+        "Of users reported that the app's layout was easy to navigate, thanks to clear typography and thoughtful spacing.",
+      className: "h-4 w-4 text-neutral-500",
+      icon: "/web.png",
+    },
+    {
+      title: "40%",
+      description:
+        "Reduction in decision-making time, with users feeling less stressed and more organized during the planning process",
+      className: "h-4 w-4 text-neutral-500",
+      icon: "/web.png",
     },
   ],
 
@@ -537,21 +592,45 @@ export const project1Items = {
     },
   ],
 
-  ResponsiveDesign: [
+  FutureImprovements: [
     {
-      title: "Components Styling Buttons:",
+      title: "Voice-Based Travel Assistance",
       description:
-        "Primary, secondary, and tertiary styles with hover and focus states.<",
+        "Introducing voice commands to make the app even more user-friendly, especially for users on the go.",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
     },
     {
-      title: "Components Styling Forms:",
+      title: "Social Media Integration",
       description:
-        "Accessible form fields with clear labels and error messages.",
+        "Enabling users to share their itineraries and experiences with friends or family.",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
     },
     {
-      title: "Components Styling Navigation:",
+      title: "Deeper AI Insights",
       description:
-        "Responsive and adaptive menus optimized for both desktop and mobile.",
+        "Enhancing the AI to provide even more granular recommendations, such as suggesting specific outdoor activities or events based on weather forecasts.",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+    },
+  ],
+
+  ReflectionAndChallenges: [
+    {
+      title: "✨ Collaboration Skills",
+      description:
+        "This project taught me the importance of user-centric design and collaboration with developers.",
+      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
+    },
+    {
+      title: "✨ Working with Developers",
+      description:
+        "Additionally, working with backend developers allowed me to align design elements with the app's technical capabilities.",
+      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
+    },
+    {
+      title: "✨ What I Would Improve",
+      description:
+        "The biggest challenge was ensuring that the AI algorithm was truly personalized while keeping the app simple and intuitive.",
+      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
     },
   ],
 
@@ -570,17 +649,53 @@ export const project1Items = {
     },
   ],
 
-  Conclusion: [
+  Conclusions: [
     {
       title: "Conclusion",
-      description: "",
-      points: [
-        "TravelBuddy is a ultimate personal travel guide, designed to inspire and assist you in discovering dining options, dream destinations, accommodations, and activities tailored to your preferences.",
-        "By combining the power of AI with intuitive usability, personalized recommendations, and geolocation.",
-        "TravelBuddy goes beyond the traditional travel assistant.",
-        "It anticipates your needs and provides quick, relevant answers with just a tap.",
-      ],
-      img: "",
+      description:
+        "By addressing user pain points such as decision fatigue, disorganized planning, and lack of personalization, TravelBuddy successfully simplifies the travel planning process, offering users a more seamless and enjoyable experience.",
+      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
+    },
+    {
+      title: "Conclusion",
+      description:
+        "The app's features, such as AI-driven recommendations, geo-based tips, and centralized booking, make it a unique solution in the travel industry.",
+      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
+    },
+  ],
+
+  userflows: [
+    {
+      title: "Onboarding :",
+      description:
+        " Users are greeted and prompted to create an account or log in. They input basic preferences, allowing for personalized recommendations.",
+      className:
+        "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
+      icon: "Step 1",
+    },
+    {
+      title: "Search for Travel Options :",
+      description:
+        "Users can search for nearby places to stay, dining options, and activities, with recommendations customized based on their profile.",
+      className:
+        "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
+      icon: "Step 2",
+    },
+    {
+      title: "Book & Plan :",
+      description:
+        "Once users find their ideal options, they can easily book flights, accommodations, and activities—all in one app.",
+      className:
+        "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
+      icon: "Step 3",
+    },
+    {
+      title: "Pre-Travel Checklist & Notifications :",
+      description:
+        "Users receive timely reminders and updates to ensure they are ready for their trip.",
+      className:
+        "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
+      icon: "Step 4",
     },
   ],
 
