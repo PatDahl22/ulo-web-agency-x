@@ -10,6 +10,7 @@ import { TypewriterEffectSmooth as TypewriterEffect } from "@/components/ui/type
 import { RoleFeaturesSection } from "@/components/ui/RoleFeaturesSection";
 import { LayoutGrid } from "@/components/ui/LayoutGrid";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { FocusCards } from "@/components/ui/focus-cards";
 
 const Page = () => {
   const [showSecondEffect, setShowSecondEffect] = useState(false); 
@@ -225,9 +226,10 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           <StarsBackground className="absolute inset-0 z-100" />
           <ShootingStars />
           {/* BackgroundLines fills the container */}
-          <div className="relative mx-10 xs:pt-20 px-4 w-full top-0 h-[50vh] flex justify-center items-center">
-            <div className="flex flex-col sm:flex-row gap-4 px-4 w-full max-w-7xl mx-auto items-center justify-between">
-              <div className="flex flex-col justify-center w-full sm:w-1/2 px-4 sm:px-8">
+          <div className="relative mx-10 xs:pt-40 px-10 w-full top-0 h-[50vh] flex justify-center items-center">
+            <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4">
+              {" "}
+              <div className="flex flex-col justify-center w-full px-4 sm:px-4">
                 <h4 className="text-xl sm:text-2xl lg:text-3xl">
                   UX/UI Designer
                 </h4>
@@ -238,35 +240,35 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                   {showSecondEffect && <TypewriterEffect words={words3} />}
                 </div>
               </div>
-              <div className="flex justify-center items-center sm:w-1/2 mt-6 sm:mt-0">
+              <div className="flex justify-center items-center sm:w-auto mt-4 sm:mt-0">
                 {" "}
                 <img
-                  src="/TB-Mobile/TB-mockup32.png"
+                  src="/TB-Mobile/TB-mockup29.png"
                   alt="travelbuddy mockup"
-                  className="w-full items-center sm:w-auto sm:h-auto max-w-[300px] mx-auto"
+                  className="w-full sm:w-auto sm:h-auto max-w-[500px] md:max-w-[400px] mx-auto px-4"
                 />
               </div>
             </div>
           </div>
 
           {/* About section */}
-          <section id="about" className="my-40 mx-20">
+          <section id="about" className="my-20 mx-20">
             <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center">
               About The Project
             </h1>
-            <p className="relative  text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
+            <p className="relative text-black dark:text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
               Create an intuitive travel assistant app that provides
               personalized recommendations based on user preferences.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 px-4 w-full max-w-7xl mx-auto">
-              <div className="flex flex-col justify-center w-full px-4 sm:w-1/2 sm:px-4">
-                <h4 className="relative text-white-200 my-2 flex flex-row text-xl font-semiblod">
+            <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4">
+              <div className="flex flex-col justify-center w-full px-4 sm:w-auto sm:px-4">
+                <h4 className="relative text-black dark:text-white-200 my-2 flex flex-row text-xl font-semiblod">
                   GET START
                 </h4>
                 <h2 className="relative my-4 flex flex-row text-3xl font-bold">
                   Project's Overview
                 </h2>
-                <p className="text-sm leading-[1.6] my-2 text-white-200 font-normal">
+                <p className="text-sm leading-[1.6] my-2 text-black dark:text-white-200 font-normal">
                   TravelBuddy is a user-friendly, AI-powered travel assistant
                   app designed to provide personalized travel recommendations.
                   This project was my first experience working on a real UX/UI
@@ -278,18 +280,18 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                   spacing, UI components, and ensuring accessibility compliance.
                 </p>
               </div>
-              <div className="flex justify-center items-center sm:w-1/2 mt-6 sm:mt-0">
+              <div className="flex justify-center items-center sm:w-auto mt-6 sm:mt-0">
                 <img
                   src="/TB-Mobile/TB-mockup31.png"
                   alt="travelbuddy mockup"
-                  className="w-full sm:w-auto sm:h-auto max-w-[300px] mx-auto"
+                  className="w-full sm:w-auto sm:h-auto max-w-[400px] mx-auto"
                 />
               </div>
             </div>
           </section>
 
           {/* My role section */}
-          <section id="myrole" className="my-40 mx-10">
+          <section id="myrole" className="my-40 mx-20">
             <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center">
               My Role
             </h1>
@@ -313,7 +315,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
               Problems VS Solutions
             </h1>
 
-            <div className="h-full py-20 w-full">
+            <div className="h-full py-10 w-full">
               <LayoutGrid cards={cards} />
             </div>
           </section>
@@ -387,31 +389,6 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
             id="competitive"
             className="my-40 mx-20 items-center justify-center"
           >
-            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center">
-              Competitive Analysis
-            </h1>
-            <p className="relative  text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
-              TravelBuddy differentiates itself from competitors such as Google
-              Travel, TripIt, and Kayak by focusing on:
-            </p>
-            <div className="relative m-10">
-              <ul className="grid md:grid-cols-4 grid-rows-none sm:grid-cols-1 xs:grid-cols-2 gap-8 ">
-                {" "}
-                {/* This is the important part! */}
-                {project1Items.CompetitiveAnalysis.map(
-                  (CompetitiveAnalysis, index) => (
-                    <TextCard id={0} key={index} {...CompetitiveAnalysis} />
-                  )
-                )}
-              </ul>
-            </div>
-          </section>
-
-          {/* Competitive Analysis */}
-          <section
-            id="competitive"
-            className="my-40 mx-20 items-center justify-center"
-          >
             <h1 className="relative text-black dark:text-white flex flex-row text-4xl font-bold items-center justify-center">
               Competitive Analysis
             </h1>
@@ -464,14 +441,24 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
             <p className="relative text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
               We kept the user flow simple and intuitive.
             </p>
-            <div className="relative py-10 mx-10 items-center justify-center md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-1 gap-6 grid">
-              {project1Items.userflows.map((userflow, index) => (
-                <RoleFeaturesSection
-                  key={userflow.title}
-                  {...userflow}
-                  index={index}
+            <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto mx-20 items-center justify-center">
+              <div className="relative mx-10 items-center justify-center md:grid-cols-1 lg:grid-cols-1 sm:grid-cols-1 gap-6 grid">
+                {project1Items.userflows.map((userflow, index) => (
+                  <RoleFeaturesSection
+                    key={userflow.title}
+                    {...userflow}
+                    index={index}
+                  />
+                ))}
+              </div>
+              <div className="flex">
+                {" "}
+                <img
+                  src="/TB-Mobile/UserFlow.png"
+                  alt="user flow"
+                  className="md:h-full h-full items-center sm:w-auto sm:h-auto mx-auto p-4"
                 />
-              ))}
+              </div>
             </div>
           </section>
 
@@ -494,7 +481,24 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
               touch-friendly buttons and links. Customizable light and dark
               modes for a comfortable experience in any setting.
             </p>{" "}
-            <div className="relative m-10"></div>
+            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 max-w-7xl mx-auto my-8 mx-30">
+              <div className="flex">
+                {" "}
+                <img
+                  src="/TB-Mobile/StyleGuide.png"
+                  alt="Style Guide"
+                  className="w-full h-full items-center px-10 sm:w-auto sm:h-auto mx-auto"
+                />
+              </div>
+              <div className="flex">
+                {" "}
+                <img
+                  src="/TB-Mobile/Colors-Guide.png"
+                  alt="Colors-Guide"
+                  className="w-full h-full items-center sm:w-auto sm:h-auto mx-auto"
+                />
+              </div>
+            </div>
           </section>
 
           {/* Key Features */}
@@ -519,20 +523,95 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           {/* Visual Design */}
           <section
             id="VisualDesign"
-            className="my-40 mx-20 items-center justify-center"
+            className="my-20 mx-20 items-center justify-center"
           >
-            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
-              Visual Design
-            </h1>
-            <p className="relative text-black dark:text-white-200 mt-6 py-4 px-8 flex text-start items-center justify-center">
-              The app's functionality focuses on user personalization, helping
-              users find travel-related services (like accommodation, dining,
-              and activities) based on their personal preferences and location.
-              The search options are highly customizable, and the profile
-              creation ensures the app can provide more relevant and tailored
-              suggestions.
-            </p>{" "}
-            <div className="relative m-10"></div>
+            <div
+              className="relative bg-cover bg-center bg-no-repeat before:absolute before:inset-0 before:bg-black before:opacity-70 text-white py-10"
+              style={{ backgroundImage: `url('/TB-Mobile/UIDesign.png')` }}
+            >
+              <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
+                Visual Design
+              </h1>
+              <p className="relative text-black dark:text-white-200 mt-6 py-4 px-8 flex text-start items-center justify-center">
+                The app's functionality focuses on user personalization, helping
+                users find travel-related services (like accommodation, dining,
+                and activities) based on their personal preferences and
+                location. The search options are highly customizable, and the
+                profile creation ensures the app can provide more relevant and
+                tailored suggestions.
+              </p>{" "}
+            </div>
+            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto mx-20">
+              <div className="py-4">
+                {" "}
+                <img
+                  src="/TB-Mobile/VisualDesign1.png"
+                  alt="travelbuddy bomile's mockup"
+                  className="h-[400px] w-full items-center sm:w-auto sm:h-auto mx-auto"
+                />
+              </div>
+              <div className="py-4">
+                {" "}
+                <img
+                  src="/TB-Mobile/VisualDesign2.png"
+                  alt="travelbuddy bomile's mockup"
+                  className="h-[400px] w-full items-center sm:w-auto sm:h-auto mx-auto"
+                />
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto mx-20">
+              {" "}
+              <div className="py-4">
+                {" "}
+                <img
+                  src="/TB-Mobile/VisualDesign3.png"
+                  alt="travelbuddy bomile's mockup"
+                  className="h-[400px] w-full items-center sm:w-auto sm:h-auto mx-auto"
+                />
+              </div>
+              <div className="py-4">
+                {" "}
+                <img
+                  src="/TB-Mobile/VisualDesign4.png"
+                  alt="travelbuddy bomile's mockup"
+                  className="h-[400px] w-full items-center sm:w-auto sm:h-auto mx-auto"
+                />
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto mx-20">
+              <div className="py-4">
+                <img
+                  src="/TB-Mobile/VisualDesign5.png"
+                  alt="travelbuddy bomile's mockup"
+                  className="h-[400px] w-full items-center sm:w-auto sm:h-auto mx-auto"
+                />
+              </div>
+              <div>
+                <img
+                  src="/TB-Mobile/TB-mockup32.png"
+                  alt="travelbuddy bomile's mockup"
+                  className="w-full h-full px-16 sm:px-10 items-center sm:w-auto sm:h-auto mx-auto"
+                />
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto">
+              <div className="flex">
+                {" "}
+                <img
+                  src="/TB-Mobile/iMac.png"
+                  alt="travelbuddy mockup"
+                  className="w-full h-full items-center sm:w-auto sm:h-auto mx-auto"
+                />
+              </div>
+              <div className="flex">
+                {" "}
+                <img
+                  src="/TB-Mobile/iMac-1.png"
+                  alt="travelbuddy mockup"
+                  className="w-full h-full items-center sm:w-auto sm:h-auto mx-auto"
+                />
+              </div>
+            </div>
           </section>
 
           {/* Testing & Results */}
@@ -611,6 +690,30 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                   <TextCard id={0} key={index} {...Conclusion} />
                 ))}
               </ul>
+            </div>
+          </section>
+
+          <section className="my-20 mx-20 items-center justify-center">
+            <h1 className="relative flex flex-row text-3xl text-center font-bold items-center justify-center text-black dark:text-white">
+              We took second place in the 'Chas's Challenge' at Chas academy!
+            </h1>
+            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 max-w-7xl mx-auto my-20 mx-20">
+              <div className="flex">
+                {" "}
+                <img
+                  src="/TB-Mobile/TravelBuddy-compatition.png"
+                  alt="travelbuddy mockup"
+                  className="w-full h-full items-center sm:w-auto sm:h-auto mx-auto"
+                />
+              </div>
+              <div className="flex">
+                {" "}
+                <img
+                  src="/TB-Mobile/Chas-team.png"
+                  alt="travelbuddy mockup"
+                  className="w-full h-full items-center sm:w-auto sm:h-auto mx-auto"
+                />
+              </div>
             </div>
           </section>
         </div>

@@ -615,21 +615,27 @@ export const project1Items = {
 
   ReflectionAndChallenges: [
     {
-      title: "✨ Collaboration Skills",
+      title: "✨ Managing Personalization Without Complexity",
       description:
-        "This project taught me the importance of user-centric design and collaboration with developers.",
+        "One of our biggest challenges was balancing a personalized experience with simplicity. While we wanted TravelBuddy to offer tailored recommendations, too many customization options initially confused users. To address this, we simplified the interface by introducing guided choices and offering default settings that users could refine over time as they interacted more with the app.",
       area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
     },
     {
-      title: "✨ Working with Developers",
+      title: "✨ Improving Geolocation Accuracy",
       description:
-        "Additionally, working with backend developers allowed me to align design elements with the app's technical capabilities.",
+        "Ensuring that location-based suggestions were accurate was critical for the app's success. Early in development, we noticed inconsistencies in geolocation data, particularly in remote areas. To overcome this, we improved our use of geolocation services by switching to more reliable APIs, while also integrating fallback options to ensure users still received relevant recommendations even when precise location data was unavailable.",
       area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
     },
     {
-      title: "✨ What I Would Improve",
+      title: "✨ Optimizing the AI for Usability",
       description:
-        "The biggest challenge was ensuring that the AI algorithm was truly personalized while keeping the app simple and intuitive.",
+        "The AI assistant was central to our design, but early testing revealed that it occasionally struggled to deliver contextually relevant suggestions. Users sometimes found it slow or requiring too many inputs. After evaluating the AI's natural language processing, we improved its ability to anticipate user needs, refining its decision-making process to deliver faster, more relevant suggestions with minimal effort from the user.",
+      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
+    },
+    {
+      title: "✨ Balancing Notifications and Real-Time Updates",
+      description:
+        "We faced a challenge in keeping users informed without bombarding them with too many notifications. Initially, users felt overwhelmed by frequent updates, especially during their travels. To improve, we implemented a more intelligent notification system that prioritizes important updates while allowing users to customize how and when they receive alerts, ensuring a less intrusive experience.",
       area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
     },
   ],
@@ -671,7 +677,7 @@ export const project1Items = {
         " Users are greeted and prompted to create an account or log in. They input basic preferences, allowing for personalized recommendations.",
       className:
         "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
-      icon: "Step 1",
+      icon: "/figma.png",
     },
     {
       title: "Search for Travel Options :",
@@ -679,7 +685,7 @@ export const project1Items = {
         "Users can search for nearby places to stay, dining options, and activities, with recommendations customized based on their profile.",
       className:
         "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
-      icon: "Step 2",
+      icon: "/figma.png",
     },
     {
       title: "Book & Plan :",
@@ -687,7 +693,7 @@ export const project1Items = {
         "Once users find their ideal options, they can easily book flights, accommodations, and activities—all in one app.",
       className:
         "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
-      icon: "Step 3",
+      icon: "/figma.png",
     },
     {
       title: "Pre-Travel Checklist & Notifications :",
@@ -695,40 +701,7 @@ export const project1Items = {
         "Users receive timely reminders and updates to ensure they are ready for their trip.",
       className:
         "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
-      icon: "Step 4",
-    },
-  ],
-
-  ChallengesandImprovements: [
-    {
-      title: "Managing Personalization Without Complexity",
-      description:
-        "One of our biggest challenges was balancing a personalized experience with simplicity. While we wanted TravelBuddy to offer tailored recommendations, too many customization options initially confused users. To address this, we simplified the interface by introducing guided choices and offering default settings that users could refine over time as they interacted more with the app.",
-    },
-    {
-      title: "Improving Geolocation Accuracy",
-      description:
-        "Ensuring that location-based suggestions were accurate was critical for the app's success. Early in development, we noticed inconsistencies in geolocation data, particularly in remote areas. To overcome this, we improved our use of geolocation services by switching to more reliable APIs, while also integrating fallback options to ensure users still received relevant recommendations even when precise location data was unavailable.",
-    },
-    {
-      title: "Optimizing the AI for Usability",
-      description:
-        "The AI assistant was central to our design, but early testing revealed that it occasionally struggled to deliver contextually relevant suggestions. Users sometimes found it slow or requiring too many inputs. After evaluating the AI's natural language processing, we improved its ability to anticipate user needs, refining its decision-making process to deliver faster, more relevant suggestions with minimal effort from the user.",
-    },
-    {
-      title: "Enhancing Mobile Usability",
-      description:
-        "Given that most users would interact with TravelBuddy via mobile devices, we needed to ensure an optimal experience on smaller screens. During testing, we discovered that button sizes and touch zones weren't user-friendly enough, especially on mobile. We redesigned the interface to include larger, finger-friendly buttons and adjusted the layout for better usability, making sure all interactions could be performed comfortably with one hand.",
-    },
-    {
-      title: "Fine-Tuning Light and Dark Modes",
-      description:
-        "While offering both light and dark modes was well-received, we encountered some issues with readability and contrast, especially in the dark mode. After gathering feedback from users, we reworked the color schemes to ensure better legibility and visual comfort, creating a smoother experience for users in all lighting conditions.",
-    },
-    {
-      title: "Balancing Notifications and Real-Time Updates",
-      description:
-        "We faced a challenge in keeping users informed without bombarding them with too many notifications. Initially, users felt overwhelmed by frequent updates, especially during their travels. To improve, we implemented a more intelligent notification system that prioritizes important updates while allowing users to customize how and when they receive alerts, ensuring a less intrusive experience.",
+      icon: "/figma.png",
     },
   ],
 };
