@@ -1,6 +1,5 @@
-"use client";
-
 import { cn } from "@/utils/cn";
+import { useState } from "react";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import MagicButton from "../MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
@@ -15,7 +14,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "w-full p-8 items-center justify-center md:grid-cols-5 lg:grid-cols-5 sm:grid-cols-2 gap-6 grid",
+        "grid md:auto-rows-[18rem] grid-cols-1 lg:grid-cols-5 md:grid-cols-5 gap-4 max-w-7xl mx-auto ",
         className
       )}
     >
@@ -26,26 +25,26 @@ export const BentoGrid = ({
 
 export const BentoGridItem = ({
   className,
-  id,
   title,
   description,
   img,
   imgClassName,
   titleClassName,
   spareImg,
+  id,
 }: {
   className?: string;
-  id: number;
-  title?: string | React.ReactNode;
-  description?: string | React.ReactNode;
+  title?: React.ReactNode;
+  description?: React.ReactNode;
   img?: string;
   imgClassName?: string;
   titleClassName?: string;
   spareImg?: string;
+  id?: number;
 }) => {
   const leftLists = ["ReactJS", "Express", "Typescript"];
   const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
-
+  //console.log("BentoGridItem ID:", id);  // Debugging: Check the ID
 
   return (
     <div
@@ -78,6 +77,7 @@ export const BentoGridItem = ({
             <img
               src={spareImg}
               alt={spareImg}
+              //   width={220}
               className="object-cover object-center w-full h-full"
             />
           )}
@@ -102,16 +102,42 @@ export const BentoGridItem = ({
           >
             {title}
           </div>
-
           {id === 2 && (
-            <BackgroundGradientAnimation>
-              <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
-            </BackgroundGradientAnimation>
+            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl lg:opacity-100 h-full"></div>
           )}
-
+          {id === 3 && (
+            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
+              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+                {leftLists.map((item, i) => (
+                  <span
+                    key={i}
+                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50
+                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                  >
+                    {item}
+                  </span>
+                ))}
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+              </div>
+              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                {rightLists.map((item, i) => (
+                  <span
+                    key={i}
+                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50
+                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
           {id === 6 && (
-            <div className="mt-5 relative">
-              <a href="/contact">
+            <div className="mt-5 relative z-50">
+              <a
+                href="/contact"
+                className="flex items-center justify-center">
                 <MagicButton
                   title="Let's talk"
                   icon={<FaLocationArrow />}
@@ -119,7 +145,7 @@ export const BentoGridItem = ({
                 />
               </a>
             </div>
-          )}
+          )}{" "}
         </div>
       </div>
     </div>

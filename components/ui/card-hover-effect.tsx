@@ -10,8 +10,9 @@ export const HoverEffect = ({
   className,
 }: {
   items: {
+    [x: string]: any;
     title: string;
-    description: string;
+    des: string[]; // Array of descriptions
     link: string;
     imageId?: string; 
     imageUrl?: string; // Optional image URL
@@ -24,7 +25,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 py-10 gap-8",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-10 gap-8 w-full h-full",
         className
       )}
     >
@@ -56,19 +57,30 @@ export const HoverEffect = ({
           <Card>
             {/* Render the image if imageUrl or imageId is provided */}
             {item.imageUrl && (
-            <div className="relative w-full h-52 overflow-hidden">
-              <Image
-                src={item.imageUrl}
-                alt={item.title}
-                fill
-                style={{ objectFit: "cover" }}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="transition-all duration-300 group-hover:scale-110"
-              />
-            </div>
+              <div className="relative w-full h-52 overflow-hidden">
+                <Image
+                  src={item.imageUrl}
+                  alt={item.title}
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="w-full h-auto sm:w-auto sm:h-auto mx-auto"
+                  className="transition-all duration-300 group-hover:scale-110"
+                />
+              </div>
             )}
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+            <CardTitle className="px-8 py-4 md:px-2 text-2xl text-black dark:text-white">
+              {item.title}
+            </CardTitle>
+
+            {item.description &&
+              Array.isArray(item.description) &&
+              item.description.length > 0 && (
+                <ul className="px-10 md:px-2 text-start text-black dark:text-white-100">
+                  {(item.description || []).map((description, index) => (
+                    <li key={index}>{description}</li>
+                  ))}
+                </ul>
+              )}
 
             {/* Project ID Link (conditional rendering) */}
             {item.projectId && (
@@ -82,11 +94,13 @@ export const HoverEffect = ({
                 "then" in item.projectId
                   ? "Loading..."
                   : item.projectId}
-                    <div className="mt-4 flex items-center justify-end">
-                        <span className="text-purple font-medium mr-2">Read More</span>
-                        <ArrowRightIcon className="h-5 w-5 text-purple transition-transform group-hover:translate-x-1 duration-300" />
-                    </div>
-            </Link>
+                <div className="mt-4 flex items-center justify-end">
+                  <span className="text-purple font-medium mr-2">
+                    Read More
+                  </span>
+                  <ArrowRightIcon className="h-5 w-5 text-purple transition-transform group-hover:translate-x-1 duration-300" />
+                </div>
+              </Link>
             )}
           </Card>
         </Link>

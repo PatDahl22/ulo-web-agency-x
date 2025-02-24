@@ -10,6 +10,7 @@ import { TypewriterEffectSmooth as TypewriterEffect } from "@/components/ui/type
 import { RoleFeaturesSection } from "@/components/ui/RoleFeaturesSection";
 import { LayoutGrid } from "@/components/ui/LayoutGrid";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { ProjectNav } from "@/components/ui/ProjectNav";
 
 const Page = () => {
   const [showSecondEffect, setShowSecondEffect] = useState(false); 
@@ -221,6 +222,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden w-full h-full">
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
+        <ProjectNav navItems={[]} />
         <div className="h-full w-full">
           <StarsBackground className="absolute inset-0 z-100" />
           <ShootingStars />
@@ -521,7 +523,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
 
           {/* Visual Design */}
           <section
-            id="VisualDesign"
+            id="visualDesign"
             className="my-20 mx-20 items-center justify-center"
           >
             <div
@@ -636,7 +638,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
 
           {/* Future Improvements */}
           <section
-            id="FutureImprovements"
+            id="futureImprovements"
             className="my-40 mx-20 items-center justify-center"
           >
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
@@ -677,7 +679,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Conclusions*/}
-          <section id="Conclusions" className="my-40 mx-20">
+          <section id="conclusions" className="my-40 mx-20">
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
               Conclusions
             </h1>
