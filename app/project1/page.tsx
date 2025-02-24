@@ -51,12 +51,6 @@ const Page = () => {
     return () => clearTimeout(timer);
   }, []);
   
-  // Prepare the data for the HeroParallax component
-  const heroItems = project1Items.HeroImg.map((item) => ({
-    title: item.name,
-    link: item.Link,
-    thumbnail: item.img,
-  }));
 
   const myroles = project1Items.myroles.map((item) => ({
     title: item.title,
@@ -88,7 +82,7 @@ const SkeletonOne = () => {
             <span className="text-sm leading-[1.6] text-white-200 font-normal">
               Existing travel apps fail to offer personalized suggestions based
               on individual user preferences, often providing irrelevant options
-              that don't match the user's needs.
+              that don't match the use needs.
             </span>
           </p>
         </li>
@@ -97,7 +91,7 @@ const SkeletonOne = () => {
             Disorganized Pre-Travel Planning :{" "}
             <span className="text-sm leading-[1.6] text-white-200 font-normal">
               Travelers frequently need to use multiple apps to manage different
-              aspects of their trip, booking flights, accommodations, creating
+              aspects of their trip, booking flights, accommodations, and creating
               itineraries, leading to inefficiency and time wastage.
             </span>
           </p>
@@ -147,7 +141,7 @@ const SkeletonTwo = () => {
             Pre-Travel Checklist & Notifications :{" "}
             <span className="text-sm leading-[1.6] text-white-200 font-normal">
               Keeps users organized with helpful reminders and tasks to complete
-              before their trip.
+              before their trip, ensuring a smoother travel experience.
             </span>
           </p>
         </li>

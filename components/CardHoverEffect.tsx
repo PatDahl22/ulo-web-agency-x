@@ -12,11 +12,10 @@ const CardHoverEffect = () => {
         <HoverEffect
             items={projects.map((item) => ({
                 title: item.title,
-                description: item.des,
+                des: item.des,
                 imageUrl: item.img, // Corrected: use imageUrl for the image path
                 link: item.link,
                 projectId: item.id.toString(),
-                iconLists: item.iconLists, // Assign iconLists correctly
             }))}
 
         />

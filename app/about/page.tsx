@@ -2,37 +2,39 @@
 
 import { navItems } from "@/data";
 import Footer from "@/components/Footer";
-import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Experience from "@/components/Experience";
+import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { BackgroundLines } from "@/components/ui/background-lines";
-import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 import { FooterSection } from "@/components/FooterSection";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import MagicButton from "@/components/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
+import { TypewriterEffectSmooth as TypewriterEffect } from "@/components/ui/typewriter-effect";
 
+const words = [
+  {
+    text: " All ",
+    className: "text-6xl font-bold",
+  },
+  {
+    text: " about ",
+    className: "text-6xl font-bold",
+  },
+  {
+    text: "  Pat ",
+    className: "text-6xl text-purple dark:text-purple font-bold",
+  },
+];
 
 const Contact = () => {
   return (
     <>
       <div className="h-[40vh]">
-        {" "}
-        {/* Set height to 40vh on the container */}
         <div className="relative h-full w-full">
-          <BackgroundLines
-            className="absolute inset-0 -z-100"
-            children={null}
-          />{" "}
-          {/* BackgroundLines fills the container */}
+          <BackgroundLines className="absolute inset-0 -z-100" children={undefined} />
           <FloatingNav navItems={navItems} />
           <div className="relative h-full flex items-center justify-center w-full flex-col px-4">
-            {/* Ensure content is positioned correctly */}
-            <FloatingNav navItems={navItems} />
-            <TextGenerateEffect
-              words="All about Pat "
-              className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            />
-            <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+            <TypewriterEffect words={words} />
+            <p className="text-center md:tracking-wider mt-4 mb-4 text-sm md:text-lg lg:text-2xl">
               I'm a UX/UI designer and Frontend Developer based in Stockholm
               SWEDEN.
             </p>
@@ -43,7 +45,7 @@ const Contact = () => {
                   icon={<FaLocationArrow />}
                   position="right"
                 />
-              </a>{" "}
+              </a>
               <a href="https://drive.google.com/file/d/1-7CDey7GBbTAZptw6_eH1JGhantRFgiA/view">
                 <MagicButton
                   title="Download My CV Swedish"
@@ -76,7 +78,6 @@ const Contact = () => {
                 challenging, which led me to work as a nail technologist for 15
                 years.
               </p>
-
               <p className="text-sm leading-[1.6] my-2 text-black dark:text-white-200 font-normal">
                 However, my passion for technology and design remained strong.
                 During the pandemic, with fewer customers, I took the
@@ -87,17 +88,15 @@ const Contact = () => {
             <div className="flex justify-center items-center sm:w-auto mt-6 sm:mt-0">
               <img
                 src="/Pat.png"
-                alt="travelbuddy mockup"
+                alt="Pat Dahl"
                 className="w-full sm:w-auto sm:h-auto max-w-[400px] mx-auto"
               />
             </div>
           </div>
         </div>
- 
         <Experience />
         <FooterSection />
         <Footer />
-        <BackgroundBeams />
       </main>
     </>
   );

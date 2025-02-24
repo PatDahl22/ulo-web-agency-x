@@ -1,15 +1,9 @@
 "use client";
 
-import { navItems, project2Items } from "@/data";
+import { navItems } from "@/data";
 import Footer from "@/components/Footer";
-import Clients from "@/components/Clients";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import JourneysGrid from "@/components/journeysGrid";
-import { BackgroundLines } from "@/components/ui/background-lines";
-import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
-import { LayoutGrid } from "@/components/ui/LayoutGrid";
-import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { StarsBackground } from "@/components/ui/stars-background";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 
@@ -189,12 +183,13 @@ const page = () => {
           {/* Use Flow */}
           <section id="userflow" className="my-40 mx-20">
             <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center">
-              User Flow
+              About The Project
             </h1>
-            <p className="relative text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
-              We kept the user flow simple and intuitive.
+            <p className="relative text-black dark:text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
+              Create an intuitive travel assistant app that provides
+              personalized recommendations based on user preferences.
             </p>
-            <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto mx-20 items-center justify-center">
+            <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto items-center justify-center">
               <div className="flex">
                 {" "}
                 <img
@@ -225,7 +220,7 @@ const page = () => {
               touch-friendly buttons and links. Customizable light and dark
               modes for a comfortable experience in any setting.
             </p>{" "}
-            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 max-w-7xl mx-auto my-8 mx-30">
+            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 max-w-7xl mx-auto my-8 ">
               <div className="flex">
                 {" "}
                 <img
@@ -276,7 +271,7 @@ const page = () => {
                 tailored suggestions.
               </p>{" "}
             </div>
-            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto mx-20">
+            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto ">
               <div className="py-4">
                 {" "}
                 <img
@@ -294,7 +289,7 @@ const page = () => {
                 />
               </div>
             </div>
-            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto mx-20">
+            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto ">
               {" "}
               <div className="py-4">
                 {" "}
@@ -313,7 +308,7 @@ const page = () => {
                 />
               </div>
             </div>
-            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto mx-20">
+            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto ">
               <div className="py-4">
                 <img
                   src="/TB-Mobile/VisualDesign5.png"

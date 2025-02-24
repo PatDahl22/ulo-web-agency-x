@@ -8,11 +8,6 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const roboto = Roboto_Serif({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
   title: "Pat Dahl portfolio",
   description: "Next.js TypeScript",

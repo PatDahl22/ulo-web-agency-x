@@ -63,7 +63,7 @@ export const gridItems = [
 ];
 
 export const navItems = [
-  { name: "Home", link: "/home" },
+  { name: "Home", link: "/" },
   { name: "About", link: "/about" },
   {
     name: "Projects",
@@ -116,7 +116,7 @@ export const projects = [
       "👉 My Role: ",
       "👉 Impact: ",
     ],
-    img: "/p2.png",
+    img: "/Ws-bg.png",
     link: "/project2",
     area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
   },
@@ -131,7 +131,7 @@ export const projects = [
       "👉 My Role: ",
       "👉 Impact: ",
     ],
-    img: "/p3.png",
+    img: "/ft-bg.png",
     link: "/project3",
     area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
   },

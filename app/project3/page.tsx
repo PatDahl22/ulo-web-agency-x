@@ -1,15 +1,9 @@
 "use client";
 
-import { navItems, project2Items } from "@/data";
+import { navItems} from "@/data";
 import Footer from "@/components/Footer";
-import Clients from "@/components/Clients";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import JourneysGrid from "@/components/journeysGrid";
-import { BackgroundLines } from "@/components/ui/background-lines";
-import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
-import { LayoutGrid } from "@/components/ui/LayoutGrid";
-import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { StarsBackground } from "@/components/ui/stars-background";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 

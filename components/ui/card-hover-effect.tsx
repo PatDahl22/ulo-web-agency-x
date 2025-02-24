@@ -14,7 +14,7 @@ export const HoverEffect = ({
     title: string;
     des: string[]; // Array of descriptions
     link: string;
-    imageId?: string; 
+    imageId?: string;
     imageUrl?: string; // Optional image URL
     projectId?: string; // Optional project ID
   }[];
@@ -30,9 +30,8 @@ export const HoverEffect = ({
       )}
     >
       {items.map((item, idx) => (
-        <Link
-          href={item?.link}
-          key={item?.link}
+        <div
+          key={item.link}
           className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -40,7 +39,7 @@ export const HoverEffect = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block  rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -54,6 +53,7 @@ export const HoverEffect = ({
               />
             )}
           </AnimatePresence>
+
           <Card>
             {/* Render the image if imageUrl or imageId is provided */}
             {item.imageUrl && (
@@ -68,42 +68,33 @@ export const HoverEffect = ({
                 />
               </div>
             )}
+
             <CardTitle className="px-8 py-4 md:px-2 text-2xl text-black dark:text-white">
               {item.title}
             </CardTitle>
 
-            {item.description &&
-              Array.isArray(item.description) &&
-              item.description.length > 0 && (
-                <ul className="px-10 md:px-2 text-start text-black dark:text-white-100">
-                  {(item.description || []).map((description, index) => (
-                    <li key={index}>{description}</li>
-                  ))}
-                </ul>
-              )}
+            {item.des && item.des.length > 0 && (
+              <ul className="px-10 md:px-2 text-start text-black dark:text-white-100">
+                {item.des.map((description, index) => (
+                  <li key={index}>{description}</li>
+                ))}
+              </ul>
+            )}
 
-            {/* Project ID Link (conditional rendering) */}
+            {/* "Read More" Link (separate from card hover effect) */}
             {item.projectId && (
-              <Link
-                href={item.link}
-                className="text-blue-500 hover:underline block mt-2"
-              >
-                {" "}
-                {item.projectId &&
-                typeof item.projectId === "object" &&
-                "then" in item.projectId
-                  ? "Loading..."
-                  : item.projectId}
-                <div className="mt-4 flex items-center justify-end">
-                  <span className="text-purple font-medium mr-2">
-                    Read More
-                  </span>
-                  <ArrowRightIcon className="h-5 w-5 text-purple transition-transform group-hover:translate-x-1 duration-300" />
-                </div>
-              </Link>
+              <div className="mt-4 flex items-center justify-end">
+                <Link
+                  href={item.link}
+                  className="text-purple font-medium mr-2 hover:underline"
+                >
+                  Read More
+                </Link>
+                <ArrowRightIcon className="h-5 w-5 text-purple transition-transform group-hover:translate-x-1 duration-300" />
+              </div>
             )}
           </Card>
-        </Link>
+        </div>
       ))}
     </div>
   );
@@ -129,6 +120,7 @@ export const Card = ({
     </div>
   );
 };
+
 export const CardTitle = ({
   className,
   children,
@@ -147,6 +139,7 @@ export const CardTitle = ({
     </h3>
   );
 };
+
 export const CardDescription = ({
   className,
   children,
