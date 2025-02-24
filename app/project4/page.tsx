@@ -194,7 +194,7 @@ const page = () => {
             <p className="relative text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
               We kept the user flow simple and intuitive.
             </p>
-            <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto mx-20 items-center justify-center">
+            <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto items-center justify-center">
               <div className="flex">
                 {" "}
                 <img
@@ -276,7 +276,7 @@ const page = () => {
                 tailored suggestions.
               </p>{" "}
             </div>
-            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto mx-20">
+            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto">
               <div className="py-4">
                 {" "}
                 <img
@@ -294,7 +294,7 @@ const page = () => {
                 />
               </div>
             </div>
-            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto mx-20">
+            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto">
               {" "}
               <div className="py-4">
                 {" "}
@@ -313,7 +313,7 @@ const page = () => {
                 />
               </div>
             </div>
-            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto mx-20">
+            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto ">
               <div className="py-4">
                 <img
                   src="/TB-Mobile/VisualDesign5.png"

@@ -10,7 +10,6 @@ import { TypewriterEffectSmooth as TypewriterEffect } from "@/components/ui/type
 import { RoleFeaturesSection } from "@/components/ui/RoleFeaturesSection";
 import { LayoutGrid } from "@/components/ui/LayoutGrid";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
-import { FocusCards } from "@/components/ui/focus-cards";
 
 const Page = () => {
   const [showSecondEffect, setShowSecondEffect] = useState(false); 
@@ -441,7 +440,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
             <p className="relative text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
               We kept the user flow simple and intuitive.
             </p>
-            <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto mx-20 items-center justify-center">
+            <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto items-center justify-center">
               <div className="relative mx-10 items-center justify-center md:grid-cols-1 lg:grid-cols-1 sm:grid-cols-1 gap-6 grid">
                 {project1Items.userflows.map((userflow, index) => (
                   <RoleFeaturesSection
@@ -541,7 +540,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 tailored suggestions.
               </p>{" "}
             </div>
-            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto mx-20">
+            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto">
               <div className="py-4">
                 {" "}
                 <img
@@ -559,7 +558,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 />
               </div>
             </div>
-            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto mx-20">
+            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto">
               {" "}
               <div className="py-4">
                 {" "}
@@ -578,7 +577,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 />
               </div>
             </div>
-            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto mx-20">
+            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto">
               <div className="py-4">
                 <img
                   src="/TB-Mobile/VisualDesign5.png"
@@ -697,7 +696,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
             <h1 className="relative flex flex-row text-3xl text-center font-bold items-center justify-center text-black dark:text-white">
               We took second place in the 'Chas's Challenge' at Chas academy!
             </h1>
-            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 max-w-7xl mx-auto my-20 mx-20">
+            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 max-w-7xl mx-auto my-20">
               <div className="flex">
                 {" "}
                 <img

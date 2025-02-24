@@ -72,14 +72,14 @@ export function FooterSection() {
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
         <a href="/contact">
           <MagicButton
-            title="Reach Out"
+            title="Let's talk"
             icon={<FaLocationArrow />}
             position="right"
           />
         </a>
       </div>
-      <ShootingStars/>
-      <StarsBackground/>
+      <ShootingStars />
+      <StarsBackground />
     </div>
   );
 }

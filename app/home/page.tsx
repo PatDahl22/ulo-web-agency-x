@@ -1,6 +1,6 @@
 "use client";
 
-import { navItems } from "@/data";
+import { gridItems, navItems } from "@/data";
 
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
@@ -23,7 +23,7 @@ const Home = () => {
         <Approach />
         <Clients />
         <HomeExperience />
-        <FooterSection/>
+        <FooterSection />
         <Footer />
       </div>
     </main>
