@@ -69,9 +69,9 @@ export const navItems = [
     link: "/projects",
     projectLinks: [
       { name: "Project 1", link: "/project1" },
-      { name: "Project 2", link: "/project2" },
+      { name: "Project 2", link: "/" },
       { name: "Project 3", link: "/project3" },
-      { name: "Project 4", link: "/project4" },
+      { name: "Project 4", link: "/" },
     ],
   },
   { name: "Contact", link: "/contact" },
@@ -116,7 +116,7 @@ export const projects = [
       "👉 Impact: ",
     ],
     img: "/Ws-bg.png",
-    link: "/project2",
+    link: "/",
     area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
   },
   {
@@ -146,7 +146,7 @@ export const projects = [
       "👉 Impact: ",
     ],
     img: "/p4.PNG",
-    link: "/project4",
+    link: "/",
     area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
   },
 ];
@@ -716,105 +716,31 @@ export const project1Items = {
   ],
 };
 
-export const project2Items = {
+export const project3Items = {
   challenges: [
     {
       title: "Disorganization",
       description:
         "Lack of a central system to track tasks and responsibilities.",
-      className: "h-4 w-4 text-neutral-500",
-      icon: "/TB-Mobile/role-icons1.png",
+      className: "text-neutral-500",
     },
     {
       title: "Miscommunication",
       description:
         "Difficulty coordinating schedules and ensuring everyone is on the same page.",
-      className: "h-4 w-4 text-neutral-500",
-      icon: "/TB-Mobile/role-icons2.png",
+      className: "text-neutral-500",
     },
     {
       title: "Unequal Burden",
       description:
         "Imbalance in household chores, leading to resentment and conflict.",
-      className: "h-4 w-4 text-neutral-500",
-      icon: "/TB-Mobile/role-icon3.png",
+      className: "text-neutral-500",
     },
     {
       title: "Motivational Issues",
       description:
         "Difficulty engaging children in household tasks and responsibilities.",
-      className: "h-4 w-4 text-neutral-500",
-      icon: "/TB-Mobile/role-icons4.png",
-    },
-  ],
-
-  Personas1: [
-    {
-      id: 1,
-      area: "sm:col-span-2 md:col-span-2 row-start-1 row-end-3 xl:col-span-4 xl:row-span-1",
-      icon: "/TB-Mobile/role-icons6.png",
-      title: "Name: Eva - Adventurous Traveler",
-      description:
-        "A working parent with school-aged children, juggling multiple responsibilities.",
-    },
-    {
-      id: 2,
-      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-4 xl:row-span-1",
-      title: "Goals",
-      description:
-        "Streamline household chores, delegate tasks effectively, reduce stress, improve family communication.",
-    },
-    {
-      id: 3,
-      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
-      title: "Pain Points",
-      description:
-        "Difficulty keeping track of tasks, constant need for reminders, imbalance in household responsibilities, struggles to motivate children.",
-    },
-  ],
-
-  Personas2: [
-    {
-      id: 1,
-      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
-      icon: "/TB-Mobile/role-icons6.png",
-      title: "Name: David - Business Traveler",
-      description:
-        "I travel frequently for work and need to book flights, hotels, and transportation at the last minute. I use apps and online booking services to make my reservations and keep track of my travel plans.",
-    },
-    {
-      id: 2,
-      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
-      title: "Goals",
-      description:
-        "' For me, it would be very useful if the AI assistant could act as a personal travel assistant that could handle the entire booking process for me, including comparing prices, booking flights and hotels, and keeping track of my travel plans. I would also like the assistant to be able to give me real-time updates on flight status and traffic conditions to help me plan my business trips smoothly and efficiently. '",
-    },
-    {
-      id: 3,
-      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
-      title: "Think & Feel",
-      description:
-        "Values efficiency and ease in booking travel. Frustrated by last-minute bookings and lack of real-time updates.",
-    },
-    {
-      id: 4,
-      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
-      title: "See",
-      description:
-        "Sees airports, hotels, and booking platforms on his devices.",
-    },
-    {
-      id: 5,
-      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
-      title: "Hear",
-      description: "Hears tips from colleagues on efficient travel planning.",
-    },
-    {
-      id: 6,
-      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
-      title: "Say & Do",
-      description:
-        "'I need an app to handle my bookings.' Does, books last-minute travel and manages itineraries using apps.",
+      className: "text-neutral-500",
     },
   ],
 
@@ -822,116 +748,273 @@ export const project2Items = {
     {
       title: "Need for Automated Reminders",
       area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      icon: "/TB-Mobile/role-icons6.png",
       description:
         "Parents wanted an app that proactively reminded both themselves and their children about upcoming tasks, reducing the need for constant nagging.",
     },
     {
       title: "Desire for a Clear Overview",
       area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      icon: "/TB-Mobile/role-icons6.png",
       description:
         "Users craved a simple, at-a-glance view of all tasks, assignments, and deadlines.",
     },
     {
       title: "Motivation for Children's Involvement",
       area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      icon: "/TB-Mobile/role-icons6.png",
       description:
         "Parents struggled to engage children in household chores without constant reminders or conflict.",
     },
     {
       title: "Shared Lists and Accountability",
       area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      icon: "/TB-Mobile/role-icons6.png",
       description:
         "Parents expressed the need for a system that allows children to check off completed tasks, fostering a sense of responsibility and accountability.",
     },
   ],
 
-  DesignKeyFeatures: [
+  Personas: [
     {
-      title: "Geo-Based Recommendations",
-      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      id: 1,
+      area: "",
+      icon: "/TB-Mobile/role-icons6.png",
+      title: "Name: Nathalia",
       description:
-        "Real-time tips about local attractions, events, and weather to help users make the most of their destination.",
+        "A working parent with school-aged children, juggling multiple responsibilities.",
     },
     {
-      title: "Search Filters",
-      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      id: 2,
+      area: "",
+      title: "Goals",
       description:
-        "Users can filter by price, cuisine, or activity type, making the search process more efficient.",
+        "Streamline household chores, delegate tasks effectively, reduce stress, improve family communication.",
     },
     {
-      title: "Craving Input",
-      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      id: 3,
+      area: "",
+      title: "Pain Points",
       description:
-        "For food-related searches, users can input or select specific cravings, allowing for a more personalized dining experience.",
+        "Difficulty keeping track of tasks, constant need for reminders, imbalance in household responsibilities, struggles to motivate children.",
+    },
+  ],
+
+  initialdesignconcepts: [
+    {
+      id: 1,
+      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
+      title: "Task Creation and Assignment",
+      description:
+        "Parents have the ability to assign tasks with set deadlines to children and family members.",
     },
     {
-      title: "Typography & Layout",
+      id: 2,
+      area: "sm:col-span-2 md:col-span-1 row-start-1 xl:col-span-2 xl:row-span-1",
+      title: "Shared Calendars",
+      description: "Centralized schedule view for the whole family.",
+    },
+    {
+      id: 3,
+      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
+      title: "Progress Tracking",
+      description: "Visual representation of task completion.",
+    },
+    {
+      id: 4,
+      area: "sm:col-span-1 md:col-span-3 row-start-2 xl:col-span-2 xl:row-span-1",
+      title: "Rewards System",
+      description: "Motivate children through gamification and incentives.",
+    },
+    {
+      id: 5,
+      area: "sm:col-span-1 md:col-span-3 row-start-2 xl:col-span-2 xl:row-span-1",
+      title: "Different account user",
+      description:
+        "For children, focus on what tasks they should focus on. For parent, overview of the task they are assign.",
+    },
+  ],
+
+  respondingtouserfeedback1: [
+    {
+      id: 1,
+      title: "Responding to user feedback iteration 1",
+      des: [
+        "👉 Overcrowded Homescreen: The initial design of the homescreen for the app was cluttered and overwhelming.",
+        "👉 Calendar Usability: Users expressed they wanted the calendar to only showcase their task, not the family.",
+        "👉 Navigation Issues: Users had difficulty navigating back to the main homescreen from certain sections of the app.",
+      ],
+      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
+    },
+    {
+      id: 2,
+      title: "Changes implemented iteration 1",
+      des: [
+        "👉 Simplified homescreen: Removed redundant 'To-Do' and 'Calendar' tabs, consolidating navigation into a bottom bar. Refined color scheme and button layout.",
+        "👉 Personalized Calendar View: Filtered calendar view to display only tasks assigned to the specific user.",
+        "👉 Improved Navigation: Moved the 'Back' button to a more conventional location in the bottom navigation bar.",
+      ],
+      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
+    },
+  ],
+  respondingtouserfeedback2: [
+    {
+      id: 1,
+      title: "Responding to user feedback iteration 2",
+      des: [
+        "👉 Ethical consideration: The ethical implications of constantly being reminded of tasks may induce mental anxiety for children.",
+        "👉 Ethical consideration: A high volume of bright colors and gamified animated designs may induced cognitive overload for children.",
+      ],
+      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
+    },
+    {
+      id: 2,
+      title: "Changes implemented iteration 2",
+      des: [
+        "👉 Removal of aautomatic reminders: Removed automatic reminders and implemented a notification section where users can check their upcoming tasks on their own terms.",
+        "👉 Simplified children's interface: After the first round of user testing of both admins and member accounts, we switched the interface to be more minimal and neutral.",
+        "👉 Avatar integration: We decided to integrate custom avatars into the application's UI to provide the user with a friendly face and sense of personalization while minimizing cognitive load.",
+      ],
+      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
+    },
+  ],
+
+  accessibilityconsiderations: [
+    {
+      title: "Clear visual hierarchy",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      description:
+        "Utilized headings (H1, H2, H3), body text, and text boxes to create a logical content structure for screen readers.",
+    },
+    {
+      title: "Readable font and size",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      description:
+        "Selected easily readable fonts and ensured sufficient text size (minimum 16px for body text, 24px for headings) for readability.",
+    },
+    {
+      title: "Descriptive image and icon labels",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      description:
+        "Provided descriptive alt text for all images and icons, ensuring screen readers can convey their purpose (implementation planned for the development phase).",
+    },
+    {
+      title: "Clear button labels",
       area: "sm:col-span-3 md:col-span-3 row-start-1 xl:col-span-3 xl:row-span-1",
       description:
-        "The typography was chosen for readability, with clear hierarchy and legible fonts. Spacing and padding were adjusted to ensure visual balance across the app.",
+        "Used clear, concise, and descriptive button labels, avoiding vague terms like 'Click Here.'",
     },
     {
-      title: "Personalized Recommendations",
+      title: "Sufficient button size and spacing",
       area: "sm:col-span-3 md:col-span-3 row-start-1 xl:col-span-3 xl:row-span-1",
       description:
-        "AI technology provides tailored travel suggestions based on the user's preferences, budget, and previous trips.",
+        "Ensured buttons are at least 44x44 pixels with adequate spacing to prevent accidental presses.",
+    },
+    {
+      title: "ARIA Labels (Planned)",
+      area: "sm:col-span-3 md:col-span-3 row-start-1 xl:col-span-3 xl:row-span-1",
+      description:
+        "We plan to implement ARIA attributes during development to further enhance screen reader support and ensure WCAG compliance. We also plan to be extremely aware of any color contrast issues.",
     },
   ],
 
   KeyFeatures: [
     {
-      title: "Personalized Assistance",
+      title: "Role-Based access",
       area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
       description:
-        "The app tailors the user's experience by addressing them by name and offering customized services (vacation planning, finding places to stay, eating out, and activities).",
+        "Separate login accounts for parents (admins) and children (members).",
     },
     {
-      title: "Custom Search Filters",
+      title: "Shared checklists",
       area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
       description:
-        "Users can filter dining options by price range, type of cuisine, or specific cravings, enhancing the search experience.",
+        "Admin have the access to be able to add family up-keeping tasks on a list.",
     },
     {
-      title: "Flexibility in Choices",
+      title: "Shared calendar",
       area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
       description:
-        "Users can either select predefined options or input specific desires (e.g., specific food cravings or types of vacation).",
+        "Allow parents and children to view a family calendar, children are only to see task assign to themselves.",
     },
     {
-      title: "Rating System",
+      title: "Progress tracking",
       area: "sm:col-span-3 md:col-span-3 row-start-1 xl:col-span-3 xl:row-span-1",
       description:
-        "Users can rate the app on a scale of 1 to 5 stars and add a review title and detailed feedback to explain their rating. Users have the option to cancel the rating process or send their feedback, giving them control over the process.",
+        "Parents have the ability to track their children's progress in the app.",
     },
     {
-      title: "User Profile",
+      title: "Child-Friendly design",
       area: "sm:col-span-3 md:col-span-3 row-start-1 xl:col-span-3 xl:row-span-1",
       description:
-        "Profile creation allows the app to personalize recommendations based on preferences, improving the overall user experience.",
+        "Avatar, Simple, intuitive interface with visual cues (custom avatar).",
+    },
+    {
+      title: "Flexible notifications",
+      area: "sm:col-span-3 md:col-span-3 row-start-1 xl:col-span-3 xl:row-span-1",
+      description:
+        "Users are able to access a notification section to see their upcoming tasks.",
     },
   ],
 
-  testingandresults: [
+  measuringsuccess: [
     {
-      title: "80%",
-      description:
-        "Of users found the AI recommendations highly useful for trip planning, significantly reducing decision fatigue.",
+      title: "✨ Reduced parental stress levels",
+      description: [
+        "Decrease in self-reported stress levels among parents after regular app usage (measured on a scale of 1-5).",
+        "👉 Target: Reduce stress by at least 1 point on the scale.",
+      ],
+      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
       className: "h-4 w-4 text-neutral-500",
       icon: "/web.png",
     },
     {
-      title: "90%",
-      description:
-        "Of users reported that the app's layout was easy to navigate, thanks to clear typography and thoughtful spacing.",
+      title: "✨ Time savings for parents",
+      description: [
+        "Reduction in the time parents spend manually tracking chores and reminding children.",
+        "👉 Target: Reduce follow-up time by at least 20%.",
+      ],
       className: "h-4 w-4 text-neutral-500",
       icon: "/web.png",
     },
     {
-      title: "40%",
-      description:
-        "Reduction in decision-making time, with users feeling less stressed and more organized during the planning process",
+      title: "✨ Increased task completion by children",
+      description: [
+        "Increase in the percentage of tasks completed independently by children, without parental reminders.",
+        "👉 Target: Increase independent task completion by 70%.",
+      ],
       className: "h-4 w-4 text-neutral-500",
       icon: "/web.png",
+    },
+    {
+      title: "✨ Improved family communication",
+      description: [
+        "Increase the harmony of the household and how well tasks are handled.",
+        "👉 Target: Min 70% of user report improved communications and tasks where both parent and children feel that tasks are being handled equally.",
+      ],
+      className: "h-4 w-4 text-neutral-500",
+      icon: "/web.png",
+    },
+  ],
+
+  lessonslearneds: [
+    {
+      title: "The power of user feedback",
+      description:
+        "Usability testing and user interviews are essential for identifying design flaws and refining the user experience. Even features we initially thought would be effective (e.g., automatic reminders) needed to be reconsidered based on user feedback.",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+    },
+    {
+      title: "Ethical design considerations",
+      description:
+        "It's crucial to consider the potential negative impacts of our designs and make adjustments to mitigate harm. In our case, we removed automatic reminders to prevent anxiety and simplified the children's interface to reduce cognitive load.",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+    },
+    {
+      title: "Simplicity is key",
+      description:
+        "A clean, intuitive interface is essential for engaging users of all ages. Even for child-centric designs, simplicity and clarity should be prioritized.",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
     },
   ],
 
@@ -968,50 +1051,38 @@ export const project2Items = {
     },
   ],
 
-  FutureImprovements: [
+  futuredevelopments: [
     {
-      title: "Voice-Based Travel Assistance",
+      title: "Beta testing",
       description:
-        "Introducing voice commands to make the app even more user-friendly, especially for users on the go.",
-      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+        "We will conduct a beta test to gather real-world feedback and refine the app before launch.",
+      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
     },
     {
-      title: "Social Media Integration",
+      title: "Performance and scalability",
       description:
-        "Enabling users to share their itineraries and experiences with friends or family.",
-      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+        "The app will be optimized for performance across all devices, ensuring a smooth user experience, even on older phones.",
+      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
     },
     {
-      title: "Deeper AI Insights",
+      title: "External calendar integration",
       description:
-        "Enhancing the AI to provide even more granular recommendations, such as suggesting specific outdoor activities or events based on weather forecasts.",
-      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+        "We will add two-way syncing with calendars like Google Calendar to allow families to manage both tasks and events in one place.",
+      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
+    },
+    {
+      title: "Continual user feedback",
+      description:
+        "Post-launch, we will continue collecting feedback to improve FamTask, including adding features like a chores marketplace for kids to pick extra tasks for rewards.",
+      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
     },
   ],
 
-  ReflectionAndChallenges: [
+  Conclusions: [
     {
-      title: "✨ Managing Personalization Without Complexity",
+      title: "Conclusion",
       description:
-        "One of our biggest challenges was balancing a personalized experience with simplicity. While we wanted TravelBuddy to offer tailored recommendations, too many customization options initially confused users. To address this, we simplified the interface by introducing guided choices and offering default settings that users could refine over time as they interacted more with the app.",
-      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
-    },
-    {
-      title: "✨ Improving Geolocation Accuracy",
-      description:
-        "Ensuring that location-based suggestions were accurate was critical for the app's success. Early in development, we noticed inconsistencies in geolocation data, particularly in remote areas. To overcome this, we improved our use of geolocation services by switching to more reliable APIs, while also integrating fallback options to ensure users still received relevant recommendations even when precise location data was unavailable.",
-      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
-    },
-    {
-      title: "✨ Optimizing the AI for Usability",
-      description:
-        "The AI assistant was central to our design, but early testing revealed that it occasionally struggled to deliver contextually relevant suggestions. Users sometimes found it slow or requiring too many inputs. After evaluating the AI's natural language processing, we improved its ability to anticipate user needs, refining its decision-making process to deliver faster, more relevant suggestions with minimal effort from the user.",
-      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
-    },
-    {
-      title: "✨ Balancing Notifications and Real-Time Updates",
-      description:
-        "We faced a challenge in keeping users informed without bombarding them with too many notifications. Initially, users felt overwhelmed by frequent updates, especially during their travels. To improve, we implemented a more intelligent notification system that prioritizes important updates while allowing users to customize how and when they receive alerts, ensuring a less intrusive experience.",
+        "FamTask is a UX/UI design concept with the potential to significantly improve the lives of busy families. By focusing on user needs, iterating based on feedback, and prioritizing accessibility, we can create a powerful tool that empowers families to collaborate, stay organized, and reduce stress.",
       area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
     },
   ],
@@ -1028,21 +1099,6 @@ export const project2Items = {
         "Interactive components include focus indicators and ARIA labels for screen readers, ensuring usability for all users, including those relying on assistive technologies.",
       ],
       img: "",
-    },
-  ],
-
-  Conclusions: [
-    {
-      title: "Conclusion",
-      description:
-        "By addressing user pain points such as decision fatigue, disorganized planning, and lack of personalization, TravelBuddy successfully simplifies the travel planning process, offering users a more seamless and enjoyable experience.",
-      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
-    },
-    {
-      title: "Conclusion",
-      description:
-        "The app's features, such as AI-driven recommendations, geo-based tips, and centralized booking, make it a unique solution in the travel industry.",
-      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
     },
   ],
 
@@ -1082,7 +1138,7 @@ export const project2Items = {
   ],
 };
 
-export const project3Items = {
+export const project2Items = {
   journeys: [
     {
       title: "Traveler's Profile Creation",

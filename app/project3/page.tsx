@@ -1,13 +1,80 @@
 "use client";
 
-import { navItems} from "@/data";
+import { navItems, project3Items} from "@/data";
 import Footer from "@/components/Footer";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { StarsBackground } from "@/components/ui/stars-background";
 import { ShootingStars } from "@/components/ui/shooting-stars";
+import { RoleFeaturesSection } from "@/components/ui/RoleFeaturesSection";
+import { TypewriterEffectSmooth as TypewriterEffect } from "@/components/ui/typewriter-effect";
+
+
 
 const page = () => {
+
+  const words = [
+    {
+      text: "Fem",
+      className: "text-6xl text-blue-500 dark:text-blue-500",
+    },
+    {
+      text: "Task",
+      className: "text-6xl text-blue-500 dark:text-blue-500",
+    },
+  ];
+
+
+  interface PersonasProps {
+  id: number;
+  area: string;
+  icon?: string;
+  title: string;
+  description: React.ReactNode;
+}
+
+const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
+  return (
+    <li
+      id={id.toString()} // Apply the unique ID to each grid item
+      className={`h-full items-start list-none ${area}`}
+    >
+      {/* Container with border and padding */}
+      {/* Content container with inner styling */}
+      <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-0.75 p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D] ">
+        {/* Icon and text */}
+        <div className="relative flex flex-1 flex-col justify-between gap-3">
+          {/* Icon container */}
+          <div className="w-fit rounded-lg border border-gray-600 p-2">
+            {icon && <img src={icon} alt={title} className="mb-4 w-16 h-16" />}
+          </div>
+          {/* Title and Description */}
+          <div className="space-y-3 text-start">
+            {/* Title */}
+            <h3 className="pt-0.5 text-xl/[1.375rem] font-semibold font-sans md:text-2xl/[1.875rem] text-balance text-black dark:text-white items-start">
+              {title}
+            </h3>
+            {/* Description */}
+            <h2
+              className="font-medium font-sans text-sm/[1.125rem]
+                  md:text-base/[1.375rem] text-black dark:text-neutral-400 items-start"
+            >
+              {description}
+            </h2>
+          </div>
+        </div>
+      </div>
+    </li>
+  );
+}
+
+  const keyuserinsights = project3Items.keyuserinsights.map((item) => ({
+    title: item.title,
+    description: item.description,
+    icon: item.icon,
+  }));
+
+
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden w-full h-full">
       <div className="max-w-7xl w-full">
@@ -16,19 +83,39 @@ const page = () => {
           <StarsBackground className="absolute inset-0 z-100" />
           <ShootingStars />
           {/* BackgroundLines fills the container */}
-          <div className="relative mx-10 xs:pt-40 px-10 w-full top-0 h-[50vh] flex justify-center items-center">
+          <div className="relative mx-10 xs:pt-40 px-10 w-full top-0 h-[50vh] flex justify-end items-center">
             <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4">
               {" "}
-              <div className="flex flex-col justify-center w-full px-4 sm:px-4">
-                <h4 className="text-xl sm:text-2xl lg:text-3xl">
+              <div className="flex flex-col justify-end items-start w-full px-4 sm:px-4">
+                <div className="flex flex-col justify-center w-full mt-4">
+                  {" "}
+                  <TypewriterEffect words={words} />
+                </div>
+
+                <h4 className="my-2 text-xl sm:text-xl lg:text-xl">
+                  <strong className="text-xl sm:text-xl lg:text-xl">
+                    My Role:
+                  </strong>{" "}
                   UX/UI Designer
+                </h4>
+                <h4 className="my-2 text-xl sm:text-xl lg:text-xl">
+                  <strong className="text-xl sm:text-xl lg:text-xl">
+                    Project Duration:
+                  </strong>{" "}
+                  5 Weeks
+                </h4>
+                <h4 className="my-2 text-xl sm:text-xl lg:text-xl">
+                  <strong className="text-xl sm:text-xl lg:text-xl">
+                    Tools Used:
+                  </strong>{" "}
+                  Figma, FigJame, Slax, Canvas
                 </h4>
               </div>
               <div className="flex justify-center items-center sm:w-auto mt-4 sm:mt-0">
                 {" "}
                 <img
-                  src="/TB-Mobile/TB-mockup29.png"
-                  alt="travelbuddy mockup"
+                  src="/FemTask/p3.png"
+                  alt="Femtask"
                   className="w-full sm:w-auto sm:h-auto max-w-[500px] md:max-w-[400px] mx-auto px-4"
                 />
               </div>
@@ -40,33 +127,33 @@ const page = () => {
             <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center">
               About The Project
             </h1>
-            <p className="relative text-black dark:text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
-              Create an intuitive travel assistant app that provides
-              personalized recommendations based on user preferences.
+            <p className="relative text-black dark:text-white-200 mt-6 py-4 px-8 flex text-center items-center justify-center">
+              Empowering Families Through Intuitive Task Management.
             </p>
             <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4">
               <div className="flex flex-col justify-center w-full px-4 sm:w-auto sm:px-4">
                 <h4 className="relative text-black dark:text-white-200 my-2 flex flex-row text-xl font-semiblod">
                   GET START
                 </h4>
-                <h2 className="relative my-4 flex flex-row text-3xl font-bold">
+                <h2 className="relative my-2 flex flex-row text-3xl font-bold">
                   Project's Overview
                 </h2>
                 <p className="text-sm leading-[1.6] my-2 text-black dark:text-white-200 font-normal">
-                  TravelBuddy is a user-friendly, AI-powered travel assistant
-                  app designed to provide personalized travel recommendations.
-                  This project was my first experience working on a real UX/UI
-                  process, where I collaborated with designers and backend
-                  developers.
+                  In today's fast-paced world, families often struggle to stay
+                  organized and connected. Juggling work, school,
+                  extracurricular activities, and household chores can lead to
+                  stress, miscommunication, and a sense of overwhelm.
                 </p>
                 <p className="text-sm leading-[1.6] my-2 text-white-200 font-normal">
-                  My contributions included refining typography, layout,
-                  spacing, UI components, and ensuring accessibility compliance.
+                  FamTask is a UX/UI design concept for a mobile app addressing
+                  this challenge, designed to empower families to collaborate
+                  seamlessly on task management and scheduling, creating a more
+                  harmonious home life.
                 </p>
               </div>
               <div className="flex justify-center items-center sm:w-auto mt-6 sm:mt-0">
                 <img
-                  src="/TB-Mobile/TB-mockup31.png"
+                  src="/FemTask/p3.png"
                   alt="travelbuddy mockup"
                   className="w-full sm:w-auto sm:h-auto max-w-[400px] mx-auto"
                 />
@@ -74,15 +161,48 @@ const page = () => {
             </div>
           </section>
 
-          {/* My role section */}
-          <section id="myrole" className="my-40 mx-20">
-            <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center">
-              My Role
+          {/* Challenge */}
+          <section
+            id="Challenge"
+            className="my-40 mx-20 items-center justify-center"
+          >
+            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
+              The Challenge
             </h1>
-            <p className="relative  text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
-              As a UI/UX designer, I make sure that my designs are well received
-              by users, and can be implemented by developers.
+            <p className="relative text-black dark:text-white-200 mt-4 py-2 px-4 flex text-center items-center justify-center">
+              Busy families often face several key challenges.
             </p>
+            <div className="relative m-10">
+              <ul className="p-8 py-4 items-center justify-center md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-2 gap-6 grid">
+                {" "}
+                {/* This is the important part! */}
+                {project3Items.challenges.map((challenge, index) => (
+                  <TextCard area={""} id={index} key={index} {...challenge} />
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          {/* Understanding the Users */}
+          <section id="keyuserinsights" className="my-40 mx-20">
+            <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center">
+              Understanding the Users
+            </h1>
+            <p className="relative text-white-200 mt-6 py-4 px-8 flex text-center items-center justify-center">
+              Our team recognized the need to deeply understand the challenges
+              and motivations of our target users. We conducted semi-structured
+              interviews with seven parents to gain insights into their daily
+              routines, pain points, and desired outcomes.
+            </p>
+            <div className="w-full p-8 py-4 items-center justify-center md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-2 gap-6 grid">
+              {keyuserinsights.map((keyuserinsight, index) => (
+                <RoleFeaturesSection
+                  key={keyuserinsight.title}
+                  {...keyuserinsight}
+                  index={index}
+                />
+              ))}
+            </div>
           </section>
 
           {/* Problems & Solutions */}
@@ -105,13 +225,11 @@ const page = () => {
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center">
               Persona
             </h1>
-            <p className="relative  text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
-              We conducted user interviews to gather insights into travel
-              behaviors, challenges, and requirements. This allowed us to
-              develop accurate personas and tailor the app to specific user
-              needs, improving both usability and relevance.
+            <p className="relative  text-white-200 mt-4 py-4 px-4 flex  text-center items-center justify-center">
+              Based on these insights, we created a user persona to represent
+              our target audience.
             </p>
-            <div className="relative h-full w-full p-2 m-4 rounded-xl border-0.75">
+            <div className="relative h-full w-full p-2 rounded-xl border-0.75">
               {/* Glowing effect component */}
               <GlowingEffect
                 blur={0}
@@ -124,124 +242,66 @@ const page = () => {
               />
               <div className="relative m-10">
                 <p className="relative flex flex-row py-2 text-2xl font-bold text-start ">
-                  Persona 1
+                  Persona
                 </p>
-              </div>
-            </div>
-            <div className="relative h-full w-full p-2 m-4 items-center justify-center rounded-xl border-0.75">
-              <GlowingEffect
-                blur={0}
-                borderWidth={3}
-                spread={80}
-                glow={true}
-                disabled={false}
-                proximity={64}
-                inactiveZone={0.01}
-              />
-              <div className="relative m-10">
-                <p className="relative flex flex-row py-2 text-2xl font-bold text-start ">
-                  Persona 2
-                </p>
+                <ul className="grid md:grid-cols-3 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4">
+                  {/* This is the important part! */}
+                  {project3Items.Personas.map((persona, index) => (
+                    <TextCard key={index} {...persona} />
+                  ))}
+                </ul>
               </div>
             </div>
           </section>
 
-          {/* Competitive Analysis */}
+          {/* Journey Mapping & Design Process*/}
           <section
-            id="competitive"
+            id="journeymapping"
             className="my-40 mx-20 items-center justify-center"
           >
             <h1 className="relative text-black dark:text-white flex flex-row text-4xl font-bold items-center justify-center">
-              Competitive Analysis
+              Journey Mapping
             </h1>
             <p className="relative text-black dark:text-white-200 mt-6 py-4 px-8 flex text-center items-center justify-center">
-              TravelBuddy differentiates itself from competitors such as Google
-              Travel, TripIt, and Kayak by focusing on:
+              To gain further empathy, we mapped out a typical day for Nathalia,
+              identifying key pain points and opportunities for our app to
+              provide value. This involved mapping out the high and low points
+              of the day and identifying areas for the app to assist in.
             </p>
-            <div className="relative m-10"></div>
+            <h1 className="relative mt-8 text-black dark:text-white flex flex-row text-4xl font-bold items-center justify-center">
+              Design Process
+            </h1>
+            <p className="relative text-black dark:text-white-200 py-4 px-8 flex text-center items-center justify-center">
+              Our design process followed a user-centered approach, iterating
+              based on user feedback and usability testing.
+            </p>
+
+            <div className="relative m-10">
+              <ul className="grid md:grid-cols-4 grid-rows-none sm:grid-cols-1 xs:grid-cols-2 gap-8 ">
+                {" "}
+                {/* This is the important part! */}
+                {project3Items.initialdesignconcepts.map(
+                  (initialdesignconcepts, index) => (
+                    <TextCard key={index} {...initialdesignconcepts} />
+                  )
+                )}
+              </ul>
+            </div>
           </section>
 
-          {/* Design & Key Features */}
+          {/*  Responding to User Feedback*/}
           <section
             id="competitive"
             className="my-40 mx-20 items-center justify-center"
           >
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
-              Design & Key Features
+              Responding to User Feedback Iteration 1
             </h1>
             <h3 className="relative text-black dark:text-white mt-6 py-4 px-8 flex font-semibold txt-3xl text-center items-center justify-center">
-              Features I Helped Shape
+              Following the initial usability tests, we identified several key
+              areas for improvement and iterated on our design accordingly.
             </h3>
             <div className="relative m-10"></div>
-          </section>
-
-          {/* Use Flow */}
-          <section id="userflow" className="my-40 mx-20">
-            <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center">
-              User Flow
-            </h1>
-            <p className="relative text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
-              We kept the user flow simple and intuitive.
-            </p>
-            <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto items-center justify-center">
-              <div className="flex">
-                {" "}
-                <img
-                  src="/TB-Mobile/UserFlow.png"
-                  alt="user flow"
-                  className="md:h-full h-full items-center sm:w-auto sm:h-auto mx-auto p-4"
-                />
-              </div>
-            </div>
-          </section>
-
-          {/* UI Design*/}
-          <section
-            id="uiDesign"
-            className="my-40 mx-20 items-center justify-center"
-          >
-            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
-              UI Design
-            </h1>
-            <h2 className="relative font-semibold txt-4xl text-black dark:text-white mt-6 py-4 px-8 flex  text-center items-center justify-center">
-              Our system ensures a harmonious, accessible, and responsive design
-              framework that is user-friendly and adaptable to varying contexts.
-            </h2>{" "}
-            <p className="relative text-black dark:text-white-200 mt-6 py-4 px-8 flex text-start items-center justify-center">
-              User-friendly, with simple button presses based on real user
-              feedback for enhanced usability. Clear color contrasts,
-              easy-to-read text, and a mobile-friendly interface with
-              touch-friendly buttons and links. Customizable light and dark
-              modes for a comfortable experience in any setting.
-            </p>{" "}
-            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 max-w-7xl mx-auto my-8 mx-30">
-              <div className="flex">
-                {" "}
-                <img
-                  src="/TB-Mobile/StyleGuide.png"
-                  alt="Style Guide"
-                  className="w-full h-full items-center px-10 sm:w-auto sm:h-auto mx-auto"
-                />
-              </div>
-              <div className="flex">
-                {" "}
-                <img
-                  src="/TB-Mobile/Colors-Guide.png"
-                  alt="Colors-Guide"
-                  className="w-full h-full items-center sm:w-auto sm:h-auto mx-auto"
-                />
-              </div>
-            </div>
-          </section>
-
-          {/* Key Features */}
-          <section
-            id="keyFeatures"
-            className="my-40 mx-20 items-center justify-center"
-          >
-            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
-              Key Features
-            </h1>
           </section>
 
           {/* Visual Design */}
@@ -251,7 +311,7 @@ const page = () => {
           >
             <div
               className="relative bg-cover bg-center bg-no-repeat before:absolute before:inset-0 before:bg-black before:opacity-70 text-white py-10"
-              style={{ backgroundImage: `url('/TB-Mobile/UIDesign.png')` }}
+              style={{ backgroundImage: `url('/FemTask/p3.png')` }}
             >
               <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
                 Visual Design
@@ -269,7 +329,7 @@ const page = () => {
               <div className="py-4">
                 {" "}
                 <img
-                  src="/TB-Mobile/VisualDesign1.png"
+                  src="/FemTask/p3.png"
                   alt="travelbuddy bomile's mockup"
                   className="h-[400px] w-full items-center sm:w-auto sm:h-auto mx-auto"
                 />
@@ -277,7 +337,7 @@ const page = () => {
               <div className="py-4">
                 {" "}
                 <img
-                  src="/TB-Mobile/VisualDesign2.png"
+                  src="/FemTask/p3.png"
                   alt="travelbuddy bomile's mockup"
                   className="h-[400px] w-full items-center sm:w-auto sm:h-auto mx-auto"
                 />
@@ -288,7 +348,7 @@ const page = () => {
               <div className="py-4">
                 {" "}
                 <img
-                  src="/TB-Mobile/VisualDesign3.png"
+                  src="/FemTask/p3.png"
                   alt="travelbuddy bomile's mockup"
                   className="h-[400px] w-full items-center sm:w-auto sm:h-auto mx-auto"
                 />
@@ -296,7 +356,7 @@ const page = () => {
               <div className="py-4">
                 {" "}
                 <img
-                  src="/TB-Mobile/VisualDesign4.png"
+                  src="/FemTask/p3.png"
                   alt="travelbuddy bomile's mockup"
                   className="h-[400px] w-full items-center sm:w-auto sm:h-auto mx-auto"
                 />
@@ -305,14 +365,14 @@ const page = () => {
             <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto">
               <div className="py-4">
                 <img
-                  src="/TB-Mobile/VisualDesign5.png"
+                  src="/FemTask/p3.png"
                   alt="travelbuddy bomile's mockup"
                   className="h-[400px] w-full items-center sm:w-auto sm:h-auto mx-auto"
                 />
               </div>
               <div>
                 <img
-                  src="/TB-Mobile/TB-mockup32.png"
+                  src="/FemTask/p3.png"
                   alt="travelbuddy bomile's mockup"
                   className="w-full h-full px-16 sm:px-10 items-center sm:w-auto sm:h-auto mx-auto"
                 />
@@ -322,7 +382,7 @@ const page = () => {
               <div className="flex">
                 {" "}
                 <img
-                  src="/TB-Mobile/iMac.png"
+                  src="/FemTask/p3.png"
                   alt="travelbuddy mockup"
                   className="w-full h-full items-center sm:w-auto sm:h-auto mx-auto"
                 />
@@ -330,7 +390,7 @@ const page = () => {
               <div className="flex">
                 {" "}
                 <img
-                  src="/TB-Mobile/iMac-1.png"
+                  src="/FemTask/p3.png"
                   alt="travelbuddy mockup"
                   className="w-full h-full items-center sm:w-auto sm:h-auto mx-auto"
                 />
