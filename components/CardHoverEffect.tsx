@@ -17,9 +17,8 @@ const CardHoverEffect = () => {
                 link: item.link,
                 projectId: item.id.toString(),
             }))}
-
         />
-        </div>
+      </div>
     </>
   );
 }

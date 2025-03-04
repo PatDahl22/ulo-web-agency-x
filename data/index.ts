@@ -1,3 +1,5 @@
+import { decodeFormState } from "next/dist/server/app-render/entry-base";
+
 export const gridItems = [
   {
     id: 1,
@@ -130,7 +132,7 @@ export const projects = [
       "👉 My Role: I led the UX/UI design, creating a user-friendly and accessible interface.",
       "👉 Impact: FamTask reduces stress, boosts collaboration, and encourages kids to take responsibility.",
     ],
-    img: "/ft-bg.png",
+    img: "/FemTask/p3.png",
     link: "/project3",
     area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
   },
@@ -744,6 +746,19 @@ export const project3Items = {
     },
   ],
 
+  problemsandsolutions: [
+    {
+      title: "Problem",
+      des: "Parents, especially those with school-aged children, struggle to juggle work, household chores, and kids' activities. Lack of coordination leads to stress, missed tasks, and frustration. Existing tools (like Google Keep or calendar apps) aren't designed to meet the needs of busy families.",
+      className: "text-neutral-500",
+    },
+    {
+      title: "Solution",
+      des: "FamTask simplifies task delegation, gives parents a clear overview of family responsibilities, and motivates children to complete chores through a reward system. The app centralizes family tasks in one place, enhancing communication and reducing stress.",
+      className: "text-neutral-500",
+    },
+  ],
+
   keyuserinsights: [
     {
       title: "Need for Automated Reminders",
@@ -803,32 +818,32 @@ export const project3Items = {
   initialdesignconcepts: [
     {
       id: 1,
-      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-2 md:col-span-3 row-start-1 lg:col-span-3 ",
       title: "Task Creation and Assignment",
       description:
         "Parents have the ability to assign tasks with set deadlines to children and family members.",
     },
     {
       id: 2,
-      area: "sm:col-span-2 md:col-span-1 row-start-1 xl:col-span-2 xl:row-span-1",
-      title: "Shared Calendars",
-      description: "Centralized schedule view for the whole family.",
-    },
-    {
-      id: 3,
-      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-2 xl:col-span-2 ",
       title: "Progress Tracking",
       description: "Visual representation of task completion.",
     },
     {
+      id: 3,
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 ",
+      title: "Shared Calendars",
+      description: "Centralized schedule view for the whole family.",
+    },
+    {
       id: 4,
-      area: "sm:col-span-1 md:col-span-3 row-start-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-2 xl:col-span-2",
       title: "Rewards System",
       description: "Motivate children through gamification and incentives.",
     },
     {
       id: 5,
-      area: "sm:col-span-1 md:col-span-3 row-start-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-2 row-start-2 xl:col-span-2 xl:row-span-1",
       title: "Different account user",
       description:
         "For children, focus on what tasks they should focus on. For parent, overview of the task they are assign.",
@@ -838,7 +853,7 @@ export const project3Items = {
   respondingtouserfeedback1: [
     {
       id: 1,
-      title: "Responding to user feedback iteration 1",
+      title: "Responding to user feedback iteration",
       des: [
         "👉 Overcrowded Homescreen: The initial design of the homescreen for the app was cluttered and overwhelming.",
         "👉 Calendar Usability: Users expressed they wanted the calendar to only showcase their task, not the family.",
@@ -848,7 +863,7 @@ export const project3Items = {
     },
     {
       id: 2,
-      title: "Changes implemented iteration 1",
+      title: "Changes implemented iteration",
       des: [
         "👉 Simplified homescreen: Removed redundant 'To-Do' and 'Calendar' tabs, consolidating navigation into a bottom bar. Refined color scheme and button layout.",
         "👉 Personalized Calendar View: Filtered calendar view to display only tasks assigned to the specific user.",
@@ -860,7 +875,7 @@ export const project3Items = {
   respondingtouserfeedback2: [
     {
       id: 1,
-      title: "Responding to user feedback iteration 2",
+      title: "Responding to user feedback iteration",
       des: [
         "👉 Ethical consideration: The ethical implications of constantly being reminded of tasks may induce mental anxiety for children.",
         "👉 Ethical consideration: A high volume of bright colors and gamified animated designs may induced cognitive overload for children.",
@@ -869,7 +884,7 @@ export const project3Items = {
     },
     {
       id: 2,
-      title: "Changes implemented iteration 2",
+      title: "Changes implemented iteration",
       des: [
         "👉 Removal of aautomatic reminders: Removed automatic reminders and implemented a notification section where users can check their upcoming tasks on their own terms.",
         "👉 Simplified children's interface: After the first round of user testing of both admins and member accounts, we switched the interface to be more minimal and neutral.",
@@ -885,36 +900,42 @@ export const project3Items = {
       area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
       description:
         "Utilized headings (H1, H2, H3), body text, and text boxes to create a logical content structure for screen readers.",
+      icon: "/TB-Mobile/role-icons6.png",
     },
     {
       title: "Readable font and size",
       area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
       description:
         "Selected easily readable fonts and ensured sufficient text size (minimum 16px for body text, 24px for headings) for readability.",
+      icon: "/TB-Mobile/role-icons6.png",
     },
     {
       title: "Descriptive image and icon labels",
       area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
       description:
         "Provided descriptive alt text for all images and icons, ensuring screen readers can convey their purpose (implementation planned for the development phase).",
+      icon: "/TB-Mobile/role-icons6.png",
     },
     {
       title: "Clear button labels",
       area: "sm:col-span-3 md:col-span-3 row-start-1 xl:col-span-3 xl:row-span-1",
       description:
         "Used clear, concise, and descriptive button labels, avoiding vague terms like 'Click Here.'",
+      icon: "/TB-Mobile/role-icons6.png",
     },
     {
       title: "Sufficient button size and spacing",
       area: "sm:col-span-3 md:col-span-3 row-start-1 xl:col-span-3 xl:row-span-1",
       description:
         "Ensured buttons are at least 44x44 pixels with adequate spacing to prevent accidental presses.",
+      icon: "/TB-Mobile/role-icons6.png",
     },
     {
       title: "ARIA Labels (Planned)",
       area: "sm:col-span-3 md:col-span-3 row-start-1 xl:col-span-3 xl:row-span-1",
       description:
         "We plan to implement ARIA attributes during development to further enhance screen reader support and ensure WCAG compliance. We also plan to be extremely aware of any color contrast issues.",
+      icon: "/TB-Mobile/role-icons6.png",
     },
   ],
 
@@ -924,76 +945,70 @@ export const project3Items = {
       area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
       description:
         "Separate login accounts for parents (admins) and children (members).",
+      icon: "/TB-Mobile/role-icons6.png",
     },
     {
       title: "Shared checklists",
       area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
       description:
         "Admin have the access to be able to add family up-keeping tasks on a list.",
+      icon: "/TB-Mobile/role-icons6.png",
     },
     {
       title: "Shared calendar",
       area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
       description:
         "Allow parents and children to view a family calendar, children are only to see task assign to themselves.",
+      icon: "/TB-Mobile/role-icons6.png",
     },
     {
       title: "Progress tracking",
       area: "sm:col-span-3 md:col-span-3 row-start-1 xl:col-span-3 xl:row-span-1",
       description:
         "Parents have the ability to track their children's progress in the app.",
+      icon: "/TB-Mobile/role-icons6.png",
     },
     {
       title: "Child-Friendly design",
       area: "sm:col-span-3 md:col-span-3 row-start-1 xl:col-span-3 xl:row-span-1",
       description:
         "Avatar, Simple, intuitive interface with visual cues (custom avatar).",
+      icon: "/TB-Mobile/role-icons6.png",
     },
     {
       title: "Flexible notifications",
       area: "sm:col-span-3 md:col-span-3 row-start-1 xl:col-span-3 xl:row-span-1",
       description:
         "Users are able to access a notification section to see their upcoming tasks.",
+      icon: "/TB-Mobile/role-icons6.png",
     },
   ],
 
   measuringsuccess: [
     {
-      title: "✨ Reduced parental stress levels",
+      title: "✨ Reduced parental stress levels least 1 point",
       description: [
         "Decrease in self-reported stress levels among parents after regular app usage (measured on a scale of 1-5).",
-        "👉 Target: Reduce stress by at least 1 point on the scale.",
       ],
-      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
-      className: "h-4 w-4 text-neutral-500",
-      icon: "/web.png",
     },
     {
-      title: "✨ Time savings for parents",
+      title:
+        "✨ Time savings for parents reduce follow-up time by at least 20%.",
       description: [
         "Reduction in the time parents spend manually tracking chores and reminding children.",
-        "👉 Target: Reduce follow-up time by at least 20%.",
       ],
-      className: "h-4 w-4 text-neutral-500",
-      icon: "/web.png",
     },
     {
-      title: "✨ Increased task completion by children",
+      title: "✨ Increased task completion by 70%",
       description: [
         "Increase in the percentage of tasks completed independently by children, without parental reminders.",
-        "👉 Target: Increase independent task completion by 70%.",
       ],
-      className: "h-4 w-4 text-neutral-500",
-      icon: "/web.png",
     },
     {
-      title: "✨ Improved family communication",
+      title: "✨ Improved family communication by 70%",
       description: [
-        "Increase the harmony of the household and how well tasks are handled.",
-        "👉 Target: Min 70% of user report improved communications and tasks where both parent and children feel that tasks are being handled equally.",
+        "Increase the harmony of the household and how well tasks are handled. Both parent and children feel that tasks are being handled equally.",
       ],
-      className: "h-4 w-4 text-neutral-500",
-      icon: "/web.png",
     },
   ],
 
@@ -1002,19 +1017,46 @@ export const project3Items = {
       title: "The power of user feedback",
       description:
         "Usability testing and user interviews are essential for identifying design flaws and refining the user experience. Even features we initially thought would be effective (e.g., automatic reminders) needed to be reconsidered based on user feedback.",
-      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      area: "",
     },
     {
       title: "Ethical design considerations",
       description:
         "It's crucial to consider the potential negative impacts of our designs and make adjustments to mitigate harm. In our case, we removed automatic reminders to prevent anxiety and simplified the children's interface to reduce cognitive load.",
-      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      area: "",
     },
     {
       title: "Simplicity is key",
       description:
         "A clean, intuitive interface is essential for engaging users of all ages. Even for child-centric designs, simplicity and clarity should be prioritized.",
-      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      area: "",
+    },
+  ],
+
+  nextsteps: [
+    {
+      title: "Broader range of families",
+      description:
+        "We will conduct additional usability testing with a broader range of families.",
+      area: "",
+    },
+    {
+      title: "Accessibility features",
+      description:
+        "We will develop a detailed plan for implementing ARIA labels and other accessibility features during the development phase. ",
+      area: "",
+    },
+    {
+      title: "Finalize design prototype and get feedback",
+      description:
+        "We will build a high-fidelity prototype and conduct further user testing and explore integrations with other popular calendar and task management apps.",
+      area: "",
+    },
+    {
+      title:
+        "We will iterate and improve the application from our targets feedback!",
+      description: "",
+      area: "md:col-span-3 row-start-2 xl:col-span-3 xl:row-span-1",
     },
   ],
 
@@ -1057,24 +1099,28 @@ export const project3Items = {
       description:
         "We will conduct a beta test to gather real-world feedback and refine the app before launch.",
       area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
+      icon: "/exp1.svg",
     },
     {
       title: "Performance and scalability",
       description:
         "The app will be optimized for performance across all devices, ensuring a smooth user experience, even on older phones.",
       area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
+      icon: "/exp2.svg",
     },
     {
       title: "External calendar integration",
       description:
         "We will add two-way syncing with calendars like Google Calendar to allow families to manage both tasks and events in one place.",
       area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
+      icon: "/exp3.svg",
     },
     {
       title: "Continual user feedback",
       description:
         "Post-launch, we will continue collecting feedback to improve FamTask, including adding features like a chores marketplace for kids to pick extra tasks for rewards.",
       area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
+      icon: "/exp4.svg",
     },
   ],
 
