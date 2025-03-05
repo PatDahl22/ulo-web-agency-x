@@ -87,16 +87,16 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           <StarsBackground className="absolute inset-0 z-100" />
           <ShootingStars />
           {/* BackgroundLines fills the container */}
-          <div className="relative mx-10 xs:pt-40 px-8 w-full h-[50vh] flex justify-end items-center">
-            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4 sm:mt-16">
+          <div className="relative xs:pt-40 px-8 w-full h-[50vh] flex justify-center items-center m-10 sm:px-16 md:px-14">
+            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4 sm:mt-20">
               <div className="flex justify-center items-center sm:w-auto sm:mt-0">
                 <img
                   src="/FemTask/FT-Mockup-hero.png"
                   alt="Femtask"
-                  className="justify-center items-center max-h-[500px] md:max-h-[400px] mx-auto p-4"
+                  className="justify-center items-center max-h-[600px] md:max-h-[500px] mx-auto"
                 />
               </div>
-              <div className="flex flex-col justify-end items-start w-full px-4 sm:pt-8">
+              <div className="flex flex-col justify-end items-start w-full ">
                 <div className="flex flex-col justify-center w-full">
                   <TypewriterEffect words={words} />
                 </div>
@@ -120,7 +120,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </div>
 
           {/* About section */}
-          <section id="about" className="my-20 mx-20">
+          <section id="about" className="my-40 mx-10 sm:px-16 md:px-14">
             <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center">
               About The Project
             </h1>
@@ -159,7 +159,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Problems & Solutions */}
-          <section id="problems" className="my-40 mx-20">
+          <section id="problems" className="my-40 mx-10 sm:px-16 md:px-14">
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center w-full ">
               Problems VS Solutions
             </h1>
@@ -177,17 +177,20 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 How we planned
               </h3>
             </div>
-            <div className="flex justify-center items-center w-full h-full mx-auto xl:px-14 md:px-8 xs:px-12">
+            <div className="flex justify-center items-center sm:w-auto mt-16 sm:mt-8">
               <img
                 src="/FemTask/roadmap.png"
                 alt="roadmap"
-                className="max-w-full h-auto"
+                className="w-full sm:w-auto sm:h-auto max-h-[400px] mx-auto"
               />
             </div>
           </section>
 
           {/* Understanding the Users */}
-          <section id="keyuserinsights" className="my-40 mx-20">
+          <section
+            id="keyuserinsights"
+            className="my-40 mx-10 sm:px-16 md:px-14"
+          >
             <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center">
               Understanding the Users
             </h1>
@@ -209,7 +212,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Challenge */}
-          <section id="Challenge" className="my-40 mx-20">
+          <section id="Challenge" className="my-40 mx-10 sm:px-16 md:px-14">
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
               The Challenge
             </h1>
@@ -228,7 +231,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Persona section */}
-          <section id="pesonas" className="my-40 mx-20">
+          <section id="pesonas" className="my-40 mx-10 sm:px-16 md:px-14">
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center">
               Persona
             </h1>
@@ -251,7 +254,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 <img
                   src="/FemTask/Persona.png"
                   alt="persona"
-                  className="max-w-full h-full"
+                  className="w-full sm:w-auto sm:h-auto max-h-[400px] mx-auto"
                 />
               </div>
             </div>
@@ -260,7 +263,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           {/* Journey Mapping & Design Process*/}
           <section
             id="journeymapping"
-            className="my-40 mx-20 items-center justify-center"
+            className="my-40 mx-10 sm:px-16 md:px-14"
           >
             <h1 className="relative text-black dark:text-white flex flex-row text-4xl font-bold items-center justify-center">
               Journey mapping
@@ -271,52 +274,30 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
               provide value. This involved mapping out the high and low points
               of the day and identifying areas for the app to assist in.
             </p>
-            <div className="flex flex-col justify-start w-full sm:w-auto sm:px-4">
-              <h1 className="relative text-black dark:text-white flex flex-row text-4xl mt-8 font-bold text-start items-center justify-center">
-                Design process
-              </h1>
-              <p className="relative text-black dark:text-white-200 py-4 px-8 flex text-start items-center justify-center">
-                Our design process followed a user-centered approach, iterating
-                based on user feedback and usability testing.
-              </p>
-            </div>
 
-            <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full py-4 items-center justify-between gap-4 px-10">
-              <div className="flex justify-center items-center w-full h-full mx-auto">
+            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full py-4 items-center justify-between gap-4">
+              <div className="flex flex-col justify-start items-start w-full sm:w-auto sm:px-4">
+                <h1 className="relative text-black dark:text-white flex flex-row text-4xl px-4 mt-8 font-bold text-start">
+                  Design process
+                </h1>
+                <p className="relative text-black dark:text-white-200 p-4 flex text-start">
+                  Our design process followed a user-centered approach,
+                  iterating based on user feedback and usability testing.
+                </p>
+              </div>
+
+              <div className="flex justify-center items-center w-full h-full mx-auto md:px-8 sm:px-8">
                 <img
                   src="/FemTask/Lo-fil.png"
                   alt="lofil"
-                  className="max-w-full h-full"
-                />
-              </div>
-
-              <div className="flex justify-center items-center w-full h-full mx-auto">
-                <img
-                  src="/FemTask/Colors.png"
-                  alt="Colors"
-                  className="max-w-full h-full"
-                />
-              </div>
-            </div>
-            <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full py-4 items-center justify-between gap-4 px-10">
-              <div className="flex justify-center items-center w-full h-full mx-auto">
-                <img
-                  src="/FemTask/Icons.png"
-                  alt="Icons"
-                  className="max-w-full h-full"
-                />
-              </div>
-              <div className="flex justify-center items-center w-full h-full mx-auto">
-                <img
-                  src="/FemTask/Typography.png"
-                  alt="Typography"
-                  className="max-w-full h-full"
+                  className="w-full sm:w-auto sm:h-auto max-h-[400px] mx-auto"
                 />
               </div>
             </div>
           </section>
 
-          <div className="my-40 mx-20">
+          {/*Initial Design Concepts*/}
+          <div className="my-40 mx-10 sm:px-16 md:px-14">
             <h1 className="relative text-black dark:text-white flex flex-row text-4xl mt-8 font-bold items-center justify-center">
               Initial Design Concepts
             </h1>
@@ -340,10 +321,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </div>
 
           {/* Accessibility Considerations */}
-          <section
-            id="Accessibility"
-            className="my-40 mx-20 items-center justify-center"
-          >
+          <section id="Accessibility" className="my-40 mx-10 sm:px-16 md:px-14">
             <h1 className="relative text-black dark:text-white text-4xl font-bold mt-4 py-4 px-8 flex text-center items-center justify-center">
               Accessibility considerations
             </h1>
@@ -362,10 +340,33 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 )
               )}
             </div>
+            <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-1 xs:grid-cols-1 w-full h-full py-4 items-center justify-between gap-6 px-10">
+              <div className="flex justify-center items-center w-full h-full mx-auto">
+                <img
+                  src="/FemTask/Icons.png"
+                  alt="Icons"
+                  className="w-full h-full sm:w-auto sx:max-w-[400px] mx-auto"
+                />
+              </div>
+              <div className="flex justify-center items-center w-full h-full mx-auto">
+                <img
+                  src="/FemTask/Typography.png"
+                  alt="Typography"
+                  className="w-full sm:w-auto sx:max-w-[400px] mx-auto"
+                />
+              </div>
+              <div className="flex justify-center items-center w-full h-full mx-auto">
+                <img
+                  src="/FemTask/Colors.png"
+                  alt="Colors"
+                  className="w-full h-full sm:w-auto sx:max-w-[400px] mx-auto"
+                />
+              </div>
+            </div>
           </section>
 
           {/* Key Features */}
-          <section id="Keyfeatures" className="my-40 mx-20">
+          <section id="Keyfeatures" className="my-40 mx-10 sm:px-16 md:px-14">
             <h1 className="relative text-black dark:text-white text-4xl font-bold mt-4 py-4 px-8 flex text-center items-center justify-center">
               Key Features
             </h1>
@@ -380,57 +381,18 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
             </div>
           </section>
 
-          {/*Mockups*/}
-          <div className="mx-20 my-10">
-            <div className="flex justify-center items-center w-full h-full mx-auto pt-4 xl:px-10">
-              <img
-                src="/FemTask/Mockup-FöräldrarProfile.png"
-                alt="Mockup-FöräldrarProfile"
-                className="max-w-full h-full"
-              />
-            </div>
-            <div className="flex justify-center items-center w-full h-full mx-auto pt-4 xl:px-10">
-              <img
-                src="/FemTask/Mockup-BarnProfile.png"
-                alt="Mockup-BarnProfile"
-                className="max-w-full h-full"
-              />
-            </div>
-            <div className="flex justify-center items-center w-full h-full mx-auto pt-4 xl:px-10">
-              <img
-                src="/FemTask/Mockup-SmallbarnProfile-1.png"
-                alt="Mockup-SmallbarnProfile"
-                className="max-w-full h-full"
-              />
-            </div>
-            <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full py-4 items-center justify-between gap-4 xl:px-10">
-              <div className="flex justify-center items-center w-full h-full mx-auto">
-                <img
-                  src="/FemTask/Mockup-Skapamål.png"
-                  alt="Mockup-Skapamål"
-                  className="max-w-full h-full"
-                />
-              </div>
-              <div className="flex justify-center items-center w-full h-full mx-auto">
-                <img
-                  src="/FemTask/Mockup-Skapauppgifter.png"
-                  alt="Mockup-Skapauppgifter"
-                  className="max-w-full h-full"
-                />
-              </div>
-            </div>
-          </div>
-
           {/* Responding to User Feedback*/}
-          <section id="UserFeedback" className="my-40 mx-20">
-            <h1 className="relative text-black dark:text-white text-4xl font-bold px-8 flex text-center items-center justify-center">
-              Responding to user feedback iteration 1
-            </h1>
-            <p className="relative text-black dark:text-white-200 pt-4 flex text-start items-center justify-center">
-              Following the initial usability tests, we identified several key
-              areas for improvement and iterated on our design accordingly.
-            </p>
-            <div className="max-w-5xl mx-auto gap-8">
+          <section id="UserFeedback" className="my-40 mx-10 sm:px-16 md:px-14">
+            <div className="flex flex-col justify-center sm:px-4 mx-auto gap-6 w-full py-4">
+              <h1 className="relative flex text-4xl font-bold items-center justify-center text-start text-black dark:text-white">
+                Responding to user feedback iteration 1
+              </h1>
+              <p className="relative text-black dark:text-white-200 flex text-start items-center justify-center">
+                Following the initial usability tests, we identified several key
+                areas for improvement and iterated on our design accordingly.
+              </p>
+            </div>
+            <div className="max-w-5xl mx-auto gap-6 w-full py-4">
               <HoverEffect
                 items={project3Items.respondingtouserfeedback1.map((item) => ({
                   title: item.title,
@@ -439,15 +401,17 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 }))}
               />{" "}
             </div>
-            <h1 className="relative text-black dark:text-white text-4xl font-bold mt-8 px-8 flex text-center items-center justify-center">
-              Ethical design considerations and further refinement
-            </h1>
-            <p className="relative text-black dark:text-white-200 pt-4 flex text-start items-center justify-center">
-              During our second iteration, we conducted an ethical design
-              workshop to identify and address potential negative impacts of our
-              app.
-            </p>
-            <div className="max-w-5xl mx-auto gap-8">
+            <div className="flex flex-col justify-center sm:w-auto sm:px-4 max-w-5xl mx-auto gap-6 w-full py-4">
+              <h1 className="relative flex text-4xl font-bold items-center justify-center text-start text-black dark:text-white">
+                Ethical design considerations and further refinement
+              </h1>
+              <p className="relative text-black dark:text-white-200 flex text-start items-center justify-center">
+                During our second iteration, we conducted an ethical design
+                workshop to identify and address potential negative impacts of
+                our app.
+              </p>
+            </div>
+            <div className="max-w-5xl mx-auto gap-6 w-full py-4">
               <HoverEffect
                 items={project3Items.respondingtouserfeedback2.map((item) => ({
                   title: item.title,
@@ -456,30 +420,10 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 }))}
               />
             </div>
-            {/*Mock up*/}
-            <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full py-4 items-center justify-between gap-8 xl:px-12">
-              <div className="flex justify-center items-center w-full h-full mx-auto">
-                <img
-                  src="/FemTask/Adult-Mockup-Kalender.png"
-                  alt="Adult-Mockup-Kalender"
-                  className="max-w-full h-full"
-                />
-              </div>
-              <div className="flex justify-center items-center w-full h-full mx-auto">
-                <img
-                  src="/FemTask/Kid-Mockup-Kalender.png"
-                  alt="Kid-Mockup-Kalender"
-                  className="max-w-full h-full"
-                />
-              </div>
-            </div>
           </section>
 
           {/* Visual Design */}
-          <section
-            id="VisualDesign"
-            className="my-20 mx-20 items-center justify-center"
-          >
+          <section id="VisualDesign" className="my-40 mx-10 sm:px-16 md:px-14">
             <div
               className="relative bg-cover bg-center bg-no-repeat before:absolute before:inset-0 before:bg-black before:opacity-70 text-white py-10"
               style={{ backgroundImage: `url('/FemTask/FT-Mockup-hero.png')` }}
@@ -489,81 +433,141 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
               </h1>
               <p className="relative text-black dark:text-white-200 mt-6 py-4 px-8 flex text-start items-center justify-center"></p>{" "}
             </div>
-            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto">
-              <div className="py-4">
-                {" "}
-                <img
-                  src="/FemTask/FT-Mockup-hero.png"
-                  alt="travelbuddy bomile's mockup"
-                  className="h-[400px] w-full items-center sm:w-auto sm:h-auto mx-auto"
-                />
+            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4">
+              <div className="flex flex-col justify-center sm:w-auto sm:px-4 max-w-5xl mx-auto gap-6 w-full p-4 py-4">
+                <h1 className="relative flex text-4xl font-bold items-center justify-center py-4 text-start text-black dark:text-white">
+                  Task Creation
+                </h1>
+                <p className="text-md leading-[1.6] text-black dark:text-white-200 font-normal">
+                  Empower parents to easily design and assign tasks with clear
+                  details—name, description, deadline, and rewards. Tasks can be
+                  tailored to an individual child or shared with everyone.
+                </p>
               </div>
-              <div className="py-4">
-                {" "}
+              <div className="flex justify-center items-center sm:w-auto mt-4 sm:mt-4 w-full p-4 py-4">
                 <img
-                  src="/FemTask/p3.png"
-                  alt="travelbuddy bomile's mockup"
-                  className="h-[400px] w-full items-center sm:w-auto sm:h-auto mx-auto"
-                />
-              </div>
-            </div>
-            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto">
-              {" "}
-              <div className="py-4">
-                {" "}
-                <img
-                  src="/FemTask/p3.png"
-                  alt="travelbuddy bomile's mockup"
-                  className="h-[400px] w-full items-center sm:w-auto sm:h-auto mx-auto"
-                />
-              </div>
-              <div className="py-4">
-                {" "}
-                <img
-                  src="/FemTask/p3.png"
-                  alt="travelbuddy bomile's mockup"
-                  className="h-[400px] w-full items-center sm:w-auto sm:h-auto mx-auto"
+                  src="/FemTask/Mockup-Skapauppgifter.png"
+                  alt="Task Creation"
+                  className="w-full sm:w-auto sm:h-auto mx-auto"
                 />
               </div>
             </div>
-            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto">
-              <div className="py-4">
-                <img
-                  src="/FemTask/p3.png"
-                  alt="travelbuddy bomile's mockup"
-                  className="h-[400px] w-full items-center sm:w-auto sm:h-auto mx-auto"
-                />
+            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4">
+              <div className="flex flex-col justify-center sm:w-auto sm:px-4 max-w-5xl mx-auto gap-6 w-full p-4 py-4">
+                <h1 className="relative flex text-4xl font-bold items-center justify-center py-4 text-start text-black dark:text-white">
+                  Goal Setting
+                </h1>
+                <p className="text-md leading-[1.6] text-black dark:text-white-200 font-normal">
+                  Foster collaboration with a simple, intuitive interface where
+                  parents and children set shared goals. Visual progress
+                  trackers keep everyone motivated and celebrate achievements.
+                </p>
               </div>
-              <div>
+              <div className="flex justify-center items-center sm:w-auto mt-4 sm:mt-4 w-full p-4 py-4">
                 <img
-                  src="/FemTask/p3.png"
-                  alt="travelbuddy bomile's mockup"
-                  className="w-full h-full px-16 sm:px-10 items-center sm:w-auto sm:h-auto mx-auto"
+                  src="/FemTask/Mockup-Skapamål.png"
+                  alt="Goal Setting"
+                  className="w-full sm:w-auto sm:h-auto mx-auto"
                 />
               </div>
             </div>
-            <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-4 max-w-7xl mx-auto">
-              <div className="flex">
-                {" "}
+            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4">
+              <div className="flex flex-col justify-center sm:w-auto sm:px-4 max-w-5xl mx-auto gap-6 w-full p-4 py-4">
+                <h1 className="relative flex text-4xl font-bold items-center justify-center py-4 text-start text-black dark:text-white">
+                  Personalized Calendars
+                </h1>
+                <p className="text-md leading-[1.6] text-black dark:text-white-200 font-normal">
+                  Separate calendars display tasks and activities for both
+                  children and parents. Parents get a comprehensive overview
+                  with full control to view, add, or edit events, while children
+                  enjoy a streamlined view with the ability to manage their own
+                  activities. Alerts and deadlines ensure nothing is missed.
+                </p>
+              </div>
+              {/*Mock up*/}
+              <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 h-full items-center justify-between gap-4 w-full p-4 py-4">
+                <div className="flex justify-center items-center w-full h-full mx-auto">
+                  <img
+                    src="/FemTask/Adult-Mockup-Kalender.png"
+                    alt="Adult-Mockup-Kalender"
+                    className="max-w-full h-full"
+                  />
+                </div>
+                <div className="flex justify-center items-center w-full h-full mx-auto">
+                  <img
+                    src="/FemTask/Kid-Mockup-Kalender.png"
+                    alt="Kid-Mockup-Kalender"
+                    className="max-w-full h-full"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4">
+              <div className="flex flex-col justify-center sm:w-auto sm:px-4 max-w-5xl mx-auto gap-6 w-full p-4 py-4">
+                <h1 className="relative flex text-4xl font-bold items-center justify-center py-4 text-start text-black dark:text-white">
+                  Child-Friendly Profiles
+                </h1>
+                <p className="text-md leading-[1.6] text-black dark:text-white-200 font-normal">
+                  Young children benefit from engaging, simplified profiles
+                  featuring vivid images, animations, and visual rewards—making
+                  navigation intuitive and fun.
+                </p>
+              </div>
+              <div className="flex justify-center items-center sm:w-auto mt-4 sm:mt-4 w-full p-4 py-4">
                 <img
-                  src="/FemTask/p3.png"
-                  alt="travelbuddy mockup"
-                  className="w-full h-full items-center sm:w-auto sm:h-auto mx-auto"
+                  src="/FemTask/Mockup-SmallbarnProfile-1.png"
+                  alt="Femtask-mockup"
+                  className="w-full sm:w-auto sm:h-auto mx-auto"
                 />
               </div>
-              <div className="flex">
-                {" "}
+            </div>
+            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4">
+              <div className="flex flex-col justify-center sm:w-auto sm:px-4 max-w-5xl mx-auto gap-6 w-full p-4 py-4">
+                <h1 className="relative flex text-4xl font-bold items-center justify-center py-4 text-start text-black dark:text-white">
+                  Customized Child Profiles
+                </h1>
+                <p className="text-md leading-[1.6]  text-black dark:text-white-200 font-normal">
+                  Each child's profile showcases their personalized tasks,
+                  rewards, and a dedicated calendar—empowering them to take
+                  charge of their own progress.
+                </p>
+              </div>
+              <div className="flex justify-center items-center sm:w-auto mt-4 sm:mt-4 w-full p-4 py-4">
                 <img
-                  src="/FemTask/p3.png"
-                  alt="travelbuddy mockup"
-                  className="w-full h-full items-center sm:w-auto sm:h-auto mx-auto"
+                  src="/FemTask/Mockup-BarnProfile.png"
+                  alt="Femtask-mockup"
+                  className="max-w-full h-full"
+                />
+              </div>
+            </div>
+            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4">
+              <div className="flex flex-col justify-center sm:w-auto sm:px-4 max-w-5xl mx-auto gap-6 w-full p-4 py-4">
+                <h1 className="relative flex text-4xl font-bold items-center justify-center py-4 text-start text-black dark:text-white">
+                  Comprehensive Parent Profiles
+                </h1>
+                <p className="text-md leading-[1.6] text-black dark:text-white-200 font-normal">
+                  Parents enjoy a robust dashboard displaying their role, family
+                  overview, and real-time insights into their children's tasks
+                  and goals. With easy management tools and instant
+                  notifications, staying on top of family activities is
+                  effortless.
+                </p>
+              </div>
+              <div className="flex justify-center items-center sm:w-auto mt-4 sm:mt-4 w-full p-4 py-4">
+                <img
+                  src="/FemTask/Mockup-FöräldrarProfile.png"
+                  alt="Comprehensive Parent Profiles"
+                  className="max-w-full h-full"
                 />
               </div>
             </div>
           </section>
 
           {/* Measuring success */}
-          <section id="MeasuringSuccess" className="my-40 mx-20">
+          <section
+            id="MeasuringSuccess"
+            className="my-40 mx-10 sm:px-16 md:px-14"
+          >
             <h1 className="relative text-black dark:text-white text-4xl font-bold mt-4 py-4 px-8 flex text-center items-center justify-center">
               Measuring success
             </h1>
@@ -587,7 +591,10 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Lessons Learned */}
-          <section id="Lessonslearned" className="my-40 mx-20">
+          <section
+            id="Lessonslearned"
+            className="my-40 mx-10 sm:px-16 md:px-14"
+          >
             <h1 className="relative text-black dark:text-white text-4xl font-bold mt-4 p-8 flex text-center items-center justify-center">
               Lessons learned
             </h1>
@@ -601,10 +608,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Next steps*/}
-          <section
-            id="nextsteps"
-            className="my-40 mx-20 items-center justify-center"
-          >
+          <section id="nextsteps" className="my-40 mx-10 sm:px-16 md:px-14">
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center py-8 text-black dark:text-white">
               Next steps
             </h1>
@@ -636,10 +640,10 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Conclusions*/}
-          <section id="Conclusions" className="my-40 mx-20">
-            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4">
-              <div className="flex flex-col justify-center w-full px-4 sm:w-auto sm:px-4">
-                <h1 className="relative flex text-4xl font-bold items-center justify-center py-8 text-start text-black dark:text-white">
+          <section id="Conclusions" className="my-40 mx-10 sm:px-16 md:px-14">
+            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4">
+              <div className="flex flex-col justify-center sm:w-auto sm:px-4 max-w-5xl mx-auto gap-6 w-full p-4 py-4">
+                <h1 className="relative flex text-4xl font-bold items-center justify-center py-4 text-start text-black dark:text-white">
                   Conclusions
                 </h1>
                 <p className="text-md leading-[1.6] my-2 text-black dark:text-white-200 font-normal">
@@ -653,11 +657,11 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                   stress.
                 </p>
               </div>
-              <div className="flex justify-center items-center sm:w-auto mt-12 sm:mt-8">
+              <div className="flex justify-center items-center sm:w-auto mt-4 sm:mt-4 w-full p-4 py-4">
                 <img
-                  src="/FemTask/ft-bg.png"
+                  src="/FemTask/FT-Mockup-hero.png"
                   alt="Femtask-mockup"
-                  className="w-full sm:w-auto sm:h-auto max-w-[400px] mx-auto"
+                  className="w-full sm:w-auto sm:h-auto mx-auto"
                 />
               </div>
             </div>
