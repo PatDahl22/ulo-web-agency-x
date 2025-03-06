@@ -221,46 +221,54 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           <StarsBackground className="absolute inset-0 z-100" />
           <ShootingStars />
           {/* BackgroundLines fills the container */}
-          <div className="relative mx-10 xs:pt-40 px-10 w-full top-0 h-[50vh] flex justify-center items-center">
-            <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4">
-              {" "}
-              <div className="flex flex-col justify-center w-full px-4 sm:px-4">
-                <h4 className="text-xl sm:text-2xl lg:text-3xl">
-                  UX/UI Designer
-                </h4>
-
+          <div className="relative xs:pt-40 px-8 w-full h-[50vh] flex justify-center items-center m-10 sm:px-16 md:px-14">
+            <div className="grid xl:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 w-full h-full items-center justify-center gap-4 sm:mt-20">
+              <div className="flex justify-center items-center sm:w-auto sm:mt-0">
+                <img
+                  src="/TB-Mobile/TB-mockup29.png"
+                  alt="travelbuddy mockup"
+                  className="justify-center items-center max-h-[500px] md:max-h-[300px] mx-auto"
+                />
+              </div>
+              <div className="flex flex-col justify-center w-full">
                 <div className="flex flex-col justify-center w-full mt-4">
                   {" "}
                   <TypewriterEffect words={words1} />
                   {showSecondEffect && <TypewriterEffect words={words3} />}
                 </div>
-              </div>
-              <div className="flex justify-center items-center sm:w-auto mt-4 sm:mt-0">
-                {" "}
-                <img
-                  src="/TB-Mobile/TB-mockup29.png"
-                  alt="travelbuddy mockup"
-                  className="w-full sm:w-auto sm:h-auto max-w-[500px] md:max-w-[400px] mx-auto px-4"
-                />
+                <h4 className="my-2 m:text-xl lg:text-xl">
+                  <strong className="sm:text-xl lg:text-xl">My Role:</strong>{" "}
+                  UX/UI Designer
+                </h4>
+                <h4 className="my-2 sm:text-xl lg:text-xl">
+                  <strong className="sm:text-md lg:text-xl">
+                    Project Duration:
+                  </strong>{" "}
+                  5 Weeks
+                </h4>
+                <h4 className="my-2 sm:text-xl lg:text-xl">
+                  <strong className="sm:text-md lg:text-xl">Tools Used:</strong>{" "}
+                  Figma, FigJam, Slack, Canvas
+                </h4>
               </div>
             </div>
           </div>
 
           {/* About section */}
-          <section id="about" className="my-20 mx-20">
+          <section id="about" className="my-40 mx-10 sm:px-16 md:px-14">
             <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center">
               About The Project
             </h1>
-            <p className="relative text-black dark:text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
+            <p className="relative text-black dark:text-white-200 py-4 font-semibold flex text-center items-center justify-center">
               Create an intuitive travel assistant app that provides
               personalized recommendations based on user preferences.
             </p>
-            <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4">
-              <div className="flex flex-col justify-center w-full px-4 sm:w-auto sm:px-4">
-                <h4 className="relative text-black dark:text-white-200 my-2 flex flex-row text-xl font-semiblod">
+            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4 px-6">
+              <div className="flex flex-col justify-center w-full sm:w-auto mt-8">
+                <h4 className="relative text-black dark:text-white-200 my-2 flex flex-row text-xl font-semibold">
                   GET START
                 </h4>
-                <h2 className="relative my-4 flex flex-row text-3xl font-bold">
+                <h2 className="relative my-2 flex flex-row text-3xl font-bold">
                   Project's Overview
                 </h2>
                 <p className="text-sm leading-[1.6] my-2 text-black dark:text-white-200 font-normal">
@@ -270,31 +278,31 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                   process, where I collaborated with designers and backend
                   developers.
                 </p>
-                <p className="text-sm leading-[1.6] my-2 text-white-200 font-normal">
+                <p className="text-sm leading-[1.6] mb-2 text-black dark:text-white-200 font-normal">
                   My contributions included refining typography, layout,
                   spacing, UI components, and ensuring accessibility compliance.
                 </p>
               </div>
-              <div className="flex justify-center items-center sm:w-auto mt-6 sm:mt-0">
+              <div className="flex justify-center items-center sm:w-auto mt-16 sm:mt-8">
                 <img
-                  src="/TB-Mobile/TB-mockup31.png"
+                  src="/TB-Mobile/TB-mockup29.png"
                   alt="travelbuddy mockup"
-                  className="w-full sm:w-auto sm:h-auto max-w-[400px] mx-auto"
+                  className="w-full sm:w-auto sm:h-auto max-w-[500px] mx-auto"
                 />
               </div>
             </div>
           </section>
 
           {/* My role section */}
-          <section id="myrole" className="my-40 mx-20">
-            <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center">
+          <section id="myrole" className="my-40 mx-10 sm:px-16 md:px-14">
+            <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
               My Role
             </h1>
-            <p className="relative  text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
+            <p className="relative text-black dark:text-white-200 mt-6 py-4 px-8 flex text-center items-center justify-center">
               As a UI/UX designer, I make sure that my designs are well received
               by users, and can be implemented by developers.
             </p>
-            <div className="w-full p-8 py-4 items-center justify-center md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-2 gap-6 grid">
+            <div className="w-full p-10 py-4 items-center justify-center md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 gap-6 grid">
               {myroles.map((role, index) => (
                 <RoleFeaturesSection key={role.title} {...role} index={index} />
               ))}
@@ -302,34 +310,27 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Problems & Solutions */}
-          <section
-            id="problems"
-            className="my-40 mx-20 items-center justify-center"
-          >
-            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center w-full ">
+          <section id="problems" className="my-40 mx-10 sm:px-16 md:px-14">
+            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center w-full text-black dark:text-white py-6">
               Problems VS Solutions
             </h1>
-
-            <div className="h-full py-10 w-full">
+            <div className="max-w-5xl mx-auto gap-8 px-10">
               <LayoutGrid cards={cards} />
             </div>
           </section>
 
           {/* Persona section */}
-          <section
-            id="pesonas"
-            className="my-40 mx-20 items-center justify-center"
-          >
-            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center">
+          <section id="pesonas" className="my-40 mx-10 px-14 sm:px-16 md:px-16">
+            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center  text-black dark:text-white">
               Persona
             </h1>
-            <p className="relative  text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
+            <p className="relative text-black dark:text-white-200 mt-4 py-4 px-4 flex  text-start items-center justify-center">
               We conducted user interviews to gather insights into travel
               behaviors, challenges, and requirements. This allowed us to
               develop accurate personas and tailor the app to specific user
               needs, improving both usability and relevance.
             </p>
-            <div className="relative h-full w-full p-2 m-4 rounded-xl border-0.75">
+            <div className="relative h-full w-full py-4 mt-8 rounded-xl border-0.75">
               {/* Glowing effect component */}
               <GlowingEffect
                 blur={0}
@@ -341,7 +342,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 inactiveZone={0.01}
               />
               <div className="relative m-10">
-                <p className="relative flex flex-row py-2 text-2xl font-bold text-start ">
+                <p className="relative flex flex-row py-4 text-2xl font-bold text-start ">
                   Persona 1
                 </p>
                 <ul className="grid md:grid-cols-4 grid-rows-none sm:grid-cols-2 xs:grid-cols-2 gap-4 ">
@@ -353,7 +354,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 </ul>
               </div>
             </div>
-            <div className="relative h-full w-full p-2 m-4 items-center justify-center rounded-xl border-0.75">
+            <div className="relative h-full w-full py-4 mt-8 rounded-xl border-0.75">
               {/* Glowing effect component */}
               <GlowingEffect
                 blur={0}

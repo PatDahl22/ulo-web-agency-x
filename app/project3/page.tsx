@@ -87,13 +87,13 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           <StarsBackground className="absolute inset-0 z-100" />
           <ShootingStars />
           {/* BackgroundLines fills the container */}
-          <div className="relative xs:pt-40 px-8 w-full h-[50vh] flex justify-center items-center m-10 sm:px-16 md:px-14">
+          <div className="relative xs:pt-40 px-8 w-full md:h-[50vh] flex justify-center items-center m-10 sm:px-16 md:px-14">
             <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4 sm:mt-20">
               <div className="flex justify-center items-center sm:w-auto sm:mt-0">
                 <img
                   src="/FemTask/FT-Mockup-hero.png"
                   alt="Femtask"
-                  className="justify-center items-center max-h-[600px] md:max-h-[500px] mx-auto"
+                  className="justify-center items-center max-h-[600px] md:max-h-[500px] w-full mx-auto"
                 />
               </div>
               <div className="flex flex-col justify-end items-start w-full ">
@@ -141,7 +141,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                   extracurricular activities, and household chores can lead to
                   stress, miscommunication, and a sense of overwhelm.
                 </p>
-                <p className="text-sm leading-[1.6] my-2 text-white-200 font-normal">
+                <p className="text-sm leading-[1.6] my-2 text-black dark:text-white-200 font-normal">
                   FamTask is a UX/UI design concept for a mobile app addressing
                   this challenge, designed to empower families to collaborate
                   seamlessly on task management and scheduling, creating a more
@@ -160,7 +160,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
 
           {/* Problems & Solutions */}
           <section id="problems" className="my-40 mx-10 sm:px-16 md:px-14">
-            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center w-full ">
+            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center w-full text-black dark:text-white">
               Problems VS Solutions
             </h1>
             <div className="max-w-5xl mx-auto gap-8">
@@ -173,7 +173,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
               />{" "}
             </div>
             <div>
-              <h3 className="relative my-4 flex text-xl font-bold items-center justify-center w-full ">
+              <h3 className="relative my-4 flex text-xl font-bold items-center justify-center w-full  text-black dark:text-white">
                 How we planned
               </h3>
             </div>
@@ -188,13 +188,13 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
 
           {/* Understanding the Users */}
           <section
-            id="keyuserinsights"
-            className="my-40 mx-10 sm:px-16 md:px-14"
+            id="UnderstandingtheUsers"
+            className="my-40 mx-10 sm:px-12 md:px-12"
           >
-            <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center">
+            <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
               Understanding the Users
             </h1>
-            <p className="relative text-white-200 mt-6 py-4 px-8 flex text-start items-center justify-center">
+            <p className="relative  text-black dark:text-white-200 mt-6 py-4 px-8 flex text-start items-center justify-center">
               Our team recognized the need to deeply understand the challenges
               and motivations of our target users. We conducted semi-structured
               interviews with seven parents to gain insights into their daily
@@ -232,10 +232,10 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
 
           {/* Persona section */}
           <section id="pesonas" className="my-40 mx-10 sm:px-16 md:px-14">
-            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center">
+            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center  text-black dark:text-white">
               Persona
             </h1>
-            <p className="relative  text-white-200 mt-4 py-4 px-4 flex  text-start items-center justify-center">
+            <p className="relative text-black dark:text-white-200 mt-4 py-4 px-4 flex  text-start items-center justify-center">
               Based on these insights, we created a user persona to represent
               our target audience.
             </p>
