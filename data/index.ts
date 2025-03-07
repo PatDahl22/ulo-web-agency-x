@@ -376,10 +376,31 @@ export const project1Items = {
     },
   ],
 
+  problems: [
+    {
+      title: "Problems",
+      des: [
+        "👉 Overwhelming Travel Options: With an abundance of choices for flights, accommodations, and activities, users experience decision fatigue, making it difficult to select the best options.",
+        "👉 Non-Personalized Recommendations: Existing travel apps fail to offer personalized suggestions based on individual user preferences, often providing irrelevant options that don't match the use needs.",
+        "👉 Disorganized Pre-Travel Planning: Travelers frequently need to use multiple apps to manage different aspects of their trip, booking flights, accommodations, and creating itineraries, leading to inefficiency and time wastage.",
+      ],
+      className: "text-neutral-500",
+    },
+    {
+      title: "Solutions",
+      des: [
+        "👉 Personalized AI Travel Suggestions: Custom recommendations based on the user's travel preferences, interests, and past behavior.",
+        "👉 Non-Personalized Recommendations: Compare flights, accommodations, and activities all in one app, saving users the hassle of switching between different services.",
+        "👉 Geo-Based Recommendations: Real-time travel tips based on the user's location, including suggestions for nearby attractions, dining, and activities.",
+        "👉 Pre-Travel Checklist & Notifications: Keeps users organized with helpful reminders and tasks to complete before their trip, ensuring a smoother travel experience..",
+      ],
+      className: "text-neutral-500",
+    },
+  ],
   Personas1: [
     {
       id: 1,
-      area: "sm:col-span-2 md:col-span-2 row-start-1 row-end-3 xl:col-span-4 xl:row-span-1",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
       icon: "/TB-Mobile/role-icons6.png",
       title: "Name: Eva - Adventurous Traveler",
       description:
@@ -387,34 +408,34 @@ export const project1Items = {
     },
     {
       id: 2,
-      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-4 xl:row-span-1",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
       title: "Goals",
       description:
         "Eva wants personalized adventure recommendations and real-time information about terrain and weather conditions at her travel destinations. She struggles with finding reliable, up-to-date travel information tailored to her specific interests.",
     },
     {
       id: 3,
-      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-2 row-start-2 xl:col-span-2 xl:row-span-1",
       title: "Think & Feel",
       description:
         "Eva seeks freedom and adventure but gets frustrated by lack of relevant information.",
     },
     {
       id: 4,
-      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-2 row-start-2 xl:col-span-2 xl:row-span-1",
       title: "See",
       description:
         "Eva is constantly looking for travel apps that provide detailed information and real-time updates.",
     },
     {
       id: 5,
-      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-2 row-start-2 xl:col-span-2 xl:row-span-1",
       title: "Hear",
       description: "She hears tips from other travelers and online reviews.",
     },
     {
       id: 6,
-      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-2 row-start-2 xl:col-span-2 xl:row-span-1",
       title: "Say & Do",
       description:
         "'I want recommendations for new adventures' — Eva plans and books activities based on her interests.",
@@ -439,27 +460,27 @@ export const project1Items = {
     },
     {
       id: 3,
-      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-2 row-start-2 xl:col-span-2 xl:row-span-1",
       title: "Think & Feel",
       description:
         "Values efficiency and ease in booking travel. Frustrated by last-minute bookings and lack of real-time updates.",
     },
     {
       id: 4,
-      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-2 row-start-2 xl:col-span-2 xl:row-span-1",
       title: "See",
       description:
         "Sees airports, hotels, and booking platforms on his devices.",
     },
     {
       id: 5,
-      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-2 row-start-2 xl:col-span-2 xl:row-span-1",
       title: "Hear",
       description: "Hears tips from colleagues on efficient travel planning.",
     },
     {
       id: 6,
-      area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
+      area: "sm:col-span-1 md:col-span-2 row-start-2 xl:col-span-2 xl:row-span-1",
       title: "Say & Do",
       description:
         "'I need an app to handle my bookings.' Does, books last-minute travel and manages itineraries using apps.",
@@ -502,7 +523,7 @@ export const project1Items = {
     },
     {
       title: "Typography & Layout",
-      area: "sm:col-span-3 md:col-span-3 row-start-1 xl:col-span-3 xl:row-span-1",
+      area: "sm:col-span-3 md:col-span-2 row-start-1 xl:col-span-3 xl:row-span-1",
       description:
         "The typography was chosen for readability, with clear hierarchy and legible fonts. Spacing and padding were adjusted to ensure visual balance across the app.",
     },
@@ -609,19 +630,19 @@ export const project1Items = {
       title: "Voice-Based Travel Assistance",
       description:
         "Introducing voice commands to make the app even more user-friendly, especially for users on the go.",
-      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      area: "",
     },
     {
       title: "Social Media Integration",
       description:
         "Enabling users to share their itineraries and experiences with friends or family.",
-      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      area: "",
     },
     {
       title: "Deeper AI Insights",
       description:
         "Enhancing the AI to provide even more granular recommendations, such as suggesting specific outdoor activities or events based on weather forecasts.",
-      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      area: "",
     },
   ],
 
@@ -630,25 +651,25 @@ export const project1Items = {
       title: "✨ Managing Personalization Without Complexity",
       description:
         "One of our biggest challenges was balancing a personalized experience with simplicity. While we wanted TravelBuddy to offer tailored recommendations, too many customization options initially confused users. To address this, we simplified the interface by introducing guided choices and offering default settings that users could refine over time as they interacted more with the app.",
-      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
+      area: "",
     },
     {
       title: "✨ Improving Geolocation Accuracy",
       description:
         "Ensuring that location-based suggestions were accurate was critical for the app's success. Early in development, we noticed inconsistencies in geolocation data, particularly in remote areas. To overcome this, we improved our use of geolocation services by switching to more reliable APIs, while also integrating fallback options to ensure users still received relevant recommendations even when precise location data was unavailable.",
-      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
+      area: "",
     },
     {
       title: "✨ Optimizing the AI for Usability",
       description:
         "The AI assistant was central to our design, but early testing revealed that it occasionally struggled to deliver contextually relevant suggestions. Users sometimes found it slow or requiring too many inputs. After evaluating the AI's natural language processing, we improved its ability to anticipate user needs, refining its decision-making process to deliver faster, more relevant suggestions with minimal effort from the user.",
-      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
+      area: "",
     },
     {
       title: "✨ Balancing Notifications and Real-Time Updates",
       description:
         "We faced a challenge in keeping users informed without bombarding them with too many notifications. Initially, users felt overwhelmed by frequent updates, especially during their travels. To improve, we implemented a more intelligent notification system that prioritizes important updates while allowing users to customize how and when they receive alerts, ensuring a less intrusive experience.",
-      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
+      area: "",
     },
   ],
 
@@ -672,13 +693,13 @@ export const project1Items = {
       title: "Conclusion",
       description:
         "By addressing user pain points such as decision fatigue, disorganized planning, and lack of personalization, TravelBuddy successfully simplifies the travel planning process, offering users a more seamless and enjoyable experience.",
-      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
+      area: "",
     },
     {
       title: "Conclusion",
       description:
         "The app's features, such as AI-driven recommendations, geo-based tips, and centralized booking, make it a unique solution in the travel industry.",
-      area: "sm:col-span-2 md:col-span-3 row-start-1 xl:col-span-2 xl:row-span-1",
+      area: "",
     },
   ],
 

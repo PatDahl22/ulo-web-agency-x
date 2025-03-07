@@ -163,7 +163,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center w-full text-black dark:text-white">
               Problems VS Solutions
             </h1>
-            <div className="max-w-5xl mx-auto gap-8">
+            <div className="w-full py-10 lg:px-6">
               <HoverEffect
                 items={project3Items.problemsandsolutions.map((item) => ({
                   title: item.title,
@@ -172,12 +172,12 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 }))}
               />{" "}
             </div>
-            <div>
-              <h3 className="relative my-4 flex text-xl font-bold items-center justify-center w-full  text-black dark:text-white">
-                How we planned
-              </h3>
+            <div className="flex flex-col justify-center items-center w-full sm:w-auto sm:px-4">
+              <h2 className="relative flex flex-row text-xl font-bold">
+                Our Roadmap
+              </h2>
             </div>
-            <div className="flex justify-center items-center sm:w-auto mt-16 sm:mt-8">
+            <div className="flex justify-center items-center sm:w-auto mt-8">
               <img
                 src="/FemTask/roadmap.png"
                 alt="roadmap"
@@ -187,20 +187,17 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Understanding the Users */}
-          <section
-            id="UnderstandingtheUsers"
-            className="my-40 mx-10 sm:px-12 md:px-12"
-          >
-            <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
+          <section id="UnderstandingtheUsers" className="my-40 mx-20">
+            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center w-full text-black dark:text-white">
               Understanding the Users
             </h1>
-            <p className="relative  text-black dark:text-white-200 mt-6 py-4 px-8 flex text-start items-center justify-center">
+            <p className="relative  text-black dark:text-white-200 mt-6 p-4 flex text-start items-center justify-center">
               Our team recognized the need to deeply understand the challenges
               and motivations of our target users. We conducted semi-structured
               interviews with seven parents to gain insights into their daily
               routines, pain points, and desired outcomes.
             </p>
-            <div className="w-full p-10 py-4 items-center justify-center md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 gap-6 grid">
+            <div className="w-full py-10 px-4 items-center justify-center md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 gap-6 grid">
               {keyuserinsights.map((keyuserinsight, index) => (
                 <RoleFeaturesSection
                   key={keyuserinsight.title}
@@ -212,14 +209,14 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Challenge */}
-          <section id="Challenge" className="my-40 mx-10 sm:px-16 md:px-14">
+          <section id="Challenge" className="my-40 mx-20">
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
               The Challenge
             </h1>
             <p className="relative text-black dark:text-white-200 mt-4 py-2 px-4 flex text-center items-center justify-center">
               Busy families often face several key challenges.
             </p>
-            <div className="relative m-10">
+            <div className="relative p-4">
               <ul className="py-4 items-center justify-center md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 gap-6 grid">
                 {" "}
                 {/* This is the important part! */}
@@ -231,7 +228,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Persona section */}
-          <section id="pesonas" className="my-40 mx-10 sm:px-16 md:px-14">
+          <section id="pesonas" className="my-40 mx-20">
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center  text-black dark:text-white">
               Persona
             </h1>
@@ -250,7 +247,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 proximity={64}
                 inactiveZone={0.01}
               />
-              <div className="flex justify-center items-center w-full h-full mx-auto px-14">
+              <div className="flex justify-center items-center w-full h-full mx-auto">
                 <img
                   src="/FemTask/Persona.png"
                   alt="persona"
@@ -261,10 +258,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Journey Mapping & Design Process*/}
-          <section
-            id="journeymapping"
-            className="my-40 mx-10 sm:px-16 md:px-14"
-          >
+          <section id="journeymapping" className="my-40 mx-20">
             <h1 className="relative text-black dark:text-white flex flex-row text-4xl font-bold items-center justify-center">
               Journey mapping
             </h1>
@@ -286,7 +280,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 </p>
               </div>
 
-              <div className="flex justify-center items-center w-full h-full mx-auto md:px-8 sm:px-8">
+              <div className="flex justify-center items-center w-full h-full mx-auto">
                 <img
                   src="/FemTask/Lo-fil.png"
                   alt="lofil"
@@ -297,7 +291,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/*Initial Design Concepts*/}
-          <div className="my-40 mx-10 sm:px-16 md:px-14">
+          <div className="my-40 mx-20">
             <h1 className="relative text-black dark:text-white flex flex-row text-4xl mt-8 font-bold items-center justify-center">
               Initial Design Concepts
             </h1>
@@ -321,7 +315,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </div>
 
           {/* Accessibility Considerations */}
-          <section id="Accessibility" className="my-40 mx-10 sm:px-16 md:px-14">
+          <section id="Accessibility" className="my-40 mx-20">
             <h1 className="relative text-black dark:text-white text-4xl font-bold mt-4 py-4 px-8 flex text-center items-center justify-center">
               Accessibility considerations
             </h1>
@@ -329,7 +323,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
               Ensuring accessibility was a core priority throughout the design
               process. Here's how we addressed key accessibility guidelines:
             </p>
-            <div className="w-full p-8 py-4 items-center justify-center md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 gap-6 grid">
+            <div className="w-full p-8 items-center justify-center md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 gap-6 grid">
               {accessibilityconsiderations.map(
                 (accessibilityconsideration, index) => (
                   <RoleFeaturesSection
@@ -340,37 +334,37 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 )
               )}
             </div>
-            <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-1 xs:grid-cols-1 w-full h-full py-4 items-center justify-between gap-6 px-10">
+            <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 xs:grid-cols-1 w-full h-full py-4 items-center justify-between gap-6 px-8">
               <div className="flex justify-center items-center w-full h-full mx-auto">
                 <img
                   src="/FemTask/Icons.png"
                   alt="Icons"
-                  className="w-full h-full sm:w-auto sx:max-w-[400px] mx-auto"
+                  className="w-full h-full mx-auto"
                 />
               </div>
               <div className="flex justify-center items-center w-full h-full mx-auto">
                 <img
                   src="/FemTask/Typography.png"
                   alt="Typography"
-                  className="w-full sm:w-auto sx:max-w-[400px] mx-auto"
+                  className="w-full h-full mx-auto"
                 />
               </div>
               <div className="flex justify-center items-center w-full h-full mx-auto">
                 <img
                   src="/FemTask/Colors.png"
                   alt="Colors"
-                  className="w-full h-full sm:w-auto sx:max-w-[400px] mx-auto"
+                  className="w-full h-full mx-auto"
                 />
               </div>
             </div>
           </section>
 
           {/* Key Features */}
-          <section id="Keyfeatures" className="my-40 mx-10 sm:px-16 md:px-14">
+          <section id="Keyfeatures" className="my-40 mx-20">
             <h1 className="relative text-black dark:text-white text-4xl font-bold mt-4 py-4 px-8 flex text-center items-center justify-center">
               Key Features
             </h1>
-            <div className="w-full p-8 py-4 items-center justify-center md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 gap-6 grid">
+            <div className="w-full p-8 items-center justify-center md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 gap-6 grid">
               {project3Items.KeyFeatures.map((keyFeature, index) => (
                 <RoleFeaturesSection
                   key={keyFeature.title}
@@ -382,7 +376,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Responding to User Feedback*/}
-          <section id="UserFeedback" className="my-40 mx-10 sm:px-16 md:px-14">
+          <section id="UserFeedback" className="my-40 mx-20">
             <div className="flex flex-col justify-center sm:px-4 mx-auto gap-6 w-full py-4">
               <h1 className="relative flex text-4xl font-bold items-center justify-center text-start text-black dark:text-white">
                 Responding to user feedback iteration 1
@@ -423,9 +417,9 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Visual Design */}
-          <section id="VisualDesign" className="my-40 mx-10 sm:px-16 md:px-14">
+          <section id="VisualDesign" className="my-40 mx-20">
             <div
-              className="relative bg-cover bg-center bg-no-repeat before:absolute before:inset-0 before:bg-black before:opacity-70 text-white py-10"
+              className="relative bg-cover bg-center bg-no-repeat before:absolute before:inset-0 before:bg-black before:opacity-70 text-white py-20 px-10"
               style={{ backgroundImage: `url('/FemTask/FT-Mockup-hero.png')` }}
             >
               <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
@@ -433,7 +427,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
               </h1>
               <p className="relative text-black dark:text-white-200 mt-6 py-4 px-8 flex text-start items-center justify-center"></p>{" "}
             </div>
-            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4">
+            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4 px-2">
               <div className="flex flex-col justify-center sm:w-auto sm:px-4 max-w-5xl mx-auto gap-6 w-full p-4 py-4">
                 <h1 className="relative flex text-4xl font-bold items-center justify-center py-4 text-start text-black dark:text-white">
                   Task Creation
@@ -452,7 +446,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 />
               </div>
             </div>
-            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4">
+            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4 px-2">
               <div className="flex flex-col justify-center sm:w-auto sm:px-4 max-w-5xl mx-auto gap-6 w-full p-4 py-4">
                 <h1 className="relative flex text-4xl font-bold items-center justify-center py-4 text-start text-black dark:text-white">
                   Goal Setting
@@ -471,7 +465,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 />
               </div>
             </div>
-            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4">
+            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4 px-2">
               <div className="flex flex-col justify-center sm:w-auto sm:px-4 max-w-5xl mx-auto gap-6 w-full p-4 py-4">
                 <h1 className="relative flex text-4xl font-bold items-center justify-center py-4 text-start text-black dark:text-white">
                   Personalized Calendars
@@ -502,7 +496,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 </div>
               </div>
             </div>
-            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4">
+            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4 px-2">
               <div className="flex flex-col justify-center sm:w-auto sm:px-4 max-w-5xl mx-auto gap-6 w-full p-4 py-4">
                 <h1 className="relative flex text-4xl font-bold items-center justify-center py-4 text-start text-black dark:text-white">
                   Child-Friendly Profiles
@@ -521,7 +515,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 />
               </div>
             </div>
-            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4">
+            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4 px-2">
               <div className="flex flex-col justify-center sm:w-auto sm:px-4 max-w-5xl mx-auto gap-6 w-full p-4 py-4">
                 <h1 className="relative flex text-4xl font-bold items-center justify-center py-4 text-start text-black dark:text-white">
                   Customized Child Profiles
@@ -540,7 +534,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 />
               </div>
             </div>
-            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4">
+            <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4 px-2">
               <div className="flex flex-col justify-center sm:w-auto sm:px-4 max-w-5xl mx-auto gap-6 w-full p-4 py-4">
                 <h1 className="relative flex text-4xl font-bold items-center justify-center py-4 text-start text-black dark:text-white">
                   Comprehensive Parent Profiles
@@ -564,17 +558,14 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Measuring success */}
-          <section
-            id="MeasuringSuccess"
-            className="my-40 mx-10 sm:px-16 md:px-14"
-          >
+          <section id="MeasuringSuccess" className="my-40 mx-20">
             <h1 className="relative text-black dark:text-white text-4xl font-bold mt-4 py-4 px-8 flex text-center items-center justify-center">
               Measuring success
             </h1>
             <p className="relative text-black dark:text-white-200 py-6 flex text-start items-center justify-center">
               The success of FamTask will be measured by the following KPIs:
             </p>
-            <div className="max-w-5xl mx-auto gap-8">
+            <div className="mx-auto gap-8 md:px-6 sm:px-2">
               <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 list-none">
                 {project3Items.measuringsuccess.map(
                   (measuringsuccess, index) => (
@@ -591,14 +582,11 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Lessons Learned */}
-          <section
-            id="Lessonslearned"
-            className="my-40 mx-10 sm:px-16 md:px-14"
-          >
+          <section id="Lessonslearned" className="my-40 mx-20">
             <h1 className="relative text-black dark:text-white text-4xl font-bold mt-4 p-8 flex text-center items-center justify-center">
               Lessons learned
             </h1>
-            <div className="max-w-5xl mx-auto gap-8">
+            <div className="mx-auto gap-8 md:px-6 sm:px-2">
               <div className="grid lg:grid-cols-3  md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 list-none">
                 {project3Items.lessonslearneds.map((lessonslearneds, index) => (
                   <TextCard id={index} key={index} {...lessonslearneds} />
@@ -608,12 +596,12 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Next steps*/}
-          <section id="nextsteps" className="my-40 mx-10 sm:px-16 md:px-14">
-            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center py-8 text-black dark:text-white">
+          <section id="nextsteps" className="my-40 mx-10">
+            <h1 className="relative text-black dark:text-white text-4xl font-bold mt-4 py-4 px-8 flex text-center items-center justify-center">
               Next steps
             </h1>
-            <div className="max-w-5xl mx-auto gap-8">
-              <div className="grid lg:grid-cols-3  md:grid-cols-3 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 list-none">
+            <div className="mx-auto gap-8 md:px-14 sm:px-8">
+              <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 list-none">
                 {project3Items.nextsteps.map((nextsteps, index) => (
                   <TextCard id={index} key={index} {...nextsteps} />
                 ))}
@@ -626,7 +614,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
             <h1 className="relative text-black dark:text-white text-4xl font-bold mt-4 py-4 px-8 flex text-center items-center justify-center">
               Future Development
             </h1>
-            <div className="w-full p-8 py-4 items-center justify-center md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 gap-6 grid">
+            <div className="w-full sm:py-8 md:px-6 items-center justify-center md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 gap-6 grid">
               {project3Items.futuredevelopments.map(
                 (futuredevelopments, index) => (
                   <RoleFeaturesSection

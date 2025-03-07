@@ -64,7 +64,7 @@ export const MyroleCard = ({
       </div>
 
       {/* Description */}
-      <p className="text-sm text-neutral-600 dark:text-neutral-300 max-w-xs relative z-10 px-10">
+      <p className="text-sm text-neutral-600 dark:text-neutral-300 relative px-10">
         {description}
       </p>
 

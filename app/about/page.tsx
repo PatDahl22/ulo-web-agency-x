@@ -27,10 +27,13 @@ const words = [
 
 const Contact = () => {
   return (
-    <>
+    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden w-full h-full px-20">
       <div className="h-[40vh]">
         <div className="relative h-full w-full">
-          <BackgroundLines className="absolute inset-0 -z-100" children={undefined} />
+          <BackgroundLines
+            className="absolute inset-0 -z-100"
+            children={undefined}
+          />
           <FloatingNav navItems={navItems} />
           <div className="relative h-full flex items-center justify-center w-full flex-col px-4">
             <TypewriterEffect words={words} />
@@ -57,48 +60,48 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-20">
-        <div>
-          <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4">
-            <div className="flex flex-col justify-center w-full px-4 sm:w-auto sm:px-4">
-              <h4 className="relative text-black dark:text-white-200 my-2 flex flex-row text-xl font-semibold">
-                Get to know Pat
-              </h4>
-              <h2 className="relative my-4 flex flex-row text-3xl font-bold">
-                I am Pat Dahl
-              </h2>
-              <p className="text-sm leading-[1.6] my-2 text-black dark:text-white-200 font-normal">
-                Originally from Thailand, I have a background in economics and
-                began my career as a finance assistant, where I worked for five
-                years after high school. Later, I ventured into
-                entrepreneurship, running my own mobile operator company.
-              </p>
-              <p className="text-sm leading-[1.6] my-2 text-black dark:text-white-200 font-normal">
-                After relocating to Sweden, I found employment in my field
-                challenging, which led me to work as a nail technologist for 15
-                years.
-              </p>
-              <p className="text-sm leading-[1.6] my-2 text-black dark:text-white-200 font-normal">
-                However, my passion for technology and design remained strong.
-                During the pandemic, with fewer customers, I took the
-                opportunity to pursue this passion further by enrolling at Chas
-                Academy.
-              </p>
-            </div>
-            <div className="flex justify-center items-center sm:w-auto mt-6 sm:mt-0">
-              <img
-                src="/Pat.png"
-                alt="Pat Dahl"
-                className="w-full sm:w-auto sm:h-auto max-w-[400px] mx-auto"
-              />
-            </div>
+
+      {/* About section */}
+      <section id="about" className="">
+        <div className="grid xl:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4 px-6">
+          <div className="flex flex-col justify-center w-full sm:w-auto mt-8">
+            <h4 className="relative text-black dark:text-white-200 my-2 flex flex-row text-xl font-semibold">
+              Get to know Pat
+            </h4>
+            <h2 className="relative my-4 flex flex-row text-3xl font-bold">
+              I am Pat Dahl
+            </h2>
+            <p className="text-sm leading-[1.6] my-2 text-black dark:text-white-200 font-normal">
+              Originally from Thailand, I have a background in economics and
+              began my career as a finance assistant, where I worked for five
+              years after high school. Later, I ventured into entrepreneurship,
+              running my own mobile operator company.
+            </p>
+            <p className="text-sm leading-[1.6] my-2 text-black dark:text-white-200 font-normal">
+              After relocating to Sweden, I found employment in my field
+              challenging, which led me to work as a nail technologist for 15
+              years.
+            </p>
+            <p className="text-sm leading-[1.6] my-2 text-black dark:text-white-200 font-normal">
+              However, my passion for technology and design remained strong.
+              During the pandemic, with fewer customers, I took the opportunity
+              to pursue this passion further by enrolling at Chas Academy.
+            </p>
+          </div>
+          <div className="flex justify-center items-center sm:w-auto mt-16 sm:mt-8">
+            <img
+              src="/Pat.png"
+              alt="Pat Dahl"
+              className="w-full sm:w-auto sm:h-auto max-w-[500px] mx-auto"
+            />
           </div>
         </div>
-        <Experience />
-        <FooterSection />
-        <Footer />
-      </main>
-    </>
+      </section>
+
+      <Experience />
+      <FooterSection />
+      <Footer />
+    </main>
   );
 };
 

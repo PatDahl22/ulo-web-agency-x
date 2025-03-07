@@ -25,7 +25,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-10 gap-8 w-full h-full",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-4 gap-6 w-full h-full",
         className
       )}
     >
@@ -74,9 +74,9 @@ export const HoverEffect = ({
             </CardTitle>
 
             {item.des && item.des.length > 0 && (
-              <ul className="px-10 md:px-2 text-start text-black dark:text-white-100">
+              <ul className="px-6 md:px-2 text-start text-base text-black dark:text-white-100">
                 {item.des.map((description, index) => (
-                  <li key={index}>{description}</li>
+                  <li className="py-2" key={index}>{description}</li>
                 ))}
               </ul>
             )}
@@ -110,7 +110,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full py-8 overflow-hidden bg-black-200 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full py-4 overflow-hidden bg-black-200 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
@@ -131,7 +131,7 @@ export const CardTitle = ({
   return (
     <h3
       className={cn(
-        "text-zinc-100 font-bold tracking-wide text-lg mt-4",
+        "text-zinc-100 font-bold tracking-wide text-lg",
         className
       )}
     >
@@ -150,7 +150,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-4 text-zinc-200 tracking-wide leading-relaxed text-sm",
+        "mt-2 text-zinc-200 tracking-wide leading-relaxed text-sm",
         className
       )}
     >
