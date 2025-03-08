@@ -6,8 +6,6 @@ import MagicButton from "./MagicButton";
 import { ShootingStars } from "./ui/shooting-stars";
 import { StarsBackground } from "./ui/stars-background";
 
-export function FooterSection() {
-  const [showSecondEffect, setShowSecondEffect] = useState(false);
 
   const words1 = [
     {
@@ -54,6 +52,10 @@ export function FooterSection() {
     },
   ];
 
+
+export function FooterSection() {
+  const [showSecondEffect, setShowSecondEffect] = useState(false);
+
   useEffect(() => {
     // Assuming each word takes 1 second to type, adjust the timeout accordingly
     const timeout = words1.length * 1000;
@@ -62,21 +64,27 @@ export function FooterSection() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-[40rem]">
-      <TypewriterEffect words={words1} />
-      {showSecondEffect && <TypewriterEffect words={words2} />}
-      <p className="text-white md:mt-10 my-5 text-center">
-        Let&apos;s work together and take your project to the next level with
-        user-centric design.
-      </p>
-      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
-        <a href="/contact">
-          <MagicButton
-            title="Let's talk"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
+    <div className="flex flex-col items-center max-lg:mt-10">
+      {/* Content Section */}
+      <div className="flex justify-center relative my-20 ">
+        <div className="h-[50vh] md:h-[30rem] rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden">
+          {" "}
+          {/* Text with animation */}
+          <TypewriterEffect words={words1} />
+          {showSecondEffect && <TypewriterEffect words={words2} />}
+          <p className="text-white md:mt-10 my-5 text-center">
+            Let&apos;s work together and take your project to the next level
+            with user-centric design.
+          </p>
+          {/* MagicButton wrapped in an anchor tag for navigation */}
+          <a href="/contact">
+            <MagicButton
+              title="Let's talk"
+              icon={<FaLocationArrow />}
+              position="right"
+            />
+          </a>
+        </div>
       </div>
       <ShootingStars />
       <StarsBackground />

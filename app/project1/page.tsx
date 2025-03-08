@@ -102,21 +102,21 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
 
 
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden w-full h-full">
-      <div className="max-w-7xl w-full">
+    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden w-full h-full px-20">
+      <div className="w-full">
         <FloatingNav navItems={navItems} />
         <ProjectNav navItems={[]} />
         <div className="h-full w-full">
           <StarsBackground className="absolute inset-0 z-100" />
           <ShootingStars />
           {/* BackgroundLines fills the container */}
-          <div className="relative xs:pt-40 px-8 w-full h-[50vh] flex justify-center items-center m-10 sm:px-16 md:px-14">
+          <div className="relative xs:pt-40 w-full h-[50vh] flex justify-center items-center my-10">
             <div className="grid xl:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 w-full h-full items-center justify-center gap-4 sm:mt-20">
               <div className="flex justify-center items-center sm:w-auto sm:mt-0">
                 <img
-                  src="/TB-Mobile/TB-mockup29.png"
+                  src="/TB-Mobile/banner.png"
                   alt="travelbuddy mockup"
-                  className="justify-center items-center max-h-[500px] md:max-h-[300px] mx-auto"
+                  className="max-h-[500px] md:max-h-[300px] mx-auto"
                 />
               </div>
               <div className="flex flex-col justify-center w-full">
@@ -144,7 +144,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </div>
 
           {/* About section */}
-          <section id="about" className="my-40 mx-10 sm:px-16 md:px-14">
+          <section id="about" className="my-40">
             <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center">
               About The Project
             </h1>
@@ -183,15 +183,15 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* My role section */}
-          <section id="myrole" className="my-40 mx-10 sm:px-14 md:px-14">
+          <section id="myrole" className="my-40">
             <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
               My Role
             </h1>
-            <p className="relative text-black dark:text-white-200 mt-6 py-4 px-6 flex text-center items-center justify-center">
+            <p className="relative text-black dark:text-white-200 mt-6 py-4 flex text-center items-center justify-center">
               As a UI/UX designer, I make sure that my designs are well received
               by users, and can be implemented by developers.
             </p>
-            <div className="w-full py-10 px-8 md:px-6 items-center justify-center md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 gap-6 grid">
+            <div className="w-full py-10 items-center justify-center md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 gap-6 grid">
               {myroles.map((role, index) => (
                 <RoleFeaturesSection key={role.title} {...role} index={index} />
               ))}
@@ -199,11 +199,11 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Problems & Solutions */}
-          <section id="problems" className="my-40 mx-8 sm:px-16 md:px-14">
+          <section id="problems" className="my-40">
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center w-full text-black dark:text-white">
               Problems VS Solutions
             </h1>
-            <div className="max-w-5xl mx-auto gap-6 mt-4 px-8 md:px-4 sm:px-4">
+            <div className="mx-auto gap-6 my-4">
               <HoverEffect
                 items={project1Items.problems.map((item) => ({
                   title: item.title,
@@ -215,17 +215,17 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Persona section */}
-          <section id="pesonas" className="my-40 mx-10 px-14 sm:px-10 md:px-16">
+          <section id="pesonas" className="my-40">
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center  text-black dark:text-white">
               Persona
             </h1>
-            <p className="relative text-black dark:text-white-200 mt-4 py-4 px-6 flex  text-start items-center justify-center">
+            <p className="relative text-black dark:text-white-200 mt-4 py-4 flex text-start items-center justify-center">
               We conducted user interviews to gather insights into travel
               behaviors, challenges, and requirements. This allowed us to
               develop accurate personas and tailor the app to specific user
               needs, improving both usability and relevance.
             </p>
-            <div className="relative h-full w-full py-2 px-8 md:px-6 sm:px-6 mt-8 rounded-xl border-0.75">
+            <div className="relative h-full w-full py-2 mt-8 rounded-xl border-0.75">
               {/* Glowing effect component */}
               <GlowingEffect
                 blur={0}
@@ -278,16 +278,16 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           {/* Competitive Analysis */}
           <section
             id="competitive"
-            className="my-40 mx-20 items-center justify-center"
+            className="my-40"
           >
             <h1 className="relative text-black dark:text-white flex flex-row text-4xl font-bold items-center justify-center">
               Competitive Analysis
             </h1>
-            <p className="relative text-black dark:text-white-200 mt-6 py-4 px-8 flex text-center items-center justify-center">
+            <p className="relative text-black dark:text-white-200 py-4 flex text-center items-center justify-center">
               TravelBuddy differentiates itself from competitors such as Google
               Travel, TripIt, and Kayak by focusing on:
             </p>
-            <div className="relative m-10 px-6">
+            <div className="relative my-10">
               <ul className="grid md:grid-cols-4 grid-rows-none sm:grid-cols-1 xs:grid-cols-2 gap-8 ">
                 {" "}
                 {/* This is the important part! */}
@@ -301,14 +301,14 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Design & Key Features */}
-          <section id="competitive" className="my-40 mx-10 sm:px-16 md:px-14">
+          <section id="competitive" className="my-40">
             <h1 className="relative text-black dark:text-white flex flex-row text-4xl mt-8 font-bold items-center justify-center">
               Design & Key Features
             </h1>
-            <h3 className="relative text-black dark:text-white-200 py-4 px-8 flex text-start items-center justify-center">
+            <h3 className="relative text-black dark:text-white-200 py-4 flex text-start items-center justify-center">
               Features I Helped Shape
             </h3>
-            <div className="relative m-10">
+            <div className="relative my-10">
               <ul className="grid md:grid-cols-4 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 ">
                 {" "}
                 {/* This is the important part! */}
@@ -322,15 +322,15 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Use Flow */}
-          <section id="userflow" className="my-40 mx-10 sm:px-16 md:px-14">
-            <h1 className="relative mt-6 flex flex-row text-4xl font-bold items-center justify-center">
+          <section id="userflow" className="my-40">
+            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center">
               User Flow
             </h1>
-            <p className="relative text-white-200 mt-6 py-4 px-8 flex  text-center items-center justify-center">
+            <p className="relative text-white-200 mt-6 py-4 flex text-center items-center justify-center">
               We kept the user flow simple and intuitive.
             </p>
             <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4">
-              <div className="relative mx-10 items-center justify-center md:grid-cols-1 lg:grid-cols-1 sm:grid-cols-1 gap-6 grid">
+              <div className="relative my-10 items-center justify-center md:grid-cols-1 lg:grid-cols-1 sm:grid-cols-1 gap-6 grid">
                 {project1Items.userflows.map((userflow, index) => (
                   <RoleFeaturesSection
                     key={userflow.title}
@@ -351,23 +351,26 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* UI Design*/}
-          <section id="uiDesign" className="my-40 mx-10 sm:px-16 md:px-14">
-            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
-              UI Design
-            </h1>
-            <p className="relative text-black dark:text-white-200 mt-6 px-8 flex text-start items-center justify-center">
-              Our system ensures a harmonious, accessible, and responsive design
-              framework that is user-friendly and adaptable to varying contexts.
-            </p>{" "}
-            <p className="relative text-black dark:text-white-200 mt-6 px-8 flex text-start items-center justify-center">
-              User-friendly, with simple button presses based on real user
-              feedback for enhanced usability. Clear color contrasts,
-              easy-to-read text, and a mobile-friendly interface with
-              touch-friendly buttons and links. Customizable light and dark
-              modes for a comfortable experience in any setting.
-            </p>{" "}
-            <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4">
-              <div className="flex justify-center items-center sm:w-auto mt-16 sm:mt-8">
+          <section id="uiDesign" className="my-40">
+            <div>
+              <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
+                UI Design
+              </h1>
+              <p className="relative text-black dark:text-white-200 my-6 mx-auto flex text-start items-center justify-center">
+                Our system ensures a harmonious, accessible, and responsive
+                design framework that is user-friendly and adaptable to varying
+                contexts.
+              </p>{" "}
+              <p className="relative text-black dark:text-white-200 my-6 mx-auto flex text-start items-center justify-center">
+                User-friendly, with simple button presses based on real user
+                feedback for enhanced usability. Clear color contrasts,
+                easy-to-read text, and a mobile-friendly interface with
+                touch-friendly buttons and links. Customizable light and dark
+                modes for a comfortable experience in any setting.
+              </p>{" "}
+            </div>
+            <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-8 mx-auto">
+              <div className="flex justify-center items-center">
                 {" "}
                 <img
                   src="/TB-Mobile/StyleGuide.png"
@@ -375,23 +378,23 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                   className="w-full sm:w-auto sm:h-auto max-w-[400px] mx-auto"
                 />
               </div>
-              <div className="flex justify-center items-center sm:w-auto mt-16 sm:mt-8">
+              <div className="flex justify-center items-center">
                 {" "}
                 <img
-                  src="/TB-Mobile/Colors-Guide.png"
+                  src="/TB-Mobile/Colorssystem.png"
                   alt="Colors-Guide"
-                  className="w-full sm:w-auto sm:h-auto max-w-[400px] mx-auto"
+                  className="w-full sm:w-auto sm:h-auto max-h-[400px] mx-auto"
                 />
               </div>
             </div>
           </section>
 
           {/* Key Features */}
-          <section id="keyFeatures" className="my-40 mx-10 sm:px-16 md:px-14">
-            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
+          <section id="keyFeatures" className="my-40">
+            <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white mx-auto">
               Key Features
             </h1>
-            <div className="relative m-10">
+            <div className="relative my-10">
               <ul className="grid md:grid-cols-6 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 ">
                 {" "}
                 {/* This is the important part! */}
@@ -403,9 +406,9 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Visual Design */}
-          <section id="visualDesign" className="my-40 mx-10 sm:px-16 md:px-14">
+          <section id="visualDesign" className="my-40">
             <div
-              className="relative bg-cover bg-center bg-no-repeat before:absolute before:inset-0 before:bg-black before:opacity-70 text-white py-10"
+              className="relative bg-cover bg-center bg-no-repeat before:absolute before:inset-0 before:bg-black before:opacity-70 text-white py-10 mx-auto"
               style={{ backgroundImage: `url('/TB-Mobile/UIDesign.png')` }}
             >
               <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
@@ -473,30 +476,20 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 />
               </div>
             </div>
-            <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center mt-8 gap-4">
-              <div className="flex justify-center items-center sm:w-auto mt-4 sm:mt-4 w-full p-4 py-4">
-                {" "}
-                <img
-                  src="/TB-Mobile/iMac.png"
-                  alt="travelbuddy mockup"
-                  className="w-full sm:w-auto sm:h-auto mx-auto"
-                />
-              </div>
-              <div className="flex justify-center items-center sm:w-auto mt-4 sm:mt-4 w-full p-4 py-4">
-                {" "}
-                <img
-                  src="/TB-Mobile/iMac-1.png"
-                  alt="travelbuddy mockup"
-                  className="w-full sm:w-auto sm:h-auto mx-auto"
-                />
-              </div>
+            <div className="flex justify-center items-center mt-4">
+              {" "}
+              <img
+                src="/TB-Mobile/banner.png"
+                alt="travelbuddy mockup"
+                className="w-full sm:w-auto sm:h-auto mx-auto"
+              />
             </div>
           </section>
 
           {/* Testing & Results */}
           <section
             id="Testing&Results"
-            className="my-40 mx-14 sm:px-16 md:px-18"
+            className="my-40"
           >
             <h1 className="relative my-10 flex flex-row text-4xl font-bold items-center justify-center">
               Testing & Results
@@ -517,12 +510,12 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           {/* Future Improvements */}
           <section
             id="futureImprovements"
-            className="my-40 mx-20 items-center justify-center"
+            className="my-40"
           >
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
               Future Improvements
             </h1>
-            <div className="relative m-10">
+            <div className="relative my-10">
               <ul className="grid lg:grid-cols-3 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 ">
                 {" "}
                 {/* This is the important part! */}
@@ -538,12 +531,12 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           {/* Reflection & Challenges*/}
           <section
             id="Reflection&Challenges"
-            className="my-40 mx-20 items-center justify-center"
+            className="my-40"
           >
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
               Reflection & Challenges
             </h1>
-            <div className="relative m-10">
+            <div className="relative my-10">
               <ul className="grid lg:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 ">
                 {" "}
                 {/* This is the important part! */}
@@ -557,11 +550,11 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Conclusions*/}
-          <section id="conclusions" className="my-40 mx-20">
+          <section id="conclusions" className="my-40">
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
               Conclusions
             </h1>
-            <div className="relative m-10">
+            <div className="relative my-10">
               <ul className="grid lg:grid-cols-2 md:grid-cols-1 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 ">
                 {" "}
                 {/* This is the important part! */}
@@ -572,32 +565,32 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
             </div>
           </section>
 
-          <section className="my-40 mx-20">
+          <section className="my-40">
             <h3 className="relative flex flex-row text-3xl text-center font-bold items-center justify-center text-black dark:text-white">
               We took second place in the 'Chas's Challenge' at Chas academy!
             </h3>
-            <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 w-full h-auto items-center justify-center gap-6">
-              <div className="flex justify-center items-center mt-4">
+
+            <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 w-full h-auto items-center justify-center gap-6 my-10">
+              <div className="flex justify-center items-center">
                 {" "}
                 <img
                   src="/TB-Mobile/TravelBuddy-compatition.png"
                   alt="travelbuddy mockup"
-                  className=""
+                  className="mx-auto h-full w-full"
                 />
               </div>
-              <div className="flex justify-center items-center mt-4">
+              <div className="flex justify-center items-center">
                 {" "}
                 <img
                   src="/TB-Mobile/Chas-team.png"
                   alt="Chas-team"
-                  className="h-full"
+                  className="h-full w-full mx-auto"
                 />
               </div>
             </div>
           </section>
 
           <Footer />
-
         </div>
       </div>
     </main>

@@ -1,5 +1,4 @@
 import { cn } from "@/utils/cn";
-import { useState } from "react";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import MagicButton from "../MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
@@ -14,7 +13,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[18rem] grid-cols-1 lg:grid-cols-5 md:grid-cols-5 gap-4 max-w-7xl mx-auto ",
+        "grid md:auto-rows-[18rem] grid-cols-1 lg:grid-cols-5 md:grid-cols-5 gap-4 mx-auto ",
         className
       )}
     >
@@ -43,13 +42,12 @@ export const BentoGridItem = ({
   id?: number;
 }) => {
   const leftLists = ["ReactJS", "Express", "Typescript"];
-  const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
-  //console.log("BentoGridItem ID:", id);  // Debugging: Check the ID
+  const rightLists = ["JavaScript", "NextJS", "GraphQL"];
 
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        "relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col ",
         className
       )}
       style={{
@@ -77,12 +75,16 @@ export const BentoGridItem = ({
             <img
               src={spareImg}
               alt={spareImg}
-              //   width={220}
               className="object-cover object-center w-full h-full"
             />
           )}
         </div>
         {id === 6 && (
+          <BackgroundGradientAnimation>
+            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
+          </BackgroundGradientAnimation>
+        )}
+        {id === 1 && (
           <BackgroundGradientAnimation>
             <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
           </BackgroundGradientAnimation>
@@ -135,9 +137,7 @@ export const BentoGridItem = ({
           )}
           {id === 6 && (
             <div className="mt-5 relative z-50">
-              <a
-                href="/contact"
-                className="flex items-center justify-center">
+              <a href="/contact" className="flex items-center justify-center">
                 <MagicButton
                   title="Let's talk"
                   icon={<FaLocationArrow />}

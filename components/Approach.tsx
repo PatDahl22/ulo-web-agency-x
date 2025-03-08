@@ -10,7 +10,7 @@ const Approach = () => {
         My <span className="text-purple"> Approachs</span>
       </h1>
 
-      <div className="w-full mt-12 grid lg:grid-rows-4 grid-cols-1 gap-6">
+      <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 xs:grid-cols-1 w-full h-auto items-center justify-center gap-6 my-10">
         {Approachs.map((card) => (
           <Button
             key={card.id}
@@ -25,16 +25,15 @@ const Approach = () => {
               // add this border radius to make it more rounded so that the moving border is more realistic
               borderRadius: `calc(1.75rem* 0.96)`,
             }}
-            // remove bg-white dark:bg-slate-900
-            className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+            className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800 gap-6"
           >
-            <img
-              src={card.img}
-              alt={card.img}
-              className="lg:w-16 md:w-16 w-16 p-2"
-            />
-            <div className="flex lg:flex-row flex-col-reverse lg:items-center p-3 py-6 md:p-4 lg:p-6 gap-2">
-              <div className="lg:ms-5">
+            <div className="flex lg:flex-row flex-col-reverse items-center justify-center p-8">
+              <div>
+                  <img
+                    src={card.img}
+                    alt={card.img}
+                    className="w-16 py-4"
+                  />
                 <h1 className="text-start text-xl md:text-2xl font-bold">
                   {card.icon}
                 </h1>

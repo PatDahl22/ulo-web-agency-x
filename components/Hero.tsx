@@ -1,5 +1,4 @@
 import { FaLocationArrow } from "react-icons/fa";
-import { Spotlight } from "./ui/Spotlight";
 import MagicButton from "./MagicButton";
 import { TypewriterEffectSmooth as TypewriterEffect } from "./ui/typewriter-effect";
 
@@ -30,30 +29,20 @@ import { TypewriterEffectSmooth as TypewriterEffect } from "./ui/typewriter-effe
   ];
 
   
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
-  const [showSecondEffect, setShowSecondEffect] = useState(true);
+  const [showSecondEffect, setShowSecondEffect] = useState(false);
+
+    useEffect(() => {
+      const timeout = words1.length * 1000;
+      const timer = setTimeout(() => setShowSecondEffect(true), timeout);
+      return () => clearTimeout(timer);
+    }, []);
+  
   return (
     <div className="pb-10 pt-36 relative">
       {" "}
-      {/* Added relative to contain absolute children */}
-      <div>
-        {/* Spotlight components - Ensure their positioning works as expected */}
-        <Spotlight
-          className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
-          fill="white"
-        />
-        <Spotlight
-          className="h-[80vh] w-[50vw] top-10 left-full"
-          fill="purple"
-        />
-        <Spotlight className="left-80 top-28 h-[50vh] w-[50vw]" fill="blue" />
-      </div>
-      {/* Background Grid - Ensures proper grid layer effect */}
-      <div className="h-[50vh] w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.03] absolute top-0 left-0 flex items-center justify-center">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-black-100" />
-      </div>
       {/* Content Section */}
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center py-10">

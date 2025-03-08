@@ -7,7 +7,7 @@ import { InfiniteMovingCards } from "./ui/InfiniteCards";
 
 const Clients = () => {
   return (
-    <section className="py-10">
+    <section className="py-20">
       <h1 className="heading">
         What others say about
         <span className="text-purple"> Pat ...</span>
