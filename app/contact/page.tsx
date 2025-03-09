@@ -28,6 +28,9 @@ const words = [
 const Contact = () => {
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden w-full h-full px-20">
+      <ShootingStars />
+      <StarsBackground />
+
       <div className="h-[50vh]">
         <div className="relative h-full w-full">
           <BackgroundLines
@@ -40,7 +43,7 @@ const Contact = () => {
             <div className="flex flex-col items-center">
               <p className="text-center my-10">
                 I'm ready to
-                <span className="text-purple"> craft a solution</span>
+                <span className="text-purple "> craft a solution</span>
                 <br /> that drives results for your business.
               </p>
             </div>
@@ -52,8 +55,6 @@ const Contact = () => {
         <FloatingNav navItems={navItems} />
         <SignupForm />
         <Clients />
-        <ShootingStars />
-        <StarsBackground />
         <Footer />
       </div>
     </main>

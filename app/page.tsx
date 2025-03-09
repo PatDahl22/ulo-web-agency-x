@@ -11,10 +11,15 @@ import CardHoverEffect from "@/components/CardHoverEffect";
 import { FooterSection } from "@/components/FooterSection";
 import HomeExperience from "@/components/HomeExperience";
 import Grid from "@/components/Grid";
+import { ShootingStars } from "@/components/ui/shooting-stars";
+import { StarsBackground } from "@/components/ui/stars-background";
 
 const Home = () => {
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden w-full h-full px-20">
+      <ShootingStars />
+      <StarsBackground />
+      
       <div className="w-full">
         <FloatingNav navItems={navItems} />
         <Hero />

@@ -9,6 +9,9 @@ import { FooterSection } from "@/components/FooterSection";
 import MagicButton from "@/components/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
 import { TypewriterEffectSmooth as TypewriterEffect } from "@/components/ui/typewriter-effect";
+import { ShootingStars } from "@/components/ui/shooting-stars";
+import { StarsBackground } from "@/components/ui/stars-background";
+
 
 const words = [
   {
@@ -28,6 +31,9 @@ const words = [
 const Contact = () => {
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden w-full h-full px-20">
+      <ShootingStars />
+      <StarsBackground />
+
       <div className="h-[50vh]">
         <div className="relative h-full w-full">
           <BackgroundLines
@@ -42,25 +48,29 @@ const Contact = () => {
               SWEDEN.
             </p>
             <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 max-w-7xl mx-auto">
-              <a href="https://drive.google.com/open?id=1nRcgIKJ0V5KMwy6S1MjQ6dBGi7zFMNkT&usp=drive_fs"
-                  target="_blank"
-                  rel="noopener noreferrer">
+              <a
+                href="https://drive.google.com/open?id=1nRcgIKJ0V5KMwy6S1MjQ6dBGi7zFMNkT&usp=drive_fs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <MagicButton
                   title="Download My CV English"
                   icon={<FaLocationArrow />}
                   position="right"
                 />
               </a>
-              <a href="https://drive.google.com/file/d/1-7CDey7GBbTAZptw6_eH1JGhantRFgiA/view"
-                  target="_blank"
-                  rel="noopener noreferrer">
+              <a
+                href="https://drive.google.com/file/d/1-7CDey7GBbTAZptw6_eH1JGhantRFgiA/view"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <MagicButton
                   title="Download My CV in Swedish"
                   icon={<FaLocationArrow />}
                   position="right"
                 />
               </a>
-            </div>            
+            </div>
           </div>
         </div>
       </div>
@@ -101,10 +111,11 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      <Experience />
-      <FooterSection />
-      <Footer />
+      <div>
+        <Experience />
+        <FooterSection />
+        <Footer />
+      </div>
     </main>
   );
 };

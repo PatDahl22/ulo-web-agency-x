@@ -116,7 +116,7 @@ export const projects = [
       "👉 My Role: Design Focus, Component Developer, Team Collaborator",
       "👉 Technologies Used: React, Vite, react-router-dom, Git, GitHub Projects, Netlify",
     ],
-    img: "/Ws-bg.png",
+    img: "/WebShop/Ws-bg.png",
     link: "/project2",
     area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
   },

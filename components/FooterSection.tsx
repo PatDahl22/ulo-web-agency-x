@@ -1,10 +1,6 @@
-"use client";
-import { useState, useEffect } from "react";
 import { FaLocationArrow } from "react-icons/fa";
-import { TypewriterEffectSmooth as TypewriterEffect } from "./ui/typewriter-effect";
 import MagicButton from "./MagicButton";
-import { ShootingStars } from "./ui/shooting-stars";
-import { StarsBackground } from "./ui/stars-background";
+import { TypewriterEffectSmooth as TypewriterEffect } from "./ui/typewriter-effect";
 
 
   const words1 = [
@@ -53,29 +49,32 @@ import { StarsBackground } from "./ui/stars-background";
   ];
 
 
-export function FooterSection() {
+import { useEffect, useState } from "react";
+
+export const FooterSection = () => {
   const [showSecondEffect, setShowSecondEffect] = useState(false);
 
   useEffect(() => {
-    // Assuming each word takes 1 second to type, adjust the timeout accordingly
     const timeout = words1.length * 1000;
     const timer = setTimeout(() => setShowSecondEffect(true), timeout);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="flex flex-col items-center max-lg:mt-10">
+    <div className="pb-10 pt-36 relative">
+      {" "}
       {/* Content Section */}
-      <div className="flex justify-center relative my-20 ">
-        <div className="h-[50vh] md:h-[30rem] rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden">
-          {" "}
+      <div className="flex justify-center relative my-20 z-10">
+        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center py-10">
           {/* Text with animation */}
           <TypewriterEffect words={words1} />
           {showSecondEffect && <TypewriterEffect words={words2} />}
-          <p className="text-white md:mt-10 my-5 text-center">
+
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-md lg:text-lg">
             Let&apos;s work together and take your project to the next level
             with user-centric design.
           </p>
+
           {/* MagicButton wrapped in an anchor tag for navigation */}
           <a href="/contact">
             <MagicButton
@@ -86,8 +85,6 @@ export function FooterSection() {
           </a>
         </div>
       </div>
-      <ShootingStars />
-      <StarsBackground />
     </div>
   );
-}
+};
