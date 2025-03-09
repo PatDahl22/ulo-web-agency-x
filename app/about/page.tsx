@@ -28,7 +28,7 @@ const words = [
 const Contact = () => {
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden w-full h-full px-20">
-      <div className="h-[40vh]">
+      <div className="h-[50vh]">
         <div className="relative h-full w-full">
           <BackgroundLines
             className="absolute inset-0 -z-100"
@@ -42,21 +42,25 @@ const Contact = () => {
               SWEDEN.
             </p>
             <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 max-w-7xl mx-auto">
-              <a href="https://drive.google.com/file/d/1-6qItxKaDT63F3om4ljZDnP2tde5ftLR/view">
+              <a href="https://drive.google.com/open?id=1nRcgIKJ0V5KMwy6S1MjQ6dBGi7zFMNkT&usp=drive_fs"
+                  target="_blank"
+                  rel="noopener noreferrer">
                 <MagicButton
                   title="Download My CV English"
                   icon={<FaLocationArrow />}
                   position="right"
                 />
               </a>
-              <a href="https://drive.google.com/file/d/1-7CDey7GBbTAZptw6_eH1JGhantRFgiA/view">
+              <a href="https://drive.google.com/file/d/1-7CDey7GBbTAZptw6_eH1JGhantRFgiA/view"
+                  target="_blank"
+                  rel="noopener noreferrer">
                 <MagicButton
-                  title="Download My CV Swedish"
+                  title="Download My CV in Swedish"
                   icon={<FaLocationArrow />}
                   position="right"
                 />
               </a>
-            </div>
+            </div>            
           </div>
         </div>
       </div>

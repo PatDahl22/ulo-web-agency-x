@@ -83,12 +83,12 @@ export function SignupForm() {
   };
 
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 my-10 md:p-8 shadow-input bg-white dark:bg-black-100">
+    <div className="mx-auto w-full rounded-none md:rounded-2xl p-8 mb-20 shadow-input bg-white dark:bg-black-100 items-center justify-center max-w-[800px]">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
         Let's cooperate!
       </h2>
       <form className="my-8" onSubmit={handleSubmit} ref={formRef}>
-        <LabelInputContainer className="mb-4">
+        <LabelInputContainer className="mb-6">
           <Label htmlFor="name">Your name</Label>
           <Input
             id="name"
@@ -106,7 +106,7 @@ export function SignupForm() {
             required
           />
         </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
+        <LabelInputContainer className="mb-6">
           <Label htmlFor="email">Email Address</Label>
           <Input
             id="email"
@@ -124,7 +124,7 @@ export function SignupForm() {
             required
           />
         </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
+        <LabelInputContainer className="mb-6">
           <Label htmlFor="message">Your Message</Label>
           <TextArea
             id="message"
@@ -145,7 +145,7 @@ export function SignupForm() {
 
         <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full items-center" />
 
-        <div className="flex flex-col space-y-4 items-center">
+        <div className="flex flex-col items-center">
           <MagicButton
             title={loading ? "Sending..." : "Fire Away!"}
             icon={<FaLocationArrow />}

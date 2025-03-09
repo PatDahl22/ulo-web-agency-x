@@ -14,7 +14,7 @@ export const gridItems = [
     id: 2,
     title: "I prioritize client collaboration, fostering open communication ",
     description: "",
-    className: "lg:col-span-4 md:col-span-3 md:row-span-2 ",
+    className: "lg:col-span-4 md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center",
     img: "/1.svg",
@@ -70,7 +70,7 @@ export const navItems = [
     link: "/projects",
     projectLinks: [
       { name: "Project 1", link: "/project1" },
-      { name: "Project 2", link: "/" },
+      { name: "Project 2", link: "/project2" },
       { name: "Project 3", link: "/project3" },
       { name: "Project 4", link: "/" },
     ],
@@ -108,16 +108,16 @@ export const projects = [
   {
     id: 2,
     name: "Shoes & Stitches",
-    title: "Shoes & Stitches, WebShop Application",
+    title: "Shoes & Stitches",
     des: [
-      "💼 XXX",
-      "👉 Problem: ",
-      "👉 Solution: ",
-      "👉 My Role: ",
-      "👉 Impact: ",
+      "💼  A Collaborative E-Commerce Project",
+      "👉 Description: A responsive e-commerce web application developed",
+      "👉 Focus: Followed an agile methodology with a focus on teamwork and code quality",
+      "👉 My Role: Design Focus, Component Developer, Team Collaborator",
+      "👉 Technologies Used: React, Vite, react-router-dom, Git, GitHub Projects, Netlify",
     ],
     img: "/Ws-bg.png",
-    link: "/",
+    link: "/project2",
     area: "sm:col-span-1 md:col-span-1 row-start-2 xl:col-span-2 xl:row-span-1",
   },
   {
@@ -1205,259 +1205,229 @@ export const project3Items = {
 };
 
 export const project2Items = {
-  journeys: [
+  myroles: [
     {
-      title: "Traveler's Profile Creation",
-      description: "",
+      title: "Design Focus",
+      description:
+        "Primarily responsible for wireframing (Lo-fi and Hi-fi) and contributing to the overall design aesthetic.",
+      className: "h-4 w-4 text-neutral-500",
+      icon: "/TB-Mobile/role-icons1.png",
     },
     {
-      title: "Traveler's Profile Creation",
-      description: "",
+      title: "Component Developer",
+      description:
+        "Contributed to the front-end development of the site. Specifically took ownership of the 'About Us' page.",
+      className: "h-4 w-4 text-neutral-500",
+      icon: "/TB-Mobile/role-icons2.png",
     },
     {
-      title: "Traveler's Profile Creation",
-      description: "",
-    },
-    {
-      title: "Traveler's Profile Creation",
-      description: "",
-    },
-    {
-      title: "Traveler's Profile Creation",
-      description: "",
-    },
-  ],
-
-  Personas: [
-    {
-      title: "Eva - Adventurous Traveler",
-      overview: "",
-      preferences: "",
-      needs: "",
-    },
-    {
-      title: "Eva - Adventurous Traveler",
-      overview: "",
-      preferences: "",
-      needs: "",
-    },
-    {
-      title: "Eva - Adventurous Traveler",
-      overview: "",
-      preferences: "",
-      needs: "",
+      title: "Team Collaborator",
+      description:
+        "Participated actively in code reviews, Git collaboration, and agile planning/retrospectives.",
+      className: "h-4 w-4 text-neutral-500",
+      icon: "/TB-Mobile/role-icon3.png",
     },
   ],
 
-  Archetypes: [
+  goals: [
     {
-      title: "Adventure Anton, Age: 25",
-      interests: "",
-      techSavvy: "",
-      needs: ".",
+      title:
+        "The project aimed to create a fully functional webshop that includes:",
+      des: [
+        "👉 Product Listing Page",
+        "👉 Detailed Product Pages",
+        "👉 Shopping Cart Functionality (add, remove, change quantities)",
+        "👉 Order Confirmation (fake payment flow)",
+        "👉 Responsive Design across desktop, tablet, and mobile devices.",
+        "👉 Clean and maintainable code.",
+        "👉 Adherence to Agile principles through GitHub Projects, regular meetings, and code reviews.",
+      ],
+      className: "text-neutral-500",
     },
     {
-      title: "Adventure Anton, Age: 25",
-      interests: "",
-      techSavvy: "",
-      needs: ".",
-    },
-    {
-      title: "Adventure Anton, Age: 25",
-      interests: "",
-      techSavvy: "",
-      needs: ".",
-    },
-    {
-      title: "Adventure Anton, Age: 25",
-      interests: "",
-      techSavvy: "",
-      needs: ".",
-    },
-  ],
-
-  KeyFeatures: [
-    {
-      title: "Search & Filtering",
-      description: "",
-    },
-    {
-      title: "Search & Filtering",
-      description: "",
-    },
-    {
-      title: "Search & Filtering",
-      description: "",
-    },
-    {
-      title: "Search & Filtering",
-      description: "",
-    },
-    {
-      title: "Search & Filtering",
-      description: "",
-    },
-    {
-      title: "Search & Filtering",
-      description: "",
+      title: "Learning Objectives:",
+      des: [
+        "👉 Apply Agile methodologies in a team setting.",
+        "👉 Gain proficiency in React, Vite, and React Router.",
+        "👉 Improve design skills through wireframing and collaborative design discussions.",
+        "👉 Enhance Git and GitHub collaboration skills.",
+      ],
+      className: "text-neutral-500",
     },
   ],
 
-  StylingSystem: [
+  designProcess: [
     {
-      title: "Colors system",
-      description: "",
-      points: "",
-      img: "",
+      title: "Inspiration & Ideation:",
+      description: [
+        "The team decided to create a website for a fashion brand named 'Shoes & Stitches'.",
+        "Drew inspiration from clean, simple designs of existing fashion brand websites.",
+      ],
+      className: "text-neutral-500",
     },
     {
-      title: "Colors system",
-      description: "",
-      points: "",
-      img: "",
+      title: "Wireframing & Mockups:",
+      description: [
+        "Started with Lo-fi wireframes to establish the basic structure and layout.",
+        "Progressed to Hi-fi wireframes, refining the design details.",
+      ],
+      className: "text-neutral-500",
     },
     {
-      title: "Colors system",
-      description: "",
-      points: "",
-      img: "",
+      title: "Design System:",
+      description: [
+        "Established a design system with the 'Poppins' font.",
+        "Used a primary color scheme of black and white for a clean, high-contrast look.",
+        "Used additional colors sparingly for notifications (e.g., error and approval messages).",
+      ],
+      className: "text-neutral-500",
     },
     {
-      title: "Colors system",
-      description: "",
-      points: "",
-      img: "",
-    },
-    {
-      title: "Colors system",
-      description: "",
-      points: "",
-      img: "",
-    },
-  ],
-
-  ResponsiveDesign: [
-    {
-      title: "",
-      description: "",
-    },
-    {
-      title: "",
-      description: "",
-    },
-    {
-      title: "",
-      description: "",
-    },
-    {
-      title: "",
-      description: "",
-    },
-    {
-      title: "",
-      description: "",
-    },
-    {
-      title: "",
-      description: "",
+      title: "Iteration:",
+      description: [
+        "Initially designed the product page one way, but had to revise it to a simpler version to better align with our coding capabilities.",
+      ],
+      className: "text-neutral-500",
     },
   ],
 
-  ResponsivenessAndAvailability: [
+  DevelopmentProcess: [
     {
-      title: "",
-      description: "",
-      img: "",
+      title: "Code Structure:",
+      description: [
+        "Established a basic React code structure with pages and components, which was shared on GitHub.",
+        "Tasks were divided based on individual skills. I was responsible for the 'About Us' page.",
+      ],
+      className: "text-neutral-500",
     },
     {
-      title: "",
-      description: "",
-      img: "",
+      title: "Agile Workflow:",
+      description: [
+        "Used GitHub Projects for task management and progress tracking.",
+        "Conducted regular team meetings for updates and problem-solving.",
+        "Implemented pull requests and code reviews to ensure code quality.",
+      ],
+      className: "text-neutral-500",
     },
     {
-      title: "",
-      description: "",
-      img: "",
-    },
-    {
-      title: "",
-      description: "",
-      img: "",
-    },
-    {
-      title: "",
-      description: "",
-      img: "",
-    },
-    {
-      title: "",
-      description: "",
-      img: "",
+      title: "Technology Stack:",
+      description: [
+        "React: For building the user interface.",
+        "Vite: As a build tool for fast development.",
+        "react-router-dom: For handling routing and navigation.",
+        "Git/GitHub: For version control and collaboration.",
+        "Netlify: For deploying and hosting the application.",
+      ],
+      className: "text-neutral-500",
     },
   ],
 
-  Conclusion: [
+  challenges: [
     {
-      title: "",
-      description: "",
-      img: "",
+      title: "Design Complexity vs. Coding Capabilities: ",
+      des: "We had to adjust the design due to coding complexity. For example, we initially designed the product page one way (Product Page 1) but had to revise it to a simpler version (Product Page 2) to better align with our coding capabilities.",
+      className: "text-neutral-500",
     },
     {
-      title: "",
-      description: "",
-      img: "",
+      title: "Learning Git:",
+      des: "As a group, we supported each other, especially with using Git. I learned a lot about working with Git and Git commands thanks to the guidance of my team members.",
+      className: "text-neutral-500",
+    },
+  ],
+  solutions: [
+    {
+      title: "Solution 1:",
+      des: "Through iterative design and open communication, we simplified the design while maintaining the core functionality and aesthetic.",
+      className: "text-neutral-500",
     },
     {
-      title: "",
-      description: "",
-      img: "",
-    },
-
-    {
-      title: "",
-      description: "",
-      img: "",
-    },
-
-    {
-      title: "",
-      description: "",
-      img: "",
-    },
-
-    {
-      title: "",
-      description: "",
-      img: "",
+      title: "Solution 2:",
+      des: "Leveraged team expertise to improve Git skills and effectively collaborate on the project.",
+      className: "text-neutral-500",
     },
   ],
 
-  ChallengesandImprovements: [
+  outcomesandResults: [
     {
-      title: "Managing Personalization Without Complexity",
-      description: "",
+      id: 1,
+      area: "",
+      icon: "",
+      title: "Functional Webshop",
+      description: [
+        "The team successfully developed a functional webshop with product listings, detailed product pages, a shopping cart, and an order confirmation process.",
+      ],
     },
     {
-      title: "Managing Personalization Without Complexity",
-      description: "",
+      id: 2,
+      area: "",
+      icon: "",
+      title: "Responsive Design",
+      description: [
+        "The application is responsive and works well on mobile and desktop devices.",
+      ],
     },
     {
-      title: "Managing Personalization Without Complexity",
-      description: "",
+      id: 3,
+      area: "",
+      icon: "",
+      title: "Positive Feedback",
+      description: [
+        "Received positive feedback on the design and purchase flow from the Orders manager.",
+      ],
     },
+    {
+      id: 4,
+      area: "lg:col-span-4 md:col-span-3 md:row-span-2",
+      icon: "",
+      title: "✨ Nice design!",
+      description: [
+        "'It really feels like a realistic webshop! The purchase flow is very good and you even manage to get me to look at more products than I was originally interested in.'",
+      ],
+    },
+  ],
 
+  LearnedandReflections: [
     {
-      title: "Managing Personalization Without Complexity",
-      description: "",
+      id: 1,
+      area: "",
+      icon: "",
+      title: "Agile Benefits:",
+      description: [
+        "The agile working methodology proved to be very effective for our project, promoting quick decisions and flexibility.",
+      ],
+      className: "text-neutral-500",
     },
-
     {
-      title: "Managing Personalization Without Complexity",
-      description: "",
+      id: 2,
+      area: "",
+      icon: "",
+      title: "Teamwork Importance:",
+      description: [
+        "This project emphasized the importance of teamwork, adaptability, and continuous learning to achieve successful results.",
+      ],
+      className: "text-neutral-500",
     },
     {
-      title: "Managing Personalization Without Complexity",
-      description: "",
+      id: 3,
+      area: "",
+      icon: "",
+      title: "Skill Development:",
+      description: [
+        "I especially improved my wireframing and Git skills through collaboration.",
+      ],
+      className: "text-neutral-500",
+    },
+    {
+      id: 4,
+      area: "lg:col-span-4 md:col-span-3 md:row-span-2",
+      icon: "",
+      title: "Areas for Improvement:",
+      description: [
+        "Coding Skills: However, our coding skills could have been stronger; with more advanced skills, we could have tackled a more complex design.",
+        "Code Consistency: The Orders manager noticed mixed export methods and used both arrow functions and regular function declarations",
+        "Acknowledge the feedback and state how I would address it in future projects, like establishing stricter coding guidelines.",
+      ],
+      className: "text-neutral-500",
     },
   ],
 };
