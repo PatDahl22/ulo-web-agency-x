@@ -79,13 +79,53 @@ export const navItems = [
 ];
 
 export const ProjectnavItems = [
-  { name: "Problems & Solutions", link: "#problems" },
-  { name: "Competitive Analysis", link: "#competitive" },
-  { name: "UI Design", link: "#uiDesign" },
-  { name: "Visual Design", link: "#visualDesign" },
-  { name: "Future Improvements", link: "#futureImprovements" },
-  { name: "Conclusions", link: "#conclusions" },
+  {
+    project1nav: [
+      { name: "About", link: "#about" },
+      { name: "Problems", link: "#problems" },
+      { name: "Analysis", link: "#competitive" },
+      { name: "UI Design", link: "#uiDesign" },
+      { name: "Visual Design", link: "#visualDesign" },
+      { name: "Future ", link: "#futureImprovements" },
+      { name: "Conclusions", link: "#conclusions" },
+    ],
+  },
+  {
+    project2nav: [
+      { name: "About", link: "#about" },
+      { name: "Role", link: "#myrole" },
+      { name: "Goals", link: "#goals" },
+      { name: "Design Process", link: "#designProcess" },
+      { name: "Development", link: "#DevelopmentProcess" },
+      { name: "Challenges", link: "#Challenges" },
+      { name: "Results", link: "#Results" },
+      { name: "Reflection", link: "#Reflection" },
+    ],
+  },
+  {
+    project3nav: [
+      { name: "About", link: "#about" },
+      { name: "Problems", link: "#problems" },
+      { name: "Challenge", link: "#Challenge" },
+      { name: "Initial Design", link: "#InitialDesign" },
+      { name: "Key features", link: "#Keyfeatures" },
+      { name: "Visual Design", link: "#VisualDesign" },
+      { name: "Learned", link: "#Lessonslearned" },
+      { name: "Conclusions", link: "#Conclusions" },
+    ],
+  },
+  {
+    project4nav: [
+      { name: "Problems & Solutions", link: "#problems" },
+      { name: "Competitive Analysis", link: "#competitive" },
+      { name: "UI Design", link: "#uiDesign" },
+      { name: "Visual Design", link: "#visualDesign" },
+      { name: "Future Improvements", link: "#futureImprovements" },
+      { name: "Conclusions", link: "#conclusions" },
+    ],
+  },
 ];
+
 
 
 
@@ -123,7 +163,7 @@ export const projects = [
   {
     id: 3,
     name: "FemTask",
-    title: "FemTask, Web Application",
+    title: "FemTask",
     des: [
       "💼 UX/UI Designer for helps busy families organize tasks",
       "👉 Problem: Parents struggle with task management, leading to stress and disorganization.",

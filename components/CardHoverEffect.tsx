@@ -20,7 +20,7 @@ const CardHoverEffect = () => {
         />
       </div>
     </div>
-  );
+  ); 
 }
 
 export default CardHoverEffect

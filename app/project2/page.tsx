@@ -1,6 +1,6 @@
 "use client";
 
-import { navItems, project1Items, project2Items } from "@/data";
+import { navItems, project2Items, ProjectnavItems } from "@/data";
 import Footer from "@/components/Footer";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { StarsBackground } from "@/components/ui/stars-background";
@@ -70,6 +70,11 @@ const Page = () => {
     className: item.className 
   }));
 
+   const project2Nav = ProjectnavItems.find(item => item.project2nav)?.project2nav;
+  
+  if (!project2Nav) {
+    return <p>No navigation data found!</p>;
+  }
 
 interface PersonasProps {
   id: number;
@@ -114,7 +119,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden w-full h-full px-20">
       <div className="w-full">
         <FloatingNav navItems={navItems} />
-        <ProjectNav navItems={[]} />
+        <ProjectNav navItems={project2Nav} />
         <div className="h-full w-full">
           <StarsBackground className="absolute inset-0 z-100" />
           <ShootingStars />
@@ -213,7 +218,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Project Goals*/}
-          <section id="problems" className="my-40">
+          <section id="goals" className="my-40">
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center w-full text-black dark:text-white">
               Project Goals
             </h1>
@@ -229,7 +234,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Design Process */}
-          <section id="" className="my-40">
+          <section id="designProcess" className="my-40">
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center  text-black dark:text-white">
               Design Process
             </h1>
@@ -295,7 +300,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Development Process */}
-          <section id="" className="my-40">
+          <section id="DevelopmentProcess" className="my-40">
             <h1 className="relative text-black dark:text-white flex flex-row text-4xl font-bold items-center justify-center">
               Development Process
             </h1>
@@ -422,7 +427,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Challenges & Solutions */}
-          <section id="" className="my-40">
+          <section id="Challenges" className="my-40">
             <h1 className="relative text-black dark:text-white flex flex-row text-4xl font-bold items-center justify-center">
               Challenges & Solutions
             </h1>
@@ -467,7 +472,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Outcomes & Results */}
-          <section id="" className="my-40">
+          <section id="Results" className="my-40">
             <div>
               <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center  text-black dark:text-white">
                 Outcomes & Results
@@ -512,7 +517,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Lessons Learned & Reflection */}
-          <section id="" className="my-40">
+          <section id="Reflection" className="my-40">
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center">
               Lessons Learned & Reflection
             </h1>
@@ -570,7 +575,6 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
               </div>
             </div>
           </section>
-
           <Footer />
         </div>
       </div>

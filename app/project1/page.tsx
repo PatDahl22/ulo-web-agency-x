@@ -1,6 +1,6 @@
 "use client";
 
-import { navItems, project1Items } from "@/data";
+import { navItems, project1Items, ProjectnavItems } from "@/data";
 import Footer from "@/components/Footer";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { StarsBackground } from "@/components/ui/stars-background";
@@ -14,6 +14,14 @@ import { HoverEffect } from "@/components/ui/card-hover-effect";
 
 const Page = () => {
   const [showSecondEffect, setShowSecondEffect] = useState(false); 
+
+  const project1Nav = ProjectnavItems.find(
+    (item) => item.project1nav
+  )?.project1nav;
+
+    if (!project1Nav) {
+      return <p>No navigation data found!</p>;
+    }
 
   const words1 = [
     {
@@ -105,7 +113,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden w-full h-full px-20">
       <div className="w-full">
         <FloatingNav navItems={navItems} />
-        <ProjectNav navItems={[]} />
+        <ProjectNav navItems={project1Nav} />
         <div className="h-full w-full">
           <StarsBackground className="absolute inset-0 z-100" />
           <ShootingStars />
@@ -276,10 +284,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Competitive Analysis */}
-          <section
-            id="competitive"
-            className="my-40"
-          >
+          <section id="competitive" className="my-40">
             <h1 className="relative text-black dark:text-white flex flex-row text-4xl font-bold items-center justify-center">
               Competitive Analysis
             </h1>
@@ -487,10 +492,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Testing & Results */}
-          <section
-            id="Testing&Results"
-            className="my-40"
-          >
+          <section id="Testing&Results" className="my-40">
             <h1 className="relative my-10 flex flex-row text-4xl font-bold items-center justify-center">
               Testing & Results
             </h1>
@@ -508,10 +510,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Future Improvements */}
-          <section
-            id="futureImprovements"
-            className="my-40"
-          >
+          <section id="futureImprovements" className="my-40">
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
               Future Improvements
             </h1>
@@ -529,10 +528,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/* Reflection & Challenges*/}
-          <section
-            id="Reflection&Challenges"
-            className="my-40"
-          >
+          <section id="Reflection&Challenges" className="my-40">
             <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
               Reflection & Challenges
             </h1>

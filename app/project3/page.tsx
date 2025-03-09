@@ -1,6 +1,6 @@
 "use client";
 
-import { navItems, project3Items} from "@/data";
+import { navItems, project3Items, ProjectnavItems} from "@/data";
 import Footer from "@/components/Footer";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
@@ -9,8 +9,7 @@ import { ShootingStars } from "@/components/ui/shooting-stars";
 import { RoleFeaturesSection } from "@/components/ui/RoleFeaturesSection";
 import { TypewriterEffectSmooth as TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
-
-
+import { ProjectNav } from "@/components/ui/ProjectNav";
 
 const page = () => {
 
@@ -25,7 +24,12 @@ const page = () => {
     },
   ];
 
-
+  const project3Nav = ProjectnavItems.find(item => item.project3nav)?.project3nav;
+  
+  if (!project3Nav) {
+    return <p>No navigation data found!</p>;
+  }
+  
   interface PersonasProps {
   id: number;
   area: string;
@@ -34,37 +38,37 @@ const page = () => {
   description: React.ReactNode;
 }
 
-const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
-  return (
-    <li
-      id={id.toString()} // Apply the unique ID to each grid item
-      className={`h-full items-start list-none ${area}`}
-    >
-      {/* Container with border and padding */}
-      {/* Content container with inner styling */}
-      <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-0.75 p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D] ">
-        {/* Icon and text */}
-        <div className="relative flex flex-1 flex-col justify-between gap-3">
-          {/* Icon container */}
-          <div className="w-fit rounded-lg border border-gray-600 p-2">
-            {icon && <img src={icon} alt={title} className="mb-4 w-16 h-16" />}
-            {/* Title and Description */}
-            <div className="space-y-3 text-start">
-              {/* Title */}
-              <h3 className="pt-0.5 text-xl/[1.375rem] font-semibold font-sans md:text-2xl/[1.875rem] text-black dark:text-white items-start">
-                {title}
-              </h3>
-              {/* Description */}
-              <h2 className="list-description font-medium font-sans text-sm/[1.125rem] md:text-base/[1.375rem] text-black dark:text-neutral-400 items-start w-full">
-                {description}
-              </h2>
+  const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
+    return (
+      <li
+        id={id.toString()} // Apply the unique ID to each grid item
+        className={`h-full items-start list-none ${area}`}
+      >
+        {/* Container with border and padding */}
+        {/* Content container with inner styling */}
+        <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-0.75 p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D] ">
+          {/* Icon and text */}
+          <div className="relative flex flex-1 flex-col justify-between gap-3">
+            {/* Icon container */}
+            <div className="w-fit rounded-lg border border-gray-600 p-2">
+              {icon && <img src={icon} alt={title} className="mb-4 w-16 h-16" />}
+              {/* Title and Description */}
+              <div className="space-y-3 text-start">
+                {/* Title */}
+                <h3 className="pt-0.5 text-xl/[1.375rem] font-semibold font-sans md:text-2xl/[1.875rem] text-black dark:text-white items-start">
+                  {title}
+                </h3>
+                {/* Description */}
+                <h2 className="list-description font-medium font-sans text-sm/[1.125rem] md:text-base/[1.375rem] text-black dark:text-neutral-400 items-start w-full">
+                  {description}
+                </h2>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </li>
-  );
-};
+      </li>
+    );
+  };
 
   const keyuserinsights = project3Items.keyuserinsights.map((item) => ({
     title: item.title,
@@ -83,6 +87,8 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden w-full h-full px-20">
       <div className="w-full">
         <FloatingNav navItems={navItems} />
+        <ProjectNav navItems={project3Nav} />
+
         <div className="h-full w-full">
           <StarsBackground className="absolute inset-0 z-100" />
           <ShootingStars />
@@ -295,7 +301,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           </section>
 
           {/*Initial Design Concepts*/}
-          <div className="my-40">
+          <section id="InitialDesign" className="my-40">
             <h1 className="relative text-black dark:text-white flex flex-row text-4xl mt-8 font-bold items-center justify-center">
               Initial Design Concepts
             </h1>
@@ -316,7 +322,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 )}
               </ul>
             </div>
-          </div>
+          </section>
 
           {/* Accessibility Considerations */}
           <section id="Accessibility" className="my-40">
