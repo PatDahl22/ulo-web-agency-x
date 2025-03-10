@@ -116,18 +116,16 @@ export const ProjectnavItems = [
   },
   {
     project4nav: [
-      { name: "Problems & Solutions", link: "#problems" },
-      { name: "Competitive Analysis", link: "#competitive" },
-      { name: "UI Design", link: "#uiDesign" },
-      { name: "Visual Design", link: "#visualDesign" },
-      { name: "Future Improvements", link: "#futureImprovements" },
-      { name: "Conclusions", link: "#conclusions" },
+      { name: "About", link: "#about" },
+      { name: "Problems", link: "#problems" },
+      { name: "Challenge", link: "#Challenge" },
+      { name: "Accessibility", link: "#Accessibility" },
+      { name: "Keyfeatures", link: "#Keyfeatures" },
+      { name: "Results", link: "#Results" },
+      { name: "Lessons learned", link: "#Lessonslearned" },
     ],
   },
 ];
-
-
-
 
 export const projects = [
   {
@@ -178,13 +176,13 @@ export const projects = [
   {
     id: 4,
     name: "Ullis Fitness & Kroppvård",
-    title: "Ullis Fitness & Kroppvård, Web Application",
+    title: "Ullis Fitness & Kroppvård",
     des: [
-      "💼 XXX",
-      "👉 Problem: ",
-      "👉 Solution: ",
-      "👉 My Role: ",
-      "👉 Impact: ",
+      "💼 Fitness and Body Care company, offering a range of services focused on physical and mental well-being",
+      "👉 Problem: Outdated design, Not fully responsive, no online booking, less organized, lower quality images and no contact form",
+      "👉 Solution: Modern design, responsive, online booking, clearer information architecture, professional photography and layout",
+      "👉 My Role: Solo UX/UI Designer and web developer",
+      "👉 Impact: Easy to navigate and understand logically, responsive and adapts well to different screen sizes, online booking and easy to get in touch.",
     ],
     img: "/p4.PNG",
     link: "/",
@@ -1473,134 +1471,95 @@ export const project2Items = {
 };
 
 export const project4Items = {
-  journeys: [
-    {
-      title: "Traveler's Profile Creation",
-      description: "",
-    },
-    {
-      title: "Traveler's Profile Creation",
-      description: "",
-    },
-    {
-      title: "Traveler's Profile Creation",
-      description: "",
-    },
-    {
-      title: "Traveler's Profile Creation",
-      description: "",
-    },
-    {
-      title: "Traveler's Profile Creation",
-      description: "",
-    },
-  ],
-
-  Personas: [
-    {
-      title: "Eva - Adventurous Traveler",
-      overview: "",
-      preferences: "",
-      needs: "",
-    },
-    {
-      title: "Eva - Adventurous Traveler",
-      overview: "",
-      preferences: "",
-      needs: "",
-    },
-    {
-      title: "Eva - Adventurous Traveler",
-      overview: "",
-      preferences: "",
-      needs: "",
-    },
-  ],
-
-  Archetypes: [
-    {
-      title: "Adventure Anton, Age: 25",
-      interests: "",
-      techSavvy: "",
-      needs: ".",
-    },
-    {
-      title: "Adventure Anton, Age: 25",
-      interests: "",
-      techSavvy: "",
-      needs: ".",
-    },
-    {
-      title: "Adventure Anton, Age: 25",
-      interests: "",
-      techSavvy: "",
-      needs: ".",
-    },
-    {
-      title: "Adventure Anton, Age: 25",
-      interests: "",
-      techSavvy: "",
-      needs: ".",
-    },
-  ],
-
   KeyFeatures: [
     {
-      title: "Search & Filtering",
-      description: "",
+      title: "Services Offered",
+      description:
+        "Clearly outlining the different types of massage and training company provides.",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      icon: "/TB-Mobile/role-icons6.png",
     },
     {
-      title: "Search & Filtering",
-      description: "",
+      title: "Trust and credibility",
+      description:
+        "Building trust and credibility by showcasing company's experience, qualifications, and personal approach.",
+      area: "sm:col-span-1 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      icon: "/TB-Mobile/role-icons6.png",
     },
     {
-      title: "Search & Filtering",
-      description: "",
+      title: "Contact Information",
+      description:
+        "Making it easy for potential clients to get in touch and book appointments.",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      icon: "/TB-Mobile/role-icons6.png",
     },
     {
-      title: "Search & Filtering",
-      description: "",
+      title: "Location & Opening hours",
+      description:
+        "Providing the address, a map and opening hours to the physical location.",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      icon: "/TB-Mobile/role-icons6.png",
     },
     {
-      title: "Search & Filtering",
-      description: "",
-    },
-    {
-      title: "Search & Filtering",
-      description: "",
+      title: "Benefits of Services",
+      description: "Highlighting the positive outcomes clients can expect.",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 xl:col-span-2 xl:row-span-1",
+      icon: "/TB-Mobile/role-icons6.png",
     },
   ],
 
-  StylingSystem: [
+  problemsandsolutions: [
     {
-      title: "Colors system",
-      description: "",
-      points: "",
-      img: "",
+      title: "Problem",
+      des: [
+        "👉 Outdated Design: Visually dated and less appealing.",
+        "👉 Not Fully Responsive: Doesn't adapt well to smaller screens.",
+        "👉 No Online Booking: Requires phone or email contact, which is less convenient.",
+        "👉 Less Organized: Information is harder to find.",
+        "👉 Lower Quality Images: Images are smaller and less impactful.",
+        "👉 No Contact Form: Missing a convenient way to send messages.",
+      ],
+      className: "text-neutral-500",
     },
     {
-      title: "Colors system",
-      description: "",
-      points: "",
-      img: "",
+      title: "Solution",
+      des: [
+        "✨ Modern Design: Cleaner, more contemporary look.",
+        "✨ Responsive: Works well on all devices.",
+        "✨ Online Booking : Major improvement in user experience.",
+        "✨ Clearer Information Architecture: Better organization of content.",
+        "✨ Professional Photography: Higher quality images.",
+        "✨ Social Media Links: Provide an experience for visitors and clients.",
+        "✨ Testimonials: Builds trust with potential clients.",
+      ],
+      className: "text-neutral-500",
+    },
+  ],
+
+  challenges: [
+    {
+      title: "User Experience (UX)",
+      description:
+        "How layout, navigation, and booking flow impact the user journey.",
+      className: "text-neutral-500",
     },
     {
-      title: "Colors system",
-      description: "",
-      points: "",
-      img: "",
+      title: "Responsive Design",
+      description:
+        "Check how the site adapts on different devices. Learning to make a website responsive is crucial for modern web development.",
+      className: "text-neutral-500",
     },
     {
-      title: "Colors system",
-      description: "",
-      points: "",
-      img: "",
+      title: "Forms and Data Handling",
+      description:
+        "Especially the booking system and contact forms, which are essential for interactive websites.",
+      className: "text-neutral-500",
     },
     {
-      title: "Colors system",
-      description: "",
-      points: "",
-      img: "",
+      title: "Integration of Third-Party Tools",
+      description:
+        "The booking system is a third-party tool integrated into the website, a valuable lesson in how to connect external systems with the website.",
+      className: "text-neutral-500",
     },
   ],
 
@@ -1700,32 +1659,73 @@ export const project4Items = {
     },
   ],
 
-  ChallengesandImprovements: [
+  lessonslearneds: [
     {
-      title: "Managing Personalization Without Complexity",
-      description: "",
+      title: "Navigation Improvement",
+      description:
+        "How to navigation, making it smooth and intuitive should be the first priority. If users can't find what they're looking for easily, they'll leave the site. Plus, if the navigation is confusing or unclear, users will bounce before even considering booking a service. ",
+      area: "",
     },
     {
-      title: "Managing Personalization Without Complexity",
-      description: "",
+      title: "Design Consistency",
+      description:
+        "Design consistency makes the site look professional and trustworthy. When things are mismatched or visually jarring, it can confuse users and make them feel uncomfortable on the site.",
+      area: "",
     },
     {
-      title: "Managing Personalization Without Complexity",
-      description: "",
+      title: "Booking System Usability",
+      description:
+        "The booking system is crucial for this website. If it's confusing or hard to use, the company could lose customers. I'm ensured that those features works flawlessly is essential for converting visitors into clients.",
+      area: "",
     },
+    {
+      title: "Content Structure & Presentation",
+      description:
+        "Content should be educate and guide the audience without overwhelming them. If the text is too long or too scattered, users will lose focus. Clear and concise content is the way to go.",
+      area: "",
+    },
+    {
+      title: "Responsive Design",
+      description:
+        "More and more users are browsing on mobile devices, so I'm making sure the site looks good on all screen sizes is non-negotiable.",
+      area: "",
+    },
+    {
+      title: "SEO Optimization",
+      description:
+        "Search engine optimization (SEO) ensures the website shows up in search results when potential clients search for services. I'm improved SEO will make it easier for people to find the business online.",
+      area: "",
+    },
+  ],
 
+  OutcomesandResults: [
     {
-      title: "Managing Personalization Without Complexity",
-      description: "",
-    },
-
-    {
-      title: "Managing Personalization Without Complexity",
-      description: "",
+      title: "Modernization",
+      description:
+        "Updating the website to meet current web standards and user expectations.",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 lg:col-span-3 xl:row-span-1",
     },
     {
-      title: "Managing Personalization Without Complexity",
-      description: "",
+      title: "Mobile-First Approach",
+      description:
+        "ecognizing that many users access websites on their phones.",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 lg:col-span-2 xl:row-span-1",
+    },
+    {
+      title: "Improved User Experience",
+      description:
+        "Making it easier for clients to find information and book appointments.",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 lg:col-span-3 xl:row-span-1",
+    },
+    {
+      title: "Online Booking",
+      description: "A crucial feature for convenience and efficiency.",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 lg:col-span-2 xl:row-span-1",
+    },
+    {
+      title: "Professional Branding",
+      description: "Creating a more polished and trustworthy online presence.",
+      area: "sm:col-span-2 md:col-span-2 row-start-1 lg:col-span-3 xl:row-span-1",
     },
   ],
 };
