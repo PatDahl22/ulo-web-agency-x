@@ -185,18 +185,41 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
               <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-8 mx-auto">
                 <div className="flex justify-center items-center sm:w-auto">
                   <img
-                    src="/WebShop/Shoes&stiches1.png"
+                    src="/WebShop/Shoes&stiches1.jpg"
                     alt="travelbuddy mockup"
                     className="w-full h-[400px] mx-auto rounded-xl border-0.75"
                   />
                 </div>
                 <div className="flex justify-center items-center sm:w-auto">
                   <img
-                    src="/WebShop/Shoes&stiches2.png"
+                    src="/WebShop/Shoes&stiches2.jpg"
                     alt="travelbuddy mockup"
                     className="w-full h-[400px] mx-auto rounded-xl border-0.75"
                   />
                 </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="about" className="my-40 w-full">
+            <h1 className="relative my-6 flex flex-row text-4xl font-bold items-center justify-center">
+              Our plan
+            </h1>
+
+            <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-8 mx-auto">
+              <div className="flex justify-center items-center sm:w-auto">
+                <img
+                  src="/WebShop/Ws-roadmap.jpg"
+                  alt="travelbuddy mockup"
+                  className="w-full h-[400px] mx-auto rounded-xl border-0.75"
+                />
+              </div>
+              <div className="flex justify-center items-center sm:w-auto">
+                <img
+                  src="/WebShop/Ws-timeline.jpg"
+                  alt="travelbuddy mockup"
+                  className="w-full h-[400px] mx-auto rounded-xl border-0.75"
+                />
               </div>
             </div>
           </section>
@@ -280,7 +303,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                   />
                 </div>
               </div>
-              <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4 mx-auto">
+              <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4 mx-auto">
                 <div className="flex justify-center items-center sm:w-auto">
                   <img
                     src="/WebShop/lo-fil.png"
@@ -340,28 +363,28 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
               <div className="grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4 mx-auto">
                 <div className="flex justify-center items-center sm:w-auto">
                   <img
-                    src="/WebShop/Autentisering.png"
+                    src="/WebShop/Autentisering.jpg"
                     alt="Autentisering"
                     className="w-full h-[400px] mx-auto rounded-xl border-0.75"
                   />
                 </div>
                 <div className="flex justify-center items-center sm:w-auto">
                   <img
-                    src="/WebShop/Inloggning.png"
+                    src="/WebShop/Inloggning.jpg"
                     alt="Inloggning"
                     className="w-full h-[400px] mx-auto rounded-xl border-0.75"
                   />
                 </div>
                 <div className="flex justify-center items-center sm:w-auto">
                   <img
-                    src="/WebShop/Handlings.png"
+                    src="/WebShop/Handlings.jpg"
                     alt="Handlings"
                     className="w-full h-[400px] mx-auto rounded-xl border-0.75"
                   />
                 </div>
                 <div className="flex justify-center items-center sm:w-auto">
                   <img
-                    src="/WebShop/View.png"
+                    src="/WebShop/View.jpg"
                     alt="View"
                     className="w-full h-[400px] mx-auto rounded-xl border-0.75"
                   />
@@ -370,28 +393,28 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
               <div className="grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 w-full h-full items-center justify-center gap-4 mx-auto">
                 <div className="flex justify-center items-center sm:w-auto">
                   <img
-                    src="/WebShop/CreateAnOrder.png"
+                    src="/WebShop/CreateAnOrder.jpg"
                     alt="CreateAnOrder"
                     className="w-full h-[400px] mx-auto rounded-xl border-0.75"
                   />
                 </div>
                 <div className="flex justify-center items-center sm:w-auto">
                   <img
-                    src="/WebShop/APIcalls.png"
+                    src="/WebShop/APIcalls.jpg"
                     alt="APIcalls"
                     className="w-full h-[400px] mx-auto rounded-xl border-0.75"
                   />
                 </div>
                 <div className="flex justify-center items-center sm:w-auto">
                   <img
-                    src="/WebShop/ProductDetail.png"
+                    src="/WebShop/ProductDetail.jpg"
                     alt="ProductDetail"
                     className="w-full h-[400px] mx-auto rounded-xl border-0.75"
                   />
                 </div>
                 <div className="flex justify-center items-center sm:w-auto">
                   <img
-                    src="/WebShop/ProductList.png"
+                    src="/WebShop/ProductList.jpg"
                     alt="ProductList"
                     className="w-full h-[400px] mx-auto rounded-xl border-0.75"
                   />

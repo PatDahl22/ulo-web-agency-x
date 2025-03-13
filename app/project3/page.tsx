@@ -185,7 +185,7 @@ const page = () => {
             </div>
             <div className="flex justify-center items-center sm:w-auto mt-8">
               <img
-                src="/FemTask/roadmap.png"
+                src="/FemTask/roadmap.jpg"
                 alt="roadmap"
                 className="w-full sm:w-auto sm:h-auto max-h-[400px] mx-auto"
               />
@@ -258,7 +258,7 @@ const page = () => {
                 />
                 <div className="flex justify-center items-center w-full h-full mx-auto">
                   <img
-                    src="/FemTask/Persona.png"
+                    src="/FemTask/Persona.jpg"
                     alt="persona"
                     className="w-full sm:w-auto sm:h-auto max-h-[400px] mx-auto"
                   />
@@ -292,7 +292,7 @@ const page = () => {
 
               <div className="flex justify-center items-center w-full h-full mx-auto">
                 <img
-                  src="/FemTask/Lo-fil.png"
+                  src="/FemTask/Lo-fil.jpg"
                   alt="lofil"
                   className="w-full sm:w-auto sm:h-auto max-w-[500px] mx-auto"
                 />
@@ -347,21 +347,21 @@ const page = () => {
             <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 xs:grid-cols-1 w-full h-full py-4 items-center justify-between gap-6">
               <div className="flex justify-center items-center w-full h-full mx-auto">
                 <img
-                  src="/FemTask/Icons.png"
+                  src="/FemTask/Icons.jpg"
                   alt="Icons"
                   className="w-full h-full mx-auto"
                 />
               </div>
               <div className="flex justify-center items-center w-full h-full mx-auto">
                 <img
-                  src="/FemTask/Typography.png"
+                  src="/FemTask/Typography.jpg"
                   alt="Typography"
                   className="w-full h-full mx-auto"
                 />
               </div>
               <div className="flex justify-center items-center w-full h-full mx-auto">
                 <img
-                  src="/FemTask/Colors.png"
+                  src="/FemTask/Colors.jpg"
                   alt="Colors"
                   className="w-full h-full mx-auto"
                 />
@@ -450,7 +450,7 @@ const page = () => {
               </div>
               <div className="flex justify-center items-center sm:w-auto mt-4 sm:mt-4 w-full p-4 py-4">
                 <img
-                  src="/FemTask/Mockup-Skapauppgifter.png"
+                  src="/FemTask/Mockup-Skapauppgifter.jpg"
                   alt="Task Creation"
                   className="w-full sm:w-auto sm:h-auto mx-auto"
                 />
@@ -469,7 +469,7 @@ const page = () => {
               </div>
               <div className="flex justify-center items-center sm:w-auto mt-4 sm:mt-4 w-full p-4 py-4">
                 <img
-                  src="/FemTask/Mockup-Skapamål.png"
+                  src="/FemTask/Mockup-Skapamål.jpg"
                   alt="Goal Setting"
                   className="w-full sm:w-auto sm:h-auto mx-auto"
                 />
@@ -492,14 +492,14 @@ const page = () => {
               <div className="grid xl:grid-cols-2 md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 h-full items-center justify-between gap-4 w-full p-4 py-4">
                 <div className="flex justify-center items-center w-full h-full mx-auto">
                   <img
-                    src="/FemTask/Adult-Mockup-Kalender.png"
+                    src="/FemTask/Adult-Mockup-Kalender.jpg"
                     alt="Adult-Mockup-Kalender"
                     className="max-w-full h-full"
                   />
                 </div>
                 <div className="flex justify-center items-center w-full h-full mx-auto">
                   <img
-                    src="/FemTask/Kid-Mockup-Kalender.png"
+                    src="/FemTask/Kid-Mockup-Kalender.jpg"
                     alt="Kid-Mockup-Kalender"
                     className="max-w-full h-full"
                   />
@@ -519,7 +519,7 @@ const page = () => {
               </div>
               <div className="flex justify-center items-center sm:w-auto mt-4 sm:mt-4 w-full p-4 py-4">
                 <img
-                  src="/FemTask/Mockup-SmallbarnProfile-1.png"
+                  src="/FemTask/Mockup-SmallbarnProfile-1.jpg"
                   alt="Femtask-mockup"
                   className="w-full sm:w-auto sm:h-auto mx-auto"
                 />
@@ -538,7 +538,7 @@ const page = () => {
               </div>
               <div className="flex justify-center items-center sm:w-auto mt-4 sm:mt-4 w-full p-4 py-4">
                 <img
-                  src="/FemTask/Mockup-BarnProfile.png"
+                  src="/FemTask/Mockup-BarnProfile.jpg"
                   alt="Femtask-mockup"
                   className="max-w-full h-full"
                 />
@@ -559,7 +559,7 @@ const page = () => {
               </div>
               <div className="flex justify-center items-center sm:w-auto mt-4 sm:mt-4 w-full p-4 py-4">
                 <img
-                  src="/FemTask/Mockup-FöräldrarProfile.png"
+                  src="/FemTask/Mockup-FöräldrarProfile.jpg"
                   alt="Comprehensive Parent Profiles"
                   className="max-w-full h-full"
                 />

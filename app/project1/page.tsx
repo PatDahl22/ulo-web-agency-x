@@ -386,7 +386,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
               <div className="flex justify-center items-center">
                 {" "}
                 <img
-                  src="/TB-Mobile/Colorssystem.png"
+                  src="/TB-Mobile/Colorssystem.jpg"
                   alt="Colors-Guide"
                   className="w-full sm:w-auto sm:h-auto max-h-[400px] mx-auto"
                 />
@@ -414,7 +414,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           <section id="visualDesign" className="my-40">
             <div
               className="relative bg-cover bg-center bg-no-repeat before:absolute before:inset-0 before:bg-black before:opacity-70 text-white py-10 mx-auto"
-              style={{ backgroundImage: `url('/TB-Mobile/UIDesign.png')` }}
+              style={{ backgroundImage: `url('/TB-Mobile/UIDesign.jpg')` }}
             >
               <h1 className="relative flex flex-row text-4xl font-bold items-center justify-center text-black dark:text-white">
                 Visual Design
@@ -570,7 +570,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
               <div className="flex justify-center items-center">
                 {" "}
                 <img
-                  src="/TB-Mobile/TravelBuddy-compatition.png"
+                  src="/TB-Mobile/TravelBuddy-compatition.jpg"
                   alt="travelbuddy mockup"
                   className="mx-auto h-full w-full"
                 />
@@ -578,7 +578,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
               <div className="flex justify-center items-center">
                 {" "}
                 <img
-                  src="/TB-Mobile/Chas-team.png"
+                  src="/TB-Mobile/Chas-team.jpg"
                   alt="Chas-team"
                   className="h-full w-full mx-auto"
                 />

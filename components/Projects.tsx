@@ -7,7 +7,6 @@ interface Project {
   link: string;
   id: number;
 }
-import { HoverEffect } from './ui/card-hover-effect';
 import { projects } from "@/data";
 import { GlowingEffect } from './ui/glowing-effect';
 
