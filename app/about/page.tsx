@@ -49,8 +49,7 @@ const Contact = () => {
             </p>
             <div className="grid md:grid-cols-2 grid-rows-none sm:grid-cols-1 xs:grid-cols-1 gap-8 max-w-7xl mx-auto">
               <a
-                href="https://drive.google.com/open?id=1nRcgIKJ0V5KMwy6S1MjQ6dBGi7zFMNkT&usp=drive_fs"
-                target="_blank"
+                href="https://acrobat.adobe.com/id/urn:aaid:sc:EU:625aac10-126f-455c-8464-3fcd39757989"
                 rel="noopener noreferrer"
               >
                 <MagicButton
@@ -60,7 +59,7 @@ const Contact = () => {
                 />
               </a>
               <a
-                href="https://drive.google.com/file/d/1-7CDey7GBbTAZptw6_eH1JGhantRFgiA/view"
+                href="https://acrobat.adobe.com/id/urn:aaid:sc:EU:afef1df6-c550-45a7-a7b0-13e3e20b2c4a"
                 target="_blank"
                 rel="noopener noreferrer"
               >

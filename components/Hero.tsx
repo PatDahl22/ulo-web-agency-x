@@ -42,7 +42,7 @@ const Hero = () => {
           {/* Text with animation */}
           <TypewriterEffect words={words2} />
 
-          <p className="text-center md:tracking-wider my-4 text-sm md:text-lg lg:text-2xl">
+          <p className="text-center my-4 text-sm md:text-lg lg:text-2xl">
             I&apos;m a UX/UI designer and Frontend Developer based in Stockholm,
             SWEDEN.
           </p>
