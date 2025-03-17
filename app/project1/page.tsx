@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { StarsBackground } from "@/components/ui/stars-background";
 import { ShootingStars } from "@/components/ui/shooting-stars";
-import { useEffect, useState } from "react";
 import { TypewriterEffectSmooth as TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { RoleFeaturesSection } from "@/components/ui/RoleFeaturesSection";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
@@ -13,7 +12,6 @@ import { ProjectNav } from "@/components/ui/ProjectNav";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 
 const Page = () => {
-  const [showSecondEffect, setShowSecondEffect] = useState(false); 
 
   const project1Nav = ProjectnavItems.find(
     (item) => item.project1nav
@@ -23,7 +21,7 @@ const Page = () => {
       return <p>No navigation data found!</p>;
     }
 
-  const words1 = [
+  const words = [
     {
       text: " Travel",
       className: "text-6xl text-blue-500 dark:text-blue-500",
@@ -33,32 +31,6 @@ const Page = () => {
       className: "text-6xl text-blue-500 dark:text-blue-500",
     },
   ];
-  const words2 = [
-    {
-      text: "AI-Powered ",
-      className: "text-2xl ",
-    },
-    {
-      text: " Travel",
-      className: "text-2xl ",
-    },
-    {
-      text: " Planning",
-      className: "text-2xl ",
-    },
-    {
-      text: " App",
-      className: "text-2xl ",
-    },
-  ];
-
-  useEffect(() => {
-    // Assuming each word takes 1 second to type, adjust the timeout accordingly
-    const timeout = words1.length * 1000;
-    const timer = setTimeout(() => setShowSecondEffect(true), timeout);
-    return () => clearTimeout(timer);
-  }, []);
-  
 
   const myroles = project1Items.myroles.map((item) => ({
     title: item.title,
@@ -130,9 +102,14 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
               <div className="flex flex-col justify-center w-full">
                 <div className="flex flex-col justify-center w-full mt-4">
                   {" "}
-                  <TypewriterEffect words={words1} />
-                  {showSecondEffect && <TypewriterEffect words={words2} />}
+                  <TypewriterEffect words={words} />
                 </div>
+                <h4 className="my-2 m:text-xl lg:text-xl">
+                  <strong className="sm:text-xl lg:text-xl">
+                    Travel Planning App: AI-Powered
+                  </strong>                
+                </h4>
+
                 <h4 className="my-2 m:text-xl lg:text-xl">
                   <strong className="sm:text-xl lg:text-xl">My Role:</strong>{" "}
                   UX/UI Designer

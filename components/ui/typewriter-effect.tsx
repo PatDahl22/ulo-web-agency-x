@@ -140,7 +140,7 @@ export const TypewriterEffectSmooth = ({
   };
 
   return (
-    <div className={cn("flex mx-auto my-2 items-start", className)}>
+    <div className={cn("flex my-2", className)}>
       <motion.div
         className="overflow-hidden pb-2"
         initial={{
