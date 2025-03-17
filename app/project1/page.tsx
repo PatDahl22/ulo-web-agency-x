@@ -33,7 +33,7 @@ const Page = () => {
       className: "text-6xl text-blue-500 dark:text-blue-500",
     },
   ];
-  const words3 = [
+  const words2 = [
     {
       text: "AI-Powered ",
       className: "text-2xl ",
@@ -118,7 +118,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
           <StarsBackground className="absolute inset-0 z-100" />
           <ShootingStars />
           {/* BackgroundLines fills the container */}
-          <div className="relative xs:pt-40 w-full h-[50vh] flex justify-center items-center my-10">
+          <div className="relative xs:pt-40 w-full h-[60vh] flex justify-center items-center my-6">
             <div className="grid xl:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 w-full h-full items-center justify-center gap-4 sm:mt-20">
               <div className="flex justify-center items-center sm:w-auto sm:mt-0">
                 <img
@@ -131,7 +131,7 @@ const TextCard = ({ id, area, icon, title, description }: PersonasProps) => {
                 <div className="flex flex-col justify-center w-full mt-4">
                   {" "}
                   <TypewriterEffect words={words1} />
-                  {showSecondEffect && <TypewriterEffect words={words3} />}
+                  {showSecondEffect && <TypewriterEffect words={words2} />}
                 </div>
                 <h4 className="my-2 m:text-xl lg:text-xl">
                   <strong className="sm:text-xl lg:text-xl">My Role:</strong>{" "}

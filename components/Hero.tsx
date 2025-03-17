@@ -30,7 +30,7 @@ const Hero = () => {
           </h1>
 
           {/* Text with animation */}
-          <TypewriterEffect words={words} />
+          <TypewriterEffect words={words} className="mx-auto" />
 
           <p className="text-center my-4 text-sm md:text-lg lg:text-2xl">
             I&apos;m a UX/UI designer and Frontend Developer based in Stockholm,

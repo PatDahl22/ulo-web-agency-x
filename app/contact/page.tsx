@@ -31,7 +31,7 @@ const Contact = () => {
       <ShootingStars />
       <StarsBackground />
 
-      <div className="h-[50vh]">
+      <div className="h-[60vh]">
         <div className="relative h-full w-full">
           <BackgroundLines
             className="absolute inset-0 -z-100"

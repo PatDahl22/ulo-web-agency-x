@@ -34,7 +34,7 @@ const Contact = () => {
       <ShootingStars />
       <StarsBackground />
 
-      <div className="h-[50vh]">
+      <div className="h-[60vh]">
         <div className="relative h-full w-full">
           <BackgroundLines
             className="absolute inset-0 -z-100"
@@ -42,7 +42,7 @@ const Contact = () => {
           />
           <FloatingNav navItems={navItems} />
           <div className="relative h-full flex items-center justify-center w-full flex-col px-4">
-            <TypewriterEffect words={words} />
+            <TypewriterEffect words={words} className="mx-auto" />
             <p className="text-center md:tracking-wider mt-4 mb-4 text-sm md:text-lg lg:text-2xl">
               I'm a UX/UI designer and Frontend Developer based in Stockholm
               SWEDEN.
