@@ -2,7 +2,7 @@ import { FaLocationArrow } from "react-icons/fa";
 import MagicButton from "./MagicButton";
 import { TypewriterEffectSmooth as TypewriterEffect } from "./ui/typewriter-effect";
 
-  const words2 = [
+  const words = [
     {
       text: " Pat ",
       className: "text-6xl text-purple dark:text-purple font-bold",
@@ -17,17 +17,7 @@ import { TypewriterEffectSmooth as TypewriterEffect } from "./ui/typewriter-effe
     },
   ];
 
-  
-import { useEffect, useState } from "react";
-
 const Hero = () => {
-  const [showSecondEffect, setShowSecondEffect] = useState(false);
-
-    useEffect(() => {
-      const timeout = words2.length * 1000;
-      const timer = setTimeout(() => setShowSecondEffect(true), timeout);
-      return () => clearTimeout(timer);
-    }, []);
   
   return (
     <div className="pb-10 pt-36 relative">
@@ -40,7 +30,7 @@ const Hero = () => {
           </h1>
 
           {/* Text with animation */}
-          <TypewriterEffect words={words2} />
+          <TypewriterEffect words={words} />
 
           <p className="text-center my-4 text-sm md:text-lg lg:text-2xl">
             I&apos;m a UX/UI designer and Frontend Developer based in Stockholm,
