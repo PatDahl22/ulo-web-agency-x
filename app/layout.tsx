@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Roboto_Serif } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
 
