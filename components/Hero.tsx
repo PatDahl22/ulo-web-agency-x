@@ -1,54 +1,27 @@
-import { FaLocationArrow } from "react-icons/fa";
-import MagicButton from "./MagicButton";
-import { TypewriterEffectSmooth as TypewriterEffect } from "./ui/typewriter-effect";
+import Button from "./ui/Button";
 
-  const words = [
-    {
-      text: " Pat ",
-      className: "text-6xl text-purple dark:text-purple font-bold",
-    },
-    {
-      text: " Dahl's ",
-      className: "text-6xl text-purple dark:text-purple font-bold",
-    },
-    {
-      text: " Portfolio ",
-      className: "text-6xl text-purple dark:text-purple font-bold",
-    },
-  ];
-
-const Hero = () => {
-  
+export default function Hero() {
   return (
-    <div className="pb-10 pt-36 relative">
-      {" "}
-      {/* Content Section */}
-      <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center py-10">
-          <h1 className="relative my-6 flex flex-row text-4xl font-bold items-center justify-center">
-            Welcome to
-          </h1>
+    <section className=" w-full py-20 px-6 md:px-12 text-center">
+      <div className="max-w-3xl mx-auto">
+        <h1 className="text-4xl md:text-5xl font-bold text-text-base leading-tight">
+          Vi hjälper Sveriges bästa företag
+          <br className="hidden md:block" />
+          med allt de behöver
+        </h1>
+        <p className="mt-6 text-lg md:text-xl text-text-soft">
+          Oavsett om du behöver en enkel presentation, en smidig bokningssida
+          eller en komplett e-handel, hjälper vi dig ta nästa steg digitalt -
+          snabbt, snyggt och strategiskt.
+        </p>
 
-          {/* Text with animation */}
-          <TypewriterEffect words={words} className="mx-auto" />
-
-          <p className="text-center my-4 text-sm md:text-lg lg:text-2xl">
-            I&apos;m a UX/UI designer and Frontend Developer based in Stockholm,
-            SWEDEN.
-          </p>
-
-          {/* MagicButton wrapped in an anchor tag for navigation */}
-          <a href="/contact">
-            <MagicButton
-              title="Let's talk"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+        <div className="flex flex-col md:flex-row gap-4 justify-center mt-8 px-6 py-3 ">
+          <Button href="/boka" variant="dark">
+            Boka en kostnadsfri rådgivning idag
+          </Button>
         </div>
-      </div>
-    </div>
-  );
-};
 
-export default Hero;
+      </div>
+    </section>
+  );
+}

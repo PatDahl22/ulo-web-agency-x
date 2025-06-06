@@ -2,6 +2,15 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -68,8 +77,7 @@
 
 @layer base {
   * {
-    border: var(--border);
-    scroll-behavior: smooth;
+      scroll-behavior: smooth; 
   }
   body {
     background-color: var(--background);
@@ -170,5 +178,13 @@
     .heading {
       font-size: 3rem;
     }
+  }
+}
+@layer utilities {
+  .section-full {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    position: relative;
+    overflow: hidden;
   }
 }

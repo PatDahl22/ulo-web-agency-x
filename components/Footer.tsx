@@ -1,36 +1,120 @@
-import React, { useState, useEffect } from "react";
-import { socialMedia } from "@/data";
+import React from "react";
 
-const Footer = () => {
-  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
-
-  useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
-  }, []);
-
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
-    <footer className="w-full py-10">
-      <div className="flex mt-8 flex-row justify-between items-center">
-        <p className="md:text-base text-sm md:font-normal font-light">
-          © {currentYear} Pat Dahl Copyright
-        </p>
-
-        <div className="flex items-center md:gap-3 gap-6">
-          {socialMedia.map((info) => (
-            <a
-              key={info.id}
-              href={info.link}
-              target="_blank" // Open in a new tab/window
-              rel="noopener noreferrer" // Security best practice for external links
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
-            >
-              <img src={info.img} alt="icons" width={20} height={20} />
-            </a>
-          ))}
+    <footer className="bg-brand-main text-white text-sm mt-20">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6 py-12">
+        <div>
+          <h4 className="font-semibold mb-4">TJÄNSTER</h4>
+          <ul className="space-y-2">
+            <li>
+              <a href="/tjänster" className="hover:text-brand-light transition">
+                Hemsidor
+              </a>
+            </li>
+            <li>
+              <a href="/design" className="hover:text-brand-light transition">
+                Design
+              </a>
+            </li>
+            <li>
+              <a
+                href="/analytics"
+                className="hover:text-brand-light transition"
+              >
+                Analytics
+              </a>
+            </li>
+            <li>
+              <a
+                href="/marknadsforing"
+                className="hover:text-brand-light transition"
+              >
+                Marknadsföring
+              </a>
+            </li>
+            <li>
+              <a href="/strategi" className="hover:text-brand-light transition">
+                Strategi
+              </a>
+            </li>
+            <li>
+              <a
+                href="/forvaltning"
+                className="hover:text-brand-light transition"
+              >
+                Förvaltning
+              </a>
+            </li>
+          </ul>
         </div>
+        <div>
+          <h4 className="font-semibold mb-4">KUNDSERVICE</h4>
+          <ul className="space-y-2">
+            <li>
+              <a href="/om-oss" className="hover:text-brand-light transition">
+                Om oss
+              </a>
+            </li>
+            <li>
+              <a href="/kundcase" className="hover:text-brand-light transition">
+                KUNDCASE
+              </a>
+            </li>
+            <li>
+              <a href="/faq" className="hover:text-brand-light transition">
+                FAQ
+              </a>
+            </li>
+            <li>
+              <a
+                href="/allmanna-villkor"
+                className="hover:text-brand-light transition"
+              >
+                ALLMÄNNA VILLKOR
+              </a>
+            </li>
+            <li>
+              <a
+                href="/integritet-och-policy"
+                className="hover:text-brand-light transition"
+              >
+                INTEGRITET OCH POLICY
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-semibold mb-4">KONTAKT</h4>
+          <p>
+            Ringvägen 45A
+            <br />
+            118 63, Stockholm
+            <br />
+            SWEDEN
+          </p>
+          <p className="mt-2">
+            Tel: +46(0)7 0742 7467
+            <br />
+            E-post: info@ulo.com
+          </p>
+          <div className="flex space-x-4 mt-4">
+            <a href="#" className="hover:opacity-75">
+              TikTok
+            </a>
+            <a href="#" className="hover:opacity-75">
+              Instagram
+            </a>
+            <a href="#" className="hover:opacity-75">
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="text-center bg-brand-dark py-4 text-xs">
+        &copy; {currentYear} ULO. Alla rättigheter förbehållna.
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
