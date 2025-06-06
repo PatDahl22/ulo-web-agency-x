@@ -9,6 +9,11 @@ body {
   margin: 0;
   width: 100%;
   overflow-x: hidden;
+  overflow-y: auto;
+}
+
+html {
+  scroll-padding-top: 80px;
 }
 
 @layer base {
@@ -187,4 +192,20 @@ body {
     position: relative;
     overflow: hidden;
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease forwards;
 }

@@ -2,7 +2,7 @@ import Button from "@/components/ui/Button";
 
 export default function CallToAction() {
   return (
-    <section className="section-full bg-background-light py-20 text-center">
+    <section className="section-full bg-background-light py-20 px-20 text-center">
       <h2 className="text-xl md:text-2xl font-semibold text-text-base mb-4">
         Behöver du en offert?
       </h2>

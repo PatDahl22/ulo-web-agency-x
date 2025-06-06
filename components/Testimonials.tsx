@@ -2,7 +2,7 @@ import { testimonials } from "@/data";
 
 export default function Testimonials() {
   return (
-    <section className="w-screen h-screen bg-background-white py-20 flex flex-col justify-center overflow-hidden">
+    <section className="w-screen py-24 bg-background-white flex flex-col justify-center overflow-hidden">
       <h2 className="text-center text-2xl md:text-3xl font-bold text-text-base mb-12">
         Vad våra användare säger
       </h2>

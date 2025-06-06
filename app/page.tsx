@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
+import Services from "@/components/ui/Services";
 import Logos from "@/components/Logos";
-import Values from "@/components/Values";
+import Values from "@/components/ui/Values";
 import Testimonials from "@/components/Testimonials";
 import CallToAction from "@/components/CallToAction";
+import { services, values } from "@/data";
 
 const Home = () => {
   return (
@@ -13,8 +14,8 @@ const Home = () => {
       <div className="w-full">
         <Hero />
         <Logos />
-        <Services />
-        <Values />
+        <Services services={services} heading="ULO:s tjänster " />
+        <Values heading="Våra värderingar" values={values} />
         <Testimonials />
         <CallToAction />
       </div>

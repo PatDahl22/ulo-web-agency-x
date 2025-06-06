@@ -3,13 +3,13 @@ import React from "react";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-brand-main text-white text-sm mt-20">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6 py-12">
+    <footer className="bg-brand-main text-white text-sm">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 p-12 items-start justify-center">
         <div>
           <h4 className="font-semibold mb-4">TJÄNSTER</h4>
           <ul className="space-y-2">
             <li>
-              <a href="/tjänster" className="hover:text-brand-light transition">
+              <a href="/hemsidor" className="hover:text-brand-light transition">
                 Hemsidor
               </a>
             </li>

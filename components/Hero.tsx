@@ -2,7 +2,7 @@ import Button from "./ui/Button";
 
 export default function Hero() {
   return (
-    <section className=" w-full py-20 px-6 md:px-12 text-center">
+    <section className=" w-full mt-10 py-20 px-6 md:px-12 sm:px-12 text-center">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-text-base leading-tight">
           Vi hjälper Sveriges bästa företag
