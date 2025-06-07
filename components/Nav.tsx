@@ -66,7 +66,7 @@ export default function Nav() {
           <Link href="/om-oss" className="hover:text-brand-light transition">
             Om oss
           </Link>
-          <Link href="/kontakt" className="hover:text-brand-light transition">
+          <Link href="/contact" className="hover:text-brand-light transition">
             Kontakt
           </Link>
         </nav>
@@ -124,7 +124,7 @@ export default function Nav() {
             <Link href="/om-oss" onClick={() => setMenuOpen(false)}>
               Om oss
             </Link>
-            <Link href="/kontakt" onClick={() => setMenuOpen(false)}>
+            <Link href="/contact" onClick={() => setMenuOpen(false)}>
               Kontakt
             </Link>
             <Link href="/register" onClick={() => setMenuOpen(false)}>

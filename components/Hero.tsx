@@ -15,7 +15,7 @@ export default function Hero() {
           snabbt, snyggt och strategiskt.
         </p>
 
-        <div className="flex flex-col md:flex-row gap-4 justify-center mt-8 px-6 py-3 ">
+        <div className="flex flex-col md:flex-row gap-4 justify-center mt-8 px-16 py-3">
           <Button href="/boka" variant="dark">
             Boka en kostnadsfri rådgivning idag
           </Button>

@@ -16,12 +16,12 @@ export default function Button({
 }: ButtonProps) {
   
   const base =
-    "w-full inline-flex items-center justify-center gap-2 text-sm rounded-full px-8 py-3 transition font-medium";
+    "w-full inline-flex items-center justify-center gap-2 text-sm rounded-md px-8 py-3 transition font-medium";
 
   const styles = {
     dark: "bg-brand-main text-white hover:text-text-base hover:bg-brand-light",
     light:
-      "bg-white text-text-base border border-gray-light hover:bg-gray-light",
+      "bg-brand-light text-text-base border border-gray-light hover:bg-brand-main hover:text-white",
   };
 
   return (
