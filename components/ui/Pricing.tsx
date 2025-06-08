@@ -38,14 +38,14 @@ export default function Pricing({
       </div>
 
       {/* Hero + "Ingår alltid" */}
-      <div className="grid md:grid-cols-2 gap-6 items-center mb-16">
+      <div className="grid md:grid-cols-2 gap-6 items-center mb-16 px-8 md:px-10 xs:px-4">
         <div className="rounded-xl overflow-hidden">
           <Image
             src={image}
             alt="Paketen"
             width={800}
-            height={600}
-            className="w-full"
+            height={400}
+            className="w-full h-auto object-cover rounded-xl shadow-lg"
           />
         </div>
         <div className="border border-gray-light p-6 rounded-xl">
@@ -61,7 +61,7 @@ export default function Pricing({
       </div>
 
       {/* Paketen */}
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-6 px-8 md:px-4 xs:px-4">
         {packages.map((pkg, i) => (
           <div
             key={i}

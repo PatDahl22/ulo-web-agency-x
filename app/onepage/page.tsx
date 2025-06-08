@@ -16,8 +16,17 @@ import {
   onepagePackages,
 } from "@/data";
 import React from "react";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { logAnalyticsEvent } from "@/utils/logAnalyticsEvent";
 
 const page = () => {
+  const path = usePathname();
+
+  useEffect(() => {
+    if (path) logAnalyticsEvent(path);
+  }, [path]);
+
   return (
     <main>
       <IntroSection

@@ -21,7 +21,7 @@ export default function IntroSection({
   const isRight = imagePosition === "right";
 
   return (
-    <section className="section-full bg-background-white py-20 px-4 md:px-12 sm:px-12 relative overflow-hidden">
+    <section className="section-full bg-background-white py-20 px-8 md:px-12 sm:px-12">
       {/* Gradient overlay */}
       <div
         className={clsx(

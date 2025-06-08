@@ -46,6 +46,7 @@ const eslintConfig = [
       "quotes": ["error", "single"],
     },
   },
+  { ignores: ['dist'] },
   
 ];
 

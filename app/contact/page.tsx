@@ -1,15 +1,17 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Building, Home } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Calendar from "@/components/ui/Calendar";
 import Input from "@/components/ui/Input";
 import Textarea from "@/components/ui/Textarea";
 import Label from "@/components/ui/Label";
-import Map from "@/components/ui/Map";
 import { db } from "@/utils/firebase";
 import { addDoc, collection, Timestamp } from "firebase/firestore";
 import Snackbar from "@/components/ui/Snackbar";
+import { logAnalyticsEvent } from "@/utils/logAnalyticsEvent";
+import { usePathname } from "next/navigation";
 
 // InfoCard
 const InfoCard = ({ icon, title, content, subtext }: any) => (
@@ -32,6 +34,13 @@ const initialForm = {
 };
 
 export default function ContactPage() {
+
+  const path = usePathname();
+
+  useEffect(() => {
+    if (path) logAnalyticsEvent(path);
+  }, [path]);
+  
   const [selectedDate, setSelectedDate] = useState<Date | undefined>();
   const [selectedTime, setSelectedTime] = useState("10:00");
   const [meetingType, setMeetingType] = useState<"kontor" | "digital">(
@@ -117,7 +126,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-background-white py-16 sm:py-24 mt-10">
+    <div className="bg-background-white p-8 sm:py-10 mt-10">
       <main className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-bold text-text-base">
@@ -135,6 +144,16 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Vänsterkolumn */}
           <div className="space-y-8">
+            <div className="w-full mx-auto">
+              <Image
+                src="/Logotype.png"
+                alt="ULO logotyp"
+                width={80}
+                height={30}
+                className="w-auto h-6 md:h-8 object-contain"
+              />
+            </div>
+
             <div className="p-8 bg-background-soft shadow-md rounded-2xl">
               <h2 className="text-2xl font-bold text-text-base mb-6">
                 Välkommen att kontakta oss
@@ -144,23 +163,30 @@ export default function ContactPage() {
                   icon={<Phone size={20} />}
                   title="Ring oss"
                   content={<a href="tel:+46765962253">+46(0)7 6596 2253</a>}
-                  subtext="Måndag–Fredag: 09:00–17:00"
+                  subtext="Måndag-Fredag: 09:00-17:00"
                 />
                 <InfoCard
                   icon={<Mail size={20} />}
                   title="Maila oss"
-                  content={<a href="mailto:info@ulo.com">info@ulo.com</a>}
+                  content={<a href="mailto:info@nrsstockholm.com">info@nrsstockholm.com</a>}
                   subtext="Svar inom 24 timmar"
                 />
                 <InfoCard
                   icon={<MapPin size={20} />}
                   title="Besök oss"
-                  content="Arkens väg 26, 136 37 Handen"
+                  content={
+                    <a
+                      href="https://www.google.com/maps/place/NRS+Stockholm/@59.1622364,18.1369626,17z/data=!3m1!4b1!4m6!3m5!1s0x465f9d707de273d5:0xbc36dbfba3b8b2a1!8m2!3d59.1622364!4d18.1369626!16s%2Fg%2F11hzsvphr8?hl=sv&entry=ttu&g_ep=EgoyMDI1MDUxMS4wIKXMDSoASAFQAw%3D%3D"
+                    >
+                      Arkens väg 26 <br />
+                      136 37 HANDEN, <br />SWEDEN
+                    </a>
+                  }
                   subtext="Huvudkontor"
                 />
               </div>
             </div>
-            <Map address="Arkens väg 26, 136 37 Handen, SWEDEN" />
+
           </div>
 
           {/* Formulär */}
@@ -370,3 +396,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

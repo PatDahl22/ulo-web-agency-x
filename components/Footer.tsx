@@ -89,37 +89,51 @@ export default function Footer() {
         </div>
         <div>
           <h4 className="font-semibold mb-4">KONTAKT</h4>
-          <p >
+          <p className="my-2">
             <a
               href="https://www.google.com/maps/dir//Arkens+V%C3%A4g+26,+136+37+Handen/@59.1622103,18.0545629,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x465f9d707de273d5:0xbc36dbfba3b8b2a1!2m2!1d18.1369626!2d59.1622364?hl=sv&authuser=1&entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Arkens väg 26, 136 37 Handen, SWEDEN
+              Arkens väg 26, <br />
+              136 37 Handen, <br />
+              SWEDEN
             </a>
           </p>
-          <p className="mt-2">
-            📧{" "}
-            <a
-              href="mailto:info@ulo.com"
-              className="hover:text-brand-light transition"
-            >
-              info@ulo.com
-            </a>
+          <p className="my-2">
+            📧 <a href="mailto:info@nrsstockholm.com">info@nrsstockholm.com</a>
             <br />
             <a
-              href="tel:+46707427467"
+              href="tel:+46765962253"
               className="hover:text-brand-light transition"
             >
-              Tel: +46(0)7 0742 7467
+              Tel: +46(0)7 6596 2253
             </a>
           </p>
           <div className="flex space-x-4 mt-4">
-            <a href="#" className="hover:opacity-75">
-              TikTok
+            <a
+              href="https://www.facebook.com/Nailrichstudio"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Besök vår Facebook-sida"
+            >
+              <img
+                src="https://img.icons8.com/color/48/facebook-new.png"
+                alt="Facebook"
+                className="w-10 h-10"
+              />
             </a>
-            <a href="#" className="hover:opacity-75">
-              Instagram
+            <a
+              href="https://www.instagram.com/nailrichstudio"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Besök vår Instagram-sida"
+            >
+              <img
+                src="https://img.icons8.com/fluency/48/instagram-new.png"
+                alt="Instagram"
+                className="w-10 h-10"
+              />
             </a>
             <a href="#" className="hover:opacity-75">
               LinkedIn
@@ -128,7 +142,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center bg-brand-dark py-4 text-xs">
-        &copy; {currentYear} ULO. Alla rättigheter förbehållna.
+        &copy; {currentYear} NRS Stockholm. Alla rättigheter förbehållna.
       </div>
     </footer>
   );

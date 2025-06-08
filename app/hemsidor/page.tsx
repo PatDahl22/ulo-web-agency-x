@@ -13,8 +13,18 @@ import {
   hemsidorServices,
   kundcases,
 } from "@/data";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { logAnalyticsEvent } from "@/utils/logAnalyticsEvent";
+
 
 export default function HemsidorPage() {
+  const path = usePathname();
+
+  useEffect(() => {
+    if (path) logAnalyticsEvent(path);
+  }, [path]);
+
   return (
     <main>
       <IntroSection

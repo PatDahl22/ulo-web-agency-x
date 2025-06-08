@@ -29,7 +29,7 @@ export default function Calendar({
         onChange={handleDateChange}
         className="border rounded-md p-2 w-full"
       />
-      <p className="mt-2 text-sm text-gray-500">
+      <p className="mt-2 text-sm text-gray-500 py-2">
         📅 Dagens datum: {formattedToday}
       </p>
     </div>
