@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 import { cn } from "@/utils/cn";
 import { IconArrowWaveRightUp } from "@/components/icons";
 
@@ -14,7 +16,6 @@ export default function Button({
   href = "#",
   className = "",
 }: ButtonProps) {
-  
   const base =
     "w-full inline-flex items-center justify-center gap-2 text-sm rounded-md px-8 py-3 transition font-medium";
 

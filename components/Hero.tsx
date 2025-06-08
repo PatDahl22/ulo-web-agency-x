@@ -1,26 +1,26 @@
+"use client";
+import React from "react";
 import Button from "./ui/Button";
 
-export default function Hero() {
+export default function HeroSection() {
   return (
-    <section className=" w-full mt-10 py-20 px-6 md:px-12 sm:px-12 text-center">
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-text-base leading-tight">
-          Vi hjälper Sveriges bästa företag
-          <br className="hidden md:block" />
-          med allt de behöver
+    <section className="text-center py-20 px-6 mt-14">
+      {/* Detta är den viktiga containern */}
+      <div className="max-w-3xl mx-auto flex flex-col items-center gap-8">
+        <h1 className="text-4xl md:text-5xl font-bold">
+          Vi hjälper Sveriges bästa företag med allt de behöver
         </h1>
-        <p className="mt-6 text-lg md:text-xl text-text-soft">
+
+        <p className="text-lg text-text-muted max-w-2xl">
           Oavsett om du behöver en enkel presentation, en smidig bokningssida
           eller en komplett e-handel, hjälper vi dig ta nästa steg digitalt -
           snabbt, snyggt och strategiskt.
         </p>
 
-        <div className="flex flex-col md:flex-row gap-4 justify-center mt-8 px-16 py-3">
-          <Button href="/boka" variant="dark">
-            Boka en kostnadsfri rådgivning idag
-          </Button>
+        {/* Här sätter vi max-w på knappens container */}
+        <div className="w-full max-w-sm">
+          <Button href="/boka">Boka en kostnadsfri rådgivning idag</Button>
         </div>
-
       </div>
     </section>
   );

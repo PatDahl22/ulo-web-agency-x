@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { values as defaultValues } from "@/data";
 import { cn } from "@/utils/cn";

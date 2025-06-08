@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 const logos = [
   "/images/logos/logo1.png",
   "/images/logos/logo2.png",

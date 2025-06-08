@@ -1,11 +1,21 @@
-import CallToAction from '@/components/CallToAction'
-import Cases from '@/components/ui/Cases'
-import FAQ from '@/components/ui/FAQ'
-import IntroSection from '@/components/ui/IntroSection'
-import Pricing from '@/components/ui/Pricing'
-import ValuesSection from '@/components/ui/Values'
-import { onepageArbetsprocess, onepageIngor, onepageIntro, onepageStruktur, onepageValues, onepageFunktioner, onepagePackages } from '@/data'
-import React from 'react'
+"use client";
+
+import CallToAction from "@/components/CallToAction";
+import Cases from "@/components/ui/Cases";
+import FAQ from "@/components/ui/FAQ";
+import IntroSection from "@/components/ui/IntroSection";
+import Pricing from "@/components/ui/Pricing";
+import ValuesSection from "@/components/ui/Values";
+import {
+  onepageArbetsprocess,
+  onepageIngor,
+  onepageIntro,
+  onepageStruktur,
+  onepageValues,
+  onepageFunktioner,
+  onepagePackages,
+} from "@/data";
+import React from "react";
 
 const page = () => {
   return (
@@ -34,7 +44,6 @@ const page = () => {
         imagePosition="right"
       />
       <Pricing {...onepagePackages} />;
-      
       <IntroSection
         title={onepageArbetsprocess.title}
         subtitle={onepageArbetsprocess.description}
@@ -91,6 +100,6 @@ const page = () => {
       <CallToAction />
     </main>
   );
-}
+};
 
-export default page
+export default page;

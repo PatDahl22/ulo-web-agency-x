@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 import Button from "@/components/ui/Button";
 
 export default function CallToAction() {
@@ -11,7 +13,7 @@ export default function CallToAction() {
         små.
       </p>
 
-      <div className="flex flex-col md:flex-row gap-4 justify-center">
+      <div className="flex flex-col md:flex-row gap-4 justify-center w-full max-w-xl mx-auto">
         <Button href="/boka" variant="dark">
           Boka gratis rådgivning
         </Button>

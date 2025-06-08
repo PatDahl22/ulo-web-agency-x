@@ -1,9 +1,18 @@
+"use client";
+import React from "react";
 import CallToAction from "@/components/CallToAction";
 import Cases from "@/components/ui/Cases";
 import IntroSection from "@/components/ui/IntroSection";
 import Services from "@/components/ui/Services";
 import Values from "@/components/ui/Values";
-import { hemsidaArbetsprocess, hemsidaFokus, hemsidaIntro, hemsidaValues, hemsidorServices, kundcases } from "@/data";
+import {
+  hemsidaArbetsprocess,
+  hemsidaFokus,
+  hemsidaIntro,
+  hemsidaValues,
+  hemsidorServices,
+  kundcases,
+} from "@/data";
 
 export default function HemsidorPage() {
   return (

@@ -1,59 +1,125 @@
-// app/kontakt/page.tsx
-"use client"; // Denna rad krävs för att använda hooks som useState
-
-import { useState } from "react";
-import { Phone, Mail, MapPin, Building, Home, ArrowRight } from "lucide-react";
+"use client";
+import React, { useState } from "react";
+import { Phone, Mail, MapPin, Building, Home } from "lucide-react";
 import Button from "@/components/ui/Button";
+import Calendar from "@/components/ui/Calendar";
+import Input from "@/components/ui/Input";
+import Textarea from "@/components/ui/Textarea";
+import Label from "@/components/ui/Label";
+import Map from "@/components/ui/Map";
+import { db } from "@/utils/firebase";
+import { addDoc, collection, Timestamp } from "firebase/firestore";
+import Snackbar from "@/components/ui/Snackbar";
 
-// En liten hjälpkomponent för informationskorten
-type InfoCardProps = {
-  icon: React.ReactNode;
-  title: string;
-  content: string;
-  subtext?: string;
-};
-
-const InfoCard = ({ icon, title, content, subtext }: InfoCardProps) => (
+// InfoCard
+const InfoCard = ({ icon, title, content, subtext }: any) => (
   <div className="bg-background-white p-6 rounded-xl shadow-sm flex items-start gap-5">
     <div className="flex-shrink-0 bg-gray-100 p-3 rounded-full">{icon}</div>
     <div>
-      <h3 className="text-lg font-semibold text-text-basetransition-colors duration-300">
-        {title}
-      </h3>
-      {subtext && (
-        <p className="text-sm text-text-base">{subtext}</p>
-      )}
-      <p className="text-lg font-medium text-text-base mt-1">
-        {content}
-      </p>
+      <h3 className="text-md font-semibold text-text-base">{title}</h3>
+      {subtext && <p className="text-xs text-text-base">{subtext}</p>}
+      <p className="text-md font-medium text-text-base mt-1">{content}</p>
     </div>
   </div>
 );
 
-export default function ContactPage() {
-  // State för att hålla reda på valt datum, tid och mötestyp
-  const [selectedDate, setSelectedDate] = useState(3);
-  const [selectedTime, setSelectedTime] = useState("10:00");
-  const [meetingType, setMeetingType] = useState("digital");
+const initialForm = {
+  name: "",
+  email: "",
+  phone: "",
+  service: "Hemsidan",
+  message: "",
+};
 
-  const dates = Array.from({ length: 21 }, (_, i) => i + 1);
+export default function ContactPage() {
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>();
+  const [selectedTime, setSelectedTime] = useState("10:00");
+  const [meetingType, setMeetingType] = useState<"kontor" | "digital">(
+    "digital"
+  );
+  const [form, setForm] = useState(initialForm);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
+  const [showSnackbar, setShowSnackbar] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [fieldErrors, setFieldErrors] = useState<{ [key: string]: string }>({});
+
   const times = [
-    "08:00",
     "09:00",
     "10:00",
     "11:00",
+    "12:00",
     "13:00",
     "14:00",
     "15:00",
     "16:00",
   ];
 
+  // Enkel validering
+  const validate = () => {
+    const errors: { [key: string]: string } = {};
+    if (!form.name.trim()) errors.name = "Namn är obligatoriskt.";
+    if (!form.email.trim()) {
+      errors.email = "E-post är obligatoriskt.";
+    } else if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,}$/.test(form.email)) {
+      errors.email = "Ogiltig e-postadress.";
+    }
+    if (!form.phone.trim()) {
+      errors.phone = "Telefon är obligatoriskt.";
+    } else if (!/^[0-9+\s()-]{7,}$/.test(form.phone)) {
+      errors.phone = "Ogiltigt telefonnummer.";
+    }
+    if (!form.message.trim()) errors.message = "Meddelande är obligatoriskt.";
+    if (!selectedDate) errors.date = "Datum måste väljas.";
+    if (!selectedTime) errors.time = "Tid måste väljas.";
+    return errors;
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    setForm({ ...form, [e.target.id]: e.target.value });
+    setFieldErrors({ ...fieldErrors, [e.target.id]: "" });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSuccess(false);
+    setError("");
+    setShowSnackbar(false);
+
+    const errors = validate();
+    setFieldErrors(errors);
+    if (Object.keys(errors).length > 0) return;
+
+    setLoading(true);
+    try {
+      await addDoc(collection(db, "contactForm"), {
+        ...form,
+        date: selectedDate ? Timestamp.fromDate(selectedDate) : null,
+        time: selectedTime,
+        meetingType,
+        createdAt: Timestamp.now(),
+      });
+      setSuccess(true);
+      setShowSnackbar(true);
+      setForm(initialForm);
+      setSelectedDate(undefined);
+      setSelectedTime("10:00");
+    } catch (err) {
+      setError("Något gick fel. Försök igen senare.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="bg-background-white py-16 sm:py-24">
+    <div className="bg-background-white py-16 sm:py-24 mt-10">
       <main className="max-w-7xl mx-auto px-6 lg:px-8">
-        {/* === ÖVERSKRIFT === */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold  text-text-base">
+          <h1 className="text-4xl sm:text-5xl font-bold text-text-base">
             Kontakta oss
           </h1>
           <p className="mt-4 text-lg text-text-base max-w-2xl mx-auto">
@@ -65,9 +131,8 @@ export default function ContactPage() {
           </p>
         </div>
 
-        {/* === HUVUDINNEHÅLL - TVÅ KOLUMNER === */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* === VÄNSTER KOLUMN === */}
+          {/* Vänsterkolumn */}
           <div className="space-y-8">
             <div className="p-8 bg-background-soft shadow-md rounded-2xl">
               <h2 className="text-2xl font-bold text-text-base mb-6">
@@ -75,196 +140,226 @@ export default function ContactPage() {
               </h2>
               <div className="space-y-4">
                 <InfoCard
-                  icon={<Phone size={24} className="text-text-base" />}
-                  title="Ring Oss"
-                  subtext="Måndag-Fredag: 08:00-17:00"
-                  content="+46(0)7 0742 7467"
+                  icon={<Phone size={20} />}
+                  title="Ring oss"
+                  content={<a href="tel:+46765962253">+46(0)7 6596 2253</a>}
+                  subtext="Måndag–Fredag: 09:00–17:00"
                 />
                 <InfoCard
-                  icon={<Mail size={24} className="text-text-base" />}
-                  title="Maila Oss"
+                  icon={<Mail size={20} />}
+                  title="Maila oss"
+                  content={<a href="mailto:info@ulo.com">info@ulo.com</a>}
                   subtext="Svar inom 24 timmar"
-                  content="info@ulo.com"
                 />
                 <InfoCard
-                  icon={<MapPin size={24} className="text-text-base" />}
-                  title="Besök Oss"
+                  icon={<MapPin size={20} />}
+                  title="Besök oss"
+                  content="Arkens väg 26, 136 37 Handen"
                   subtext="Huvudkontor"
-                  content="Ringvägen 45A, 118 63, Stockholm"
                 />
               </div>
             </div>
-
-            <div className="p-8 bg-background-soft shadow-md rounded-2xl">
-              <h2 className="text-2xl font-bold text-text-base mb-6">
-                Öppettider
-              </h2>
-              <div className="space-y-3 text-text-base">
-                <div className="flex justify-between">
-                  <span>Måndag-Fredag</span>
-                  <span className="font-medium text-text-base">
-                    08:00-17:00
-                  </span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Lördag</span>
-                  <span className="font-medium text-text-base">Stängt</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Söndag</span>
-                  <span className="font-medium text-text-base">Stängt</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Karta - du kan byta ut denna div mot en riktig kartkomponent */}
-            <div className="h-64 bg-blue-200 rounded-2xl flex items-center justify-center text-blue-800">
-              <p>Kart-komponent här (t.ex. Google Maps iframe)</p>
-            </div>
+            <Map address="Arkens väg 26, 136 37 Handen, SWEDEN" />
           </div>
 
-          {/* === HÖGER KOLUMN (FORMULÄR) === */}
+          {/* Formulär */}
           <div className="p-8 bg-background-soft shadow-md rounded-2xl">
             <h2 className="text-2xl font-bold text-text-base mb-8">
               Skicka en förfrågan
             </h2>
-            <form action="#" method="POST" className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit} noValidate>
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-text-base mb-1"
-                >
-                  Namn
-                </label>
-                <input
-                  type="text"
+                <Label htmlFor="name">Namn</Label>
+                <Input
                   id="name"
-                  className="w-full p-3 border-none rounded-lg shadow-sm"
+                  value={form.name}
+                  onChange={handleChange}
+                  required
+                  aria-invalid={!!fieldErrors.name}
+                  aria-describedby={fieldErrors.name ? "name-error" : undefined}
                 />
+                {fieldErrors.name && (
+                  <span id="name-error" className="text-red-600 text-xs">
+                    {fieldErrors.name}
+                  </span>
+                )}
               </div>
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-text-base mb-1"
-                >
-                  E-post
-                </label>
-                <input
-                  type="email"
+                <Label htmlFor="email">E-post</Label>
+                <Input
                   id="email"
-                  className="w-full p-3 border-none rounded-lg shadow-sm"
+                  type="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  required
+                  aria-invalid={!!fieldErrors.email}
+                  aria-describedby={
+                    fieldErrors.email ? "email-error" : undefined
+                  }
                 />
+                {fieldErrors.email && (
+                  <span id="email-error" className="text-red-600 text-xs">
+                    {fieldErrors.email}
+                  </span>
+                )}
               </div>
               <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-text-base mb-1"
-                >
-                  Telefon
-                </label>
-                <input
-                  type="tel"
+                <Label htmlFor="phone">Telefon</Label>
+                <Input
                   id="phone"
-                  className="w-full p-3 border-none rounded-lg shadow-sm"
+                  type="tel"
+                  value={form.phone}
+                  onChange={handleChange}
+                  required
+                  aria-invalid={!!fieldErrors.phone}
+                  aria-describedby={
+                    fieldErrors.phone ? "phone-error" : undefined
+                  }
                 />
+                {fieldErrors.phone && (
+                  <span id="phone-error" className="text-red-600 text-xs">
+                    {fieldErrors.phone}
+                  </span>
+                )}
               </div>
               <div>
-                <label
-                  htmlFor="service"
-                  className="block text-sm font-medium text-text-base mb-1"
-                >
-                  Välj tjänst
-                </label>
+                <Label htmlFor="service">Tjänst</Label>
                 <select
                   id="service"
-                  className="w-full p-3 border-none rounded-lg shadow-sm appearance-none bg-white"
+                  value={form.service}
+                  onChange={handleChange}
+                  className="w-full p-3 border rounded-md"
+                  aria-label="Välj tjänst"
                 >
                   <option>Hemsidan</option>
                   <option>Designer</option>
                   <option>Analytics</option>
                   <option>Marknadsföring</option>
                   <option>Strategi</option>
-                  <option>Management</option>
+                  <option>Förvaltning</option>
                 </select>
               </div>
 
-              {/* === DATUM & TID VÄLJARE === */}
-              <div className="p-6 bg-white rounded-lg">
-                <h3 className="text-md font-semibold text-text-base mb-4">
-                  Välj Datum & Tid
-                </h3>
-                {/* Dagar */}
-                <div className="grid grid-cols-7 gap-1 text-center text-sm">
-                  {["Mån", "Tis", "Ons", "Tor", "Fre", "Lör", "Sön"].map(
-                    (day) => (
-                      <div key={day} className="text-text-soft">
-                        {day}
-                      </div>
-                    )
-                  )}
-                  {dates.map((date) => (
-                    <button
-                      key={date}
-                      type="button"
-                      onClick={() => setSelectedDate(date)}
-                      className={`p-2 rounded-md ${
-                        selectedDate === date
-                          ? "bg-brand-main text-white"
-                          : "hover:bg-brand-light"
-                      }`}
-                    >
-                      {date}
-                    </button>
-                  ))}
-                </div>
-                {/* Tider */}
-                <div className="grid grid-cols-4 gap-2 mt-6">
+              <div>
+                <Label>Välj datum & tid</Label>
+                <Calendar
+                  selected={selectedDate}
+                  onSelect={setSelectedDate}
+                  aria-label="Välj datum"
+                />
+                {fieldErrors.date && (
+                  <span className="text-red-600 text-xs">
+                    {fieldErrors.date}
+                  </span>
+                )}
+                <div
+                  className="grid grid-cols-4 gap-2 mt-2"
+                  role="radiogroup"
+                  aria-label="Välj tid"
+                >
                   {times.map((time) => (
                     <button
                       key={time}
                       type="button"
                       onClick={() => setSelectedTime(time)}
-                      className={`p-2 rounded-md text-sm ${
+                      className={`rounded-md px-3 py-1 text-sm ${
                         selectedTime === time
                           ? "bg-brand-main text-white"
-                          : "bg-gray-100 hover:bg-brand-light"
+                          : "bg-white text-text-base hover:bg-gray-100"
                       }`}
+                      aria-pressed={selectedTime === time}
+                      aria-label={time}
                     >
                       {time}
                     </button>
                   ))}
                 </div>
+                {fieldErrors.time && (
+                  <span className="text-red-600 text-xs">
+                    {fieldErrors.time}
+                  </span>
+                )}
               </div>
 
-              {/* Mötestyp */}
-              <div className="grid grid-cols-2 gap-4">
-                <Button href="/boka" variant="light">
-                  <Building size={20} /> Vår kontor
-                </Button>
-                <Button href="/boka" variant="dark">
-                  <Home size={20} /> Digital möte
-                </Button>
+              <div
+                className="flex flex-col md:flex-row gap-4 justify-center w-full max-w-xl mx-auto"
+                role="radiogroup"
+                aria-label="Välj mötestyp"
+              >
+                <button
+                  type="button"
+                  onClick={() => setMeetingType("kontor")}
+                  className="w-full"
+                  aria-pressed={meetingType === "kontor"}
+                  aria-label="Vår kontor"
+                >
+                  <Button variant={meetingType === "kontor" ? "dark" : "light"}>
+                    <Building size={20} aria-hidden="true" /> Vår kontor
+                  </Button>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setMeetingType("digital")}
+                  className="w-full"
+                  aria-pressed={meetingType === "digital"}
+                  aria-label="Digital möte"
+                >
+                  <Button
+                    variant={meetingType === "digital" ? "dark" : "light"}
+                  >
+                    <Home size={20} aria-hidden="true" /> Digital möte
+                  </Button>
+                </button>
               </div>
 
               <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-text-base mb-1"
-                >
-                  Meddelande
-                </label>
-                <textarea
+                <Label htmlFor="message">Meddelande</Label>
+                <Textarea
                   id="message"
                   rows={4}
-                  className="w-full p-3 border-none rounded-lg shadow-sm"
-                ></textarea>
+                  value={form.message}
+                  onChange={handleChange}
+                  required
+                  aria-invalid={!!fieldErrors.message}
+                  aria-describedby={
+                    fieldErrors.message ? "message-error" : undefined
+                  }
+                />
+                {fieldErrors.message && (
+                  <span id="message-error" className="text-red-600 text-xs">
+                    {fieldErrors.message}
+                  </span>
+                )}
               </div>
 
-              <div>
-                <Button href="/boka" variant="dark">
-                  Begär offert / Boka
+              <button
+                type="submit"
+                disabled={loading}
+                aria-busy={loading}
+                aria-label="Skicka förfrågan"
+                className="w-full"
+              >
+                <Button variant="dark">
+                  {loading ? "Skickar..." : "Skicka förfrågan"}
                 </Button>
-              </div>
+              </button>
+
+              <Snackbar
+                message="Tack för din bokning!"
+                show={showSnackbar}
+                onClose={() => setShowSnackbar(false)}
+              />
+
+              {success && (
+                <p className="text-green-600 text-sm" role="status">
+                  ✅ Din förfrågan är skickad!
+                </p>
+              )}
+              {error && (
+                <p className="text-red-600 text-sm" role="alert">
+                  ⚠ {error}
+                </p>
+              )}
             </form>
           </div>
         </div>
