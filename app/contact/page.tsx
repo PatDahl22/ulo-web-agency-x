@@ -37,13 +37,6 @@ export default function ContactPage() {
   const [meetingType, setMeetingType] = useState<"kontor" | "digital">(
     "digital"
   );
-  const [form, setForm] = useState(initialForm);
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState("");
-  const [showSnackbar, setShowSnackbar] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [fieldErrors, setFieldErrors] = useState<{ [key: string]: string }>({});
-
   const times = [
     "09:00",
     "10:00",
@@ -54,6 +47,14 @@ export default function ContactPage() {
     "15:00",
     "16:00",
   ];
+
+  const [form, setForm] = useState(initialForm);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
+  const [showSnackbar, setShowSnackbar] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [fieldErrors, setFieldErrors] = useState<{ [key: string]: string }>({});
+
 
   // Enkel validering
   const validate = () => {
@@ -344,11 +345,13 @@ export default function ContactPage() {
                 </Button>
               </button>
 
-              <Snackbar
-                message="Tack för din bokning!"
-                show={showSnackbar}
-                onClose={() => setShowSnackbar(false)}
-              />
+              {showSnackbar && (
+                <Snackbar
+                  message="Meddelandet har skickats!"
+                  onClose={() => setShowSnackbar(false)}
+                  show={showSnackbar}
+                />
+              )}
 
               {success && (
                 <p className="text-green-600 text-sm" role="status">

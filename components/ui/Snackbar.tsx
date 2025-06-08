@@ -16,9 +16,7 @@ export default function Snackbar({ message, show, onClose }: SnackbarProps) {
   }, [show, onClose]);
 
   return (
-    <div
-      className={`fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-brand-main text-white px-6 py-3 rounded-lg shadow-lg transition-opacity duration-300 z-50 ${show ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-    >
+    <div className="fixed bottom-4 right-4 bg-green-600 text-white px-4 py-2 rounded shadow-lg z-50 transition-opacity duration-300">
       {message}
     </div>
   );
