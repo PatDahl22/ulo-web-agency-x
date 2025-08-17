@@ -47,7 +47,7 @@ export default function AnalyticsChart() {
   const path = usePathname();
 
   useEffect(() => {
-    logAnalyticsEvent(path);
+    if (path) logAnalyticsEvent(path);
   }, [path]);
 
   return (
