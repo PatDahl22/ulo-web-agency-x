@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React from "react";
+=======
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+>>>>>>> 482ad169c965881463eed3da73bdd32eff3156ab
 import "./globals.css";
 import Layout from "@/components/Layout"; 
 import { Inter } from "next/font/google";
